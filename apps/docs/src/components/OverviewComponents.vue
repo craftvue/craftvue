@@ -57,51 +57,51 @@ const components = ref<ComponentCategory[]>([
   {
     name: 'Базовые',
     items: [
-      { title: 'Button', image: 'button.png', path: '/?path=/docs/components-button--docs' },
-      { title: 'Icon', image: 'icon.png', path: '/?path=/docs/components-icon--docs' },
+      { title: 'Button', image: 'button.png', path: '/?path=/docs/basic-button--docs' },
+      { title: 'Icon', image: 'icon.png', path: '/?path=/docs/basic-icon--docs' },
     ],
   },
   {
     name: 'Форма',
     items: [
-      { title: 'Input', image: 'input.png', path: '/?path=/docs/components-input--docs' },
-      { title: 'FormItem', image: 'formitem.png', path: '/?path=/docs/components-formitem--docs' },
-      { title: 'Select', image: 'select.png', path: '/?path=/docs/components-select--docs' },
-      { title: 'Checkbox', image: 'checkbox.png', path: '/?path=/docs/components-checkbox--docs' },
-      { title: 'Radio', image: 'radio.png', path: '/?path=/docs/components-radio--docs' },
-      { title: 'Switch', image: 'switch.png', path: '/?path=/docs/components-switch--docs' },
+      { title: 'Input', image: 'input.png', path: '/?path=/docs/form-input--docs' },
+      { title: 'FormItem', image: 'formitem.png', path: '/?path=/docs/form-formitem--docs' },
+      { title: 'Select', image: 'select.png', path: '/?path=/docs/form-select--docs' },
+      { title: 'Checkbox', image: 'checkbox.png', path: '/?path=/docs/form-checkbox--docs' },
+      { title: 'Radio', image: 'radio.png', path: '/?path=/docs/form-radio--docs' },
+      { title: 'Switch', image: 'switch.png', path: '/?path=/docs/form-switch--docs' },
     ],
   },
   {
     name: 'Данные',
     items: [
-      { title: 'Badge', image: 'badge.png', path: '/?path=/docs/components-badge--docs' },
-      { title: 'Tag', image: 'tag.png', path: '/?path=/docs/components-tag--docs' },
+      { title: 'Badge', image: 'badge.png', path: '/?path=/docs/data-badge--docs' },
+      { title: 'Tag', image: 'tag.png', path: '/?path=/docs/data-tag--docs' },
     ],
   },
   {
     name: 'Навигация',
     items: [
-      { title: 'Tabs', image: 'tabs.png', path: '/?path=/docs/components-tabs--docs' },
-      { title: 'Dropdown', image: 'dropdown.png', path: '/?path=/docs/components-dropdown--docs' },
+      { title: 'Tabs', image: 'tabs.png', path: '/?path=/docs/navigation-tabs--docs' },
+      { title: 'Dropdown', image: 'dropdown.png', path: '/?path=/docs/navigation-dropdown--docs' },
     ],
   },
   {
     name: 'Обратная связь',
     items: [
-      { title: 'Tooltip', image: 'tooltip.png', path: '/?path=/docs/components-tooltip--docs' },
+      { title: 'Tooltip', image: 'tooltip.png', path: '/?path=/docs/feedback-tooltip--docs' },
       {
         title: 'ConfirmDialog',
         image: 'confirmdialog.png',
-        path: '/?path=/docs/components-confirmdialog--docs',
+        path: '/?path=/docs/feedback-confirmdialog--docs',
       },
       {
         title: 'ConfirmPopup',
         image: 'confirmpopup.png',
-        path: '/?path=/docs/components-confirmpopup--docs',
+        path: '/?path=/docs/feedback-confirmpopup--docs',
       },
-      { title: 'Dialog', image: 'dialog.png', path: '/?path=/docs/components-dialog--docs' },
-      { title: 'Popover', image: 'popover.png', path: '/?path=/docs/components-popover--docs' },
+      { title: 'Dialog', image: 'dialog.png', path: '/?path=/docs/feedback-dialog--docs' },
+      { title: 'Popover', image: 'popover.png', path: '/?path=/docs/feedback-popover--docs' },
     ],
   },
 ])
