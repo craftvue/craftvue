@@ -9,6 +9,14 @@ export type UIComponentType =
   | 'select'
   | 'dropdown'
   | 'tooltip'
+  | 'checkbox'
+  | 'radio'
+  | 'switch'
+  | 'popover'
+  | 'confirmPopup'
+  | 'dialog'
+  | 'confirmDialog'
+  | 'tag'
 
 // Типы для названий историй UI компонентов
 export type ButtonStoryName =
@@ -111,6 +119,82 @@ export type TooltipStoryName =
   | 'controlled'
   | 'rootEl'
 
+export type CheckboxStoryName =
+  | 'basic'
+  | 'withLabel'
+  | 'filled'
+  | 'size'
+  | 'indeterminate'
+  | 'disabled'
+  | 'invalid'
+  | 'group'
+  | 'customIcon'
+  | 'customLabel'
+  | 'customValues'
+  | 'form'
+
+export type RadioStoryName =
+  | 'basic'
+  | 'filled'
+  | 'size'
+  | 'disabled'
+  | 'invalid'
+  | 'group'
+  | 'customIcon'
+  | 'customLabel'
+  | 'form'
+
+export type SwitchStoryName =
+  | 'basic'
+  | 'withLabel'
+  | 'filled'
+  | 'size'
+  | 'disabled'
+  | 'invalid'
+  | 'loading'
+  | 'customLabel'
+  | 'template'
+  | 'customValues'
+  | 'form'
+
+export type PopoverStoryName =
+  | 'basic'
+  | 'placement'
+  | 'trigger'
+  | 'arrow'
+  | 'triggerSlot'
+  | 'template'
+
+export type ConfirmPopupStoryName =
+  | 'basic'
+  | 'placement'
+  | 'controlled'
+  | 'customization'
+  | 'template'
+
+export type DialogStoryName =
+  | 'basic'
+  | 'fullscreen'
+  | 'animation'
+  | 'nonModal'
+  | 'template'
+  | 'size'
+  | 'withoutHeader'
+  | 'customIcons'
+
+export type ConfirmDialogStoryName = 'basic' | 'template' | 'type' | 'oneAction'
+
+export type TagStoryName =
+  | 'basic'
+  | 'severity'
+  | 'outlined'
+  | 'soft'
+  | 'size'
+  | 'closable'
+  | 'rounded'
+  | 'withIcon'
+  | 'template'
+
 // Union тип для всех возможных названий историй
 export type AllStoryNames =
   | ButtonStoryName
@@ -122,6 +206,14 @@ export type AllStoryNames =
   | SelectStoryName
   | DropdownStoryName
   | TooltipStoryName
+  | CheckboxStoryName
+  | RadioStoryName
+  | SwitchStoryName
+  | PopoverStoryName
+  | ConfirmPopupStoryName
+  | DialogStoryName
+  | ConfirmDialogStoryName
+  | TagStoryName
 
 // CustomSource props
 export interface CustomSourceProps {

@@ -18,7 +18,7 @@
     :duration-leave="props.durationLeave"
     :auto-hide="props.autoHide"
     :style="attrs.style"
-    :class="attrs.class"
+    :class="['c-tooltip', attrs.class]"
     @hide="emits('hide')"
     @show="emits('show')"
   >
@@ -27,8 +27,8 @@
         {{ props.content }}
       </slot>
     </div>
-    <template #trigger="{ isOpen, open, close }">
-      <slot v-if="!slots.trigger" />
+    <template v-if="slots.default || slots.trigger" #trigger="{ isOpen, open, close }">
+      <slot v-if="!slots.trigger" name="default" />
       <slot name="trigger" :is-open="isOpen" :open="open" :close="close" />
     </template>
   </CPopup>

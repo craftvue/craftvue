@@ -13,7 +13,7 @@ type AllTooltipArgs = Omit<TooltipEmits, 'show' | 'content' | 'trigger'> &
   }
 
 const meta = {
-  title: 'Components/Tooltip/Tooltip',
+  title: 'Feedback/Tooltip/Tooltip',
   component: CTooltip,
   parameters: {
     layout: 'centered',

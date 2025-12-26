@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/vue3-vite'
 import { CTabList } from 'craftvue'
 
 const meta = {
-  title: 'Components/Tabs/TabList',
+  title: 'Navigation/Tabs/TabList',
   component: CTabList,
   parameters: {
     controls: {

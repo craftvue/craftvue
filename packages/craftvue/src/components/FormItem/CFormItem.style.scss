@@ -1,14 +1,13 @@
 .c-form-item {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
 }
 
 .c-form-item__label {
-  margin-bottom: 7px;
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1;
   gap: 5px;
   color: var(--c-form-item-label-color);
@@ -20,14 +19,17 @@
 }
 
 .c-form-item__content {
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .c-form-item__error {
-  position: absolute;
+  display: flex;
+}
+
+.c-form-item__error-text {
+  padding-top: .1875rem;
   color: var(--c-invalid-color);
-  left: 0;
-  top: calc(100% + 3px);
-  font-size: 12px;
+  font-size: .75rem;
   line-height: 1;
 }

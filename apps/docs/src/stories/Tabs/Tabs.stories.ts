@@ -29,7 +29,7 @@ type AllTabsArgs = ComponentPropsAndSlots<typeof CTabs> &
   TabsEmits
 
 const meta = {
-  title: 'Components/Tabs/Tabs',
+  title: 'Navigation/Tabs/Tabs',
   component: CTabs,
   parameters: {
     controls: { exclude: ['$slots', 'onUpdate:value'] },

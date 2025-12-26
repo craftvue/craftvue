@@ -39,7 +39,7 @@ const emitsArgsKeys: (keyof InputEmits)[] = [
 const excludedKeys = ['prefix'] satisfies AllKeys[]
 
 const meta = {
-  title: 'Components/Input/Input',
+  title: 'Form/Input/Input',
   component: CInput,
   args: {
     variant: 'outlined',

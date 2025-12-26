@@ -385,7 +385,8 @@ const meta = {
   parameters: {
     layout: 'fullscreen',
   },
-  tags: ['autodocs'],
+  // tags: ['autodocs'],
+  tags: ['!dev'],
 } satisfies Meta<typeof ColorsPalette>
 
 export default meta

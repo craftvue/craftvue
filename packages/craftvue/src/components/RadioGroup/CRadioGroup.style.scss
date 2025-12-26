@@ -1,0 +1,18 @@
+.c-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: .875rem;
+
+  &.c-radio-group--sm {
+    gap: 0.5rem;
+  }
+
+  &.c-radio-group--lg {
+    gap: 1rem;
+  }
+
+  &.c-radio-group--horizontal {
+    flex-direction: row;
+    align-items: center;
+  }
+}

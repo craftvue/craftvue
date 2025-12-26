@@ -1,0 +1,132 @@
+import {
+  Meta,
+  Title,
+  Canvas,
+  ArgTypes,
+  Subtitle,
+  TableOfContents,
+} from '@storybook/addon-docs/blocks'
+import * as TagStories from './Tag.stories'
+import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+
+<Meta title="Data/Tag" />
+
+<div className='sb-docs-wrapper' >
+  <div className='sb-docs-content'>
+    <Title>Tag</Title>
+
+    <Subtitle>
+      Компонент тега для отображения меток, категорий и статусов с поддержкой различных цветовых палитр, стилей и иконок
+    </Subtitle>
+
+    <h3>Импорт</h3>
+
+    <CustomSource
+      code="import CTag from 'craftvue/tag'"
+      actions={['copy']}
+      parser="babel"
+      language="javascript"
+    />
+
+    <ArgTypes of={TagStories.Basic}  />
+
+    ## Базовый пример
+
+    <p>Стандартный тег с текстом. Текст задается через свойство <code>value</code> или слот <code>default</code>.</p>
+
+    <Canvas of={TagStories.Basic} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="tag" parser="html" />
+
+    &nbsp;
+
+    ## Цветовые палитры
+
+    <p>Тег поддерживает семь цветовых палитр через свойство <code>severity</code>: <code>primary</code>, <code>secondary</code>, <code>contrast</code>, <code>success</code>, <code>error</code>, <code>warning</code>, <code>info</code>.</p>
+
+    <Canvas of={TagStories.Severity} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="tag" name="severity" parser="html" />
+
+    &nbsp;
+
+    ## Вариант с обводкой
+
+    <p>Тег с обводкой вместо заполненного фона. Устанавливается свойством <code>variant="outlined"</code>.</p>
+
+    <Canvas of={TagStories.Outlined} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="tag" name="outlined" parser="html" />
+
+    &nbsp;
+
+    ## Мягкий вариант
+
+    <p>Тег с мягким фоном (полупрозрачным). Устанавливается свойством <code>variant="soft"</code>.</p>
+
+    <Canvas of={TagStories.Soft} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="tag" name="soft" parser="html" />
+
+    &nbsp;
+
+    ## Размер
+
+    <p>Размер тега контролируется свойством <code>size</code>. Доступные значения: <code>sm</code> (маленький), <code>lg</code> (большой). По умолчанию используется средний размер.</p>
+
+    <Canvas of={TagStories.Size} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="tag" name="size" parser="html" />
+
+    &nbsp;
+
+    ## С кнопкой закрытия
+
+    <p>Тег с кнопкой закрытия. Активируется свойством <code>closable</code>. При клике на кнопку возникает событие <code>close</code>.</p>
+
+    <Canvas of={TagStories.Closable} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="tag" name="closable" parser="html" />
+
+    &nbsp;
+
+    ## Скругленные углы
+
+    <p>Тег со скругленными углами. Активируется свойством <code>rounded</code>.</p>
+
+    <Canvas of={TagStories.Rounded} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="tag" name="rounded" parser="html" />
+
+    &nbsp;
+
+    ## С иконками
+
+    <p>Тег с иконками перед и после текста. Иконки задаются через свойства <code>prefixIcon</code> (перед текстом) и <code>suffixIcon</code> (после текста). Все иконки должны быть компонентами Vue.</p>
+
+    <Canvas of={TagStories.WithIcon} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="tag" name="withIcon" parser="html" />
+
+    &nbsp;
+
+    ## Кастомный шаблон
+
+    <p>Использование слотов <code>prefix</code> и <code>suffix</code> для кастомного содержимого перед и после текста. Слоты имеют приоритет над соответствующими иконками (<code>prefixIcon</code> и <code>suffixIcon</code>).</p>
+
+    <Canvas of={TagStories.Template} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="tag" name="template" parser="html" />
+
+  </div>
+
+  <div>
+    <TableOfContents
+      className='sb-docs-toc sb-unstyled'
+      title='Компоненты'
+      contentsSelector='.sb-docs-content'
+      headingSelector="h2"
+      ignoreSelector='.sbdocs-subtitle'
+    />
+  </div>
+</div>

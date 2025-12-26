@@ -1,6 +1,6 @@
 {
   "name": "craftvue",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "private": false,
   "author": "Craft",
   "description": "UI Components for Vue.js",
@@ -43,7 +43,7 @@
       "import": "./dist/components/Badge/index.mjs",
       "require": "./dist/components/Badge/index.cjs"
     },
-    "./form-item": {
+    "./formitem": {
       "types": "./dist/components/FormItem/index.d.ts",
       "import": "./dist/components/FormItem/index.mjs",
       "require": "./dist/components/FormItem/index.cjs"
@@ -102,6 +102,56 @@
       "types": "./dist/components/Popup/index.d.ts",
       "import": "./dist/components/Popup/index.mjs",
       "require": "./dist/components/Popup/index.cjs"
+    },
+    "./checkbox": {
+      "types": "./dist/components/Checkbox/index.d.ts",
+      "import": "./dist/components/Checkbox/index.mjs",
+      "require": "./dist/components/Checkbox/index.cjs"
+    },
+    "./checkboxgroup": {
+      "types": "./dist/components/CheckboxGroup/index.d.ts",
+      "import": "./dist/components/CheckboxGroup/index.mjs",
+      "require": "./dist/components/CheckboxGroup/index.cjs"
+    },
+    "./confirmdialog": {
+      "types": "./dist/components/ConfirmDialog/index.d.ts",
+      "import": "./dist/components/ConfirmDialog/index.mjs",
+      "require": "./dist/components/ConfirmDialog/index.cjs"
+    },
+    "./confirmpopup": {
+      "types": "./dist/components/ConfirmPopup/index.d.ts",
+      "import": "./dist/components/ConfirmPopup/index.mjs",
+      "require": "./dist/components/ConfirmPopup/index.cjs"
+    },
+    "./dialog": {
+      "types": "./dist/components/Dialog/index.d.ts",
+      "import": "./dist/components/Dialog/index.mjs",
+      "require": "./dist/components/Dialog/index.cjs"
+    },
+    "./popover": {
+      "types": "./dist/components/Popover/index.d.ts",
+      "import": "./dist/components/Popover/index.mjs",
+      "require": "./dist/components/Popover/index.cjs"
+    },
+    "./radio": {
+      "types": "./dist/components/Radio/index.d.ts",
+      "import": "./dist/components/Radio/index.mjs",
+      "require": "./dist/components/Radio/index.cjs"
+    },
+    "./radiogroup": {
+      "types": "./dist/components/RadioGroup/index.d.ts",
+      "import": "./dist/components/RadioGroup/index.mjs",
+      "require": "./dist/components/RadioGroup/index.cjs"
+    },
+    "./switch": {
+      "types": "./dist/components/Switch/index.d.ts",
+      "import": "./dist/components/Switch/index.mjs",
+      "require": "./dist/components/Switch/index.cjs"
+    },
+    "./tag": {
+      "types": "./dist/components/Tag/index.d.ts",
+      "import": "./dist/components/Tag/index.mjs",
+      "require": "./dist/components/Tag/index.cjs"
     }
   },
   "sideEffects": [
@@ -111,11 +161,14 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "vite build",
     "build:prod": "pnpm run prepare:publish && pnpm run build && pnpm run prepare:dev",
     "dev": "vite build --watch",
-    "prepare:publish": "pnpm up @craftvue/icons@^1.2.1",
+    "prepare:publish": "pnpm up @craftvue/icons@^1.3.0",
     "prepare:dev": "pnpm up @craftvue/icons@workspace:*",
     "version:patch": "npm version patch --no-git-tag-version --workspaces=false",
     "version:minor": "npm version minor --no-git-tag-version --workspaces=false",
@@ -128,7 +181,7 @@
     "vue": "^3.4.0"
   },
   "dependencies": {
-    "@craftvue/icons": "workspace:^",
+    "@craftvue/icons": "workspace:*",
     "@vueuse/core": "^13.9.0",
     "lodash": "^4.17.21"
   },

@@ -5,6 +5,8 @@ export interface FormItemProps {
   label?: string
   errorMessage?: string
   required?: boolean
+  durationEnter?: number
+  durationLeave?: number
 }
 
 export type FormItemsClasses = (string | { [key: string]: boolean })[]
@@ -12,5 +14,5 @@ export type FormItemsClasses = (string | { [key: string]: boolean })[]
 export interface FormItemSlots {
   default(): VNode[]
   labelSlot(scope: { label?: string }): VNode[]
-  error(scope: { error?: string }): VNode[]
+  error(scope: { error?: string; errorClass?: string }): VNode[]
 }

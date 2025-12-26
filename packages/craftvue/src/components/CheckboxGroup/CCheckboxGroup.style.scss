@@ -1,0 +1,18 @@
+.c-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+
+  &.c-checkbox-group--sm {
+    gap: 0.5rem;
+  }
+
+  &.c-checkbox-group--lg {
+    gap: 1rem;
+  }
+
+  &.c-checkbox-group--horizontal {
+    flex-direction: row;
+    align-items: center;
+  }
+}

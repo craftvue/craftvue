@@ -42,6 +42,16 @@ export function CraftVueResolver(options: CraftVueResolverOptions = {}): Compone
         'select',
         'dropdown',
         'popup',
+        'checkbox',
+        'checkbox-group',
+        'confirm-dialog',
+        'confirm-popup',
+        'dialog',
+        'popover',
+        'radio',
+        'radio-group',
+        'switch',
+        'tag'
       ]
 
       if (components.includes(kebabName)) {

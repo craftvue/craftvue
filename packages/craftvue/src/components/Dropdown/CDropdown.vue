@@ -16,7 +16,7 @@
     :animation="props.animation"
     :arrow="props.arrow"
     :style="attrs.style"
-    :class="attrs.class"
+    :class="['c-dropdown', attrs.class]"
     @hide="emits('hide')"
     @show="emits('show')"
   >

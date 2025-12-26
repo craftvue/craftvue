@@ -57,6 +57,24 @@ export default defineConfig({
         'components/EnvelopeIcon': fileURLToPath(
           new URL('./src/components/EnvelopeIcon.vue', import.meta.url),
         ),
+        'components/ErrorIcon': fileURLToPath(
+          new URL('./src/components/ErrorIcon.vue', import.meta.url),
+        ),
+        'components/InfoIcon': fileURLToPath(
+          new URL('./src/components/InfoIcon.vue', import.meta.url),
+        ),
+        'components/MaximizeIcon': fileURLToPath(
+          new URL('./src/components/MaximizeIcon.vue', import.meta.url),
+        ),
+        'components/MinimizeIcon': fileURLToPath(
+          new URL('./src/components/MinimizeIcon.vue', import.meta.url),
+        ),
+        'components/WarningIcon': fileURLToPath(
+          new URL('./src/components/WarningIcon.vue', import.meta.url),
+        ),
+        'components/MinusIcon': fileURLToPath(
+          new URL('./src/components/MinusIcon.vue', import.meta.url),
+        ),
       },
       name: 'CraftVueIcons',
       formats: ['es', 'cjs'],

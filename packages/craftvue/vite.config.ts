@@ -59,6 +59,36 @@ export default defineConfig({
         'components/Popup/index': fileURLToPath(
           new URL('./src/components/Popup/index.ts', import.meta.url),
         ),
+        'components/Checkbox/index': fileURLToPath(
+          new URL('./src/components/Checkbox/index.ts', import.meta.url),
+        ),
+        'components/CheckboxGroup/index': fileURLToPath(
+          new URL('./src/components/CheckboxGroup/index.ts', import.meta.url),
+        ),
+        'components/ConfirmDialog/index': fileURLToPath(
+          new URL('./src/components/ConfirmDialog/index.ts', import.meta.url),
+        ),
+        'components/ConfirmPopup/index': fileURLToPath(
+          new URL('./src/components/ConfirmPopup/index.ts', import.meta.url),
+        ),
+        'components/Dialog/index': fileURLToPath(
+          new URL('./src/components/Dialog/index.ts', import.meta.url),
+        ),
+        'components/Popover/index': fileURLToPath(
+          new URL('./src/components/Popover/index.ts', import.meta.url),
+        ),
+        'components/Radio/index': fileURLToPath(
+          new URL('./src/components/Radio/index.ts', import.meta.url),
+        ),
+        'components/RadioGroup/index': fileURLToPath(
+          new URL('./src/components/RadioGroup/index.ts', import.meta.url),
+        ),
+        'components/Switch/index': fileURLToPath(
+          new URL('./src/components/Switch/index.ts', import.meta.url),
+        ),
+        'components/Tag/index': fileURLToPath(
+          new URL('./src/components/Tag/index.ts', import.meta.url),
+        ),
       },
       name: 'CraftVue',
       formats: ['es', 'cjs'],

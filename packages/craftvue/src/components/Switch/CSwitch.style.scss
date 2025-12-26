@@ -1,0 +1,198 @@
+.c-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+
+  &.is--disabled {
+    cursor: not-allowed;
+
+    .c-switch__track {
+      background-color: var(--c-switch-disabled-background);
+    }
+
+    .c-switch__thumb {
+      color: var(--c-switch-disabled-thumb-color);
+      background-color: var(--c-switch-disabled-thumb-background);
+    }
+
+    .c-switch__label {
+      color: var(--c-switch-disabled-color);
+    }
+  }
+
+  // Checked state
+  &.is--checked {
+    .c-switch__thumb {
+      inset-inline-start: calc(
+        var(--c-switch-track-width) - calc(var(--c-switch-thumb-size) + var(--c-switch-gap)) - 2px
+      );
+    }
+
+    &:not(.is--disabled) {
+      .c-switch__track {
+        background-color: var(--c-switch-checked-background);
+        border-color: var(--c-switch-checked-border-color);
+      }
+
+      .c-switch__thumb {
+        background-color: var(--c-switch-checked-thumb-background);
+        color: var(--c-switch-checked-thumb-color);
+      }
+
+      // Checked hover
+      &:hover {
+        .c-switch__track {
+          background-color: var(--c-switch-checked-hover-background);
+          border-color: var(--c-switch-checked-hover-border-color);
+        }
+      }
+    }
+  }
+
+  // Invalid state
+  &.is--invalid:not(.is--disabled) {
+    .c-switch__track {
+      border-color: var(--c-switch-invalid-border-color);
+    }
+  }
+
+  // Focus state
+  &:not(.is--disabled):has(.c-switch__input:focus-visible) {
+    .c-switch__track {
+      outline: 1px solid var(--c-switch-focus-ring-color);
+      outline-offset: 2px;
+    }
+
+    &:not(.is--checked, .c-switch--filled) {
+      .c-switch__track {
+        border-color: var(--c-switch-focus-border-color);
+      }
+
+      &:hover {
+        .c-switch__track {
+          border-color: var(--c-switch-focus-hover-border-color);
+        }
+      }
+    }
+  }
+
+  // Hover state
+  &:hover:not(.is--disabled) {
+    .c-switch__track {
+      border-color: var(--c-switch-hover-border-color);
+    }
+  }
+
+  // Filled variant
+  &.c-switch--filled {
+    .c-switch__track {
+      background-color: var(--c-switch-filled-background);
+      border-color: var(--c-switch-filled-border-color);
+    }
+
+    &.is--disabled {
+      .c-switch__track {
+        background-color: var(--c-switch-disabled-background);
+      }
+    }
+  }
+}
+
+.c-switch__input-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.c-switch__input {
+  appearance: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.c-switch__track {
+  position: relative;
+  display: inline-flex;
+  width: var(--c-switch-track-width);
+  height: var(--c-switch-track-height);
+  background-color: var(--c-switch-background);
+  border: 1px solid var(--c-switch-border-color);
+  border-radius: var(--c-border-radius-full);
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
+  cursor: inherit;
+}
+
+.c-switch__thumb {
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.625rem;
+  width: var(--c-switch-thumb-size);
+  height: var(--c-switch-thumb-size);
+  top: 50%;
+  inset-inline-start: var(--c-switch-gap);
+  margin-block-start: calc(-1 * calc(var(--c-switch-thumb-size) / 2));
+  color: var(--c-switch-thumb-color);
+  background-color: var(--c-switch-thumb-background);
+  border-radius: 50%;
+  pointer-events: none;
+  transition:
+    inset-inline-start 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.c-switch__label {
+  color: var(--c-switch-label-color);
+  font-size: 0.875rem;
+  line-height: 1;
+  user-select: none;
+  cursor: inherit;
+}
+
+.c-switch--sm {
+  gap: 0.375rem;
+
+  .c-switch__track {
+    --c-switch-track-width: 1.75rem;
+    --c-switch-track-height: 1rem;
+  }
+
+  .c-switch__thumb {
+    --c-switch-thumb-size: 0.625rem;
+    font-size: .5625rem;
+  }
+
+  .c-switch__label {
+    font-size: 0.75rem;
+  }
+}
+
+.c-switch--lg {
+  gap: 0.625rem;
+
+  .c-switch__track {
+    --c-switch-track-width: 2.75rem;
+    --c-switch-track-height: 1.5rem;
+  }
+
+  .c-switch__thumb {
+    --c-switch-thumb-size: 1.125rem;
+    font-size: .875rem;
+  }
+
+  .c-switch__label {
+    font-size: 1rem;
+  }
+}

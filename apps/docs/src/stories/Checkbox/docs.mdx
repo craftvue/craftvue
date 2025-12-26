@@ -1,0 +1,178 @@
+import {
+  Meta,
+  Title,
+  Canvas,
+  ArgTypes,
+  Subtitle,
+  TableOfContents,
+} from '@storybook/addon-docs/blocks'
+import * as CheckboxStories from './Checkbox.stories'
+import * as CheckboxGroupStories from './CheckboxGroup.stories.ts'
+import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+
+<Meta title="Form/Checkbox" />
+
+<div className='sb-docs-wrapper' >
+  <div className='sb-docs-content'>
+    <Title>Checkbox</Title>
+
+    <Subtitle>
+      Компонент чекбокса для выбора одного или нескольких значений с поддержкой неопределенного состояния, группировки и кастомизации
+    </Subtitle>
+
+    <h3>Импорт</h3>
+
+    <CustomSource
+      code={`
+        import CCheckbox from 'craftvue/checkbox'
+        import CCheckboxGroup from 'craftvue/checkboxgroup'
+      `}
+      actions={['copy']}
+      parser="babel"
+      language="javascript"
+    />
+
+    ### Checkbox
+    <ArgTypes of={CheckboxStories.Basic} />
+
+    ### CheckboxGroup
+    <ArgTypes of={CheckboxGroupStories.Basic} />
+
+    ## Базовый пример
+
+    <p>Стандартный чекбокс в базовом состоянии без метки.</p>
+
+    <Canvas of={CheckboxStories.Basic} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="checkbox" />
+
+    &nbsp;
+
+    ## С меткой
+
+    <p>Чекбокс с текстовой меткой, отображаемой справа от элемента. Метка задается свойством <code>label</code>.</p>
+
+    <Canvas of={CheckboxStories.WithLabel} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="checkbox" name="withLabel" />
+
+    &nbsp;
+
+    ## Заполненный стиль
+
+    <p>Чекбокс с заполненным фоном вместо стандартной обводки. Устанавливается свойством <code>variant="filled"</code>.</p>
+
+    <Canvas of={CheckboxStories.Filled} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="checkbox" name="filled" />
+
+    &nbsp;
+
+    ## Размер
+
+    <p>Размер чекбокса контролируется свойством <code>size</code>. Доступные значения: <code>sm</code> (маленький), <code>lg</code> (большой). По умолчанию используется средний размер.</p>
+
+    <Canvas of={CheckboxStories.Size} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="checkbox" name="size" />
+
+    &nbsp;
+
+    ## Неопределенное состояние
+
+    <p>Чекбокс в неопределенном состоянии (частично выбран), используется для групповых операций. Активируется свойством <code>indeterminate</code>. Полезно для реализации "выбрать все" в группах чекбоксов.</p>
+
+    <Canvas of={CheckboxStories.Indeterminate} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="checkbox" name="indeterminate" parser="html" />
+
+    &nbsp;
+
+    ## Отключенное состояние
+
+    <p>Чекбокс в неактивном состоянии, недоступный для взаимодействия. Устанавливается свойством <code>disabled</code>. Может быть как выбранным, так и не выбранным.</p>
+
+    <Canvas of={CheckboxStories.Disabled} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="checkbox" name="disabled" />
+
+    &nbsp;
+
+    ## Состояние ошибки
+
+    <p>Чекбокс в состоянии ошибки с красной рамкой. Активируется свойством <code>invalid</code>. Используется для отображения ошибок валидации в формах.</p>
+
+    <Canvas of={CheckboxStories.Invalid} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="checkbox" name="invalid" />
+
+    &nbsp;
+
+    ## Группа чекбоксов
+
+    <p>Компонент <code>CCheckboxGroup</code> для управления несколькими чекбоксами. Поддерживает горизонтальную и вертикальную ориентацию через свойство <code>orientation</code>. Значение представляет собой массив выбранных значений.</p>
+
+    <Canvas of={CheckboxStories.Group} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="checkbox" name="group" parser="html" />
+
+    &nbsp;
+
+    ## Кастомная иконка
+
+    <p>Чекбокс с пользовательской иконкой вместо стандартной галочки. Иконка настраивается через слот <code>icon</code>, который получает параметры <code>checked</code>, <code>indeterminate</code> и <code>iconClass</code>.</p>
+
+    <Canvas of={CheckboxStories.CustomIcon} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="checkbox" name="customIcon" parser="html" />
+
+    &nbsp;
+
+    ## Кастомная метка
+
+    <p>Чекбокс с пользовательским содержимым метки через слот <code>default</code>. Позволяет использовать HTML-разметку, иконки или другие компоненты вместо простого текста.</p>
+
+    <Canvas of={CheckboxStories.CustomLabel} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="checkbox" name="customLabel" parser="html" />
+
+    &nbsp;
+
+    ## Кастомные значения
+
+    <p>Чекбокс с пользовательскими значениями вместо стандартных <code>true</code>/<code>false</code>. Настраивается через свойства <code>trueValue</code> и <code>falseValue</code>. Полезно для работы с API, которые используют другие типы данных.</p>
+
+    <Canvas of={CheckboxStories.CustomValues} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="checkbox" name="customValues" parser="html" />
+
+    &nbsp;
+
+    ## В составе формы
+
+    <p>Интеграция с <code>CFormItem</code>: валидация группы чекбоксов, отображение сообщения об ошибке.</p>
+
+    <Canvas of={CheckboxStories.Form} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="checkbox" name="form" parser='html' />
+
+  </div>
+
+  <div>
+    <TableOfContents
+      className='sb-docs-toc sb-unstyled'
+      title='Компоненты'
+      contentsSelector='.sb-docs-content'
+      headingSelector="h2"
+      ignoreSelector='.sbdocs-subtitle'
+    />
+  </div>
+</div>
+
+<style>
+  {`
+  .sbdocs .docblock-argstable{
+    margin-top: 0;
+  }
+`}
+</style>

@@ -53,6 +53,7 @@ export interface AriaOptions {
 export const ARIA_LABELS: AriaOptions = {
   previous: 'Previous',
   next: 'Next',
+  close: 'Close',
 }
 
 export const getAriaLabel = (key: keyof AriaOptions): string | undefined => ARIA_LABELS[key]

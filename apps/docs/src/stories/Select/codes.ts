@@ -379,12 +379,12 @@ const selectCodeTexts: CodeTexts<SelectStoryName> = {
           <CFormItem required label="Выберите страну" :error-message="error" >
             <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" :invalid="!!error" clearable full />
           </CFormItem>
-          <CButton label="Отправить" type="submit" style="width: 100%; margin-top: 10px;" />
+          <CButton label="Отправить" type="submit" style="width: 100%; margin-top: 20px;" />
         </form>
       <template>
       <script setup>
         import { ref } from "vue"
-        import CFormItem from "craftvue/form-item"
+        import CFormItem from "craftvue/formitem"
         import CButton from "craftvue/button"
 
         const value = ref(null)

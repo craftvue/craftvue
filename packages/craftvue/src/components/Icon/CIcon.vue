@@ -70,6 +70,24 @@ const iconLoaders: Record<IconName, () => Promise<{ default: Component }>> = {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
   envelope: () => import('@craftvue/icons/envelope'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
+  minus: () => import('@craftvue/icons/minus'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
+  error: () => import('@craftvue/icons/error'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
+  info: () => import('@craftvue/icons/info'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
+  maximize: () => import('@craftvue/icons/maximize'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
+  minimize: () => import('@craftvue/icons/minimize'),
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore - Icon entry points are only available after @craftvue/icons package is built
+  warning: () => import('@craftvue/icons/warning')
 }
 
 const iconComponent = computed<Component | null>(() => {

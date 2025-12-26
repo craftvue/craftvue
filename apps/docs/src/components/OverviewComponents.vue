@@ -58,7 +58,6 @@ const components = ref<ComponentCategory[]>([
     name: 'Базовые',
     items: [
       { title: 'Button', image: 'button.png', path: '/?path=/docs/components-button--docs' },
-      { title: 'Badge', image: 'badge.png', path: '/?path=/docs/components-badge--docs' },
       { title: 'Icon', image: 'icon.png', path: '/?path=/docs/components-icon--docs' },
     ],
   },
@@ -68,6 +67,16 @@ const components = ref<ComponentCategory[]>([
       { title: 'Input', image: 'input.png', path: '/?path=/docs/components-input--docs' },
       { title: 'FormItem', image: 'formitem.png', path: '/?path=/docs/components-formitem--docs' },
       { title: 'Select', image: 'select.png', path: '/?path=/docs/components-select--docs' },
+      { title: 'Checkbox', image: 'checkbox.png', path: '/?path=/docs/components-checkbox--docs' },
+      { title: 'Radio', image: 'radio.png', path: '/?path=/docs/components-radio--docs' },
+      { title: 'Switch', image: 'switch.png', path: '/?path=/docs/components-switch--docs' },
+    ],
+  },
+  {
+    name: 'Данные',
+    items: [
+      { title: 'Badge', image: 'badge.png', path: '/?path=/docs/components-badge--docs' },
+      { title: 'Tag', image: 'tag.png', path: '/?path=/docs/components-tag--docs' },
     ],
   },
   {
@@ -81,6 +90,18 @@ const components = ref<ComponentCategory[]>([
     name: 'Обратная связь',
     items: [
       { title: 'Tooltip', image: 'tooltip.png', path: '/?path=/docs/components-tooltip--docs' },
+      {
+        title: 'ConfirmDialog',
+        image: 'confirmdialog.png',
+        path: '/?path=/docs/components-confirmdialog--docs',
+      },
+      {
+        title: 'ConfirmPopup',
+        image: 'confirmpopup.png',
+        path: '/?path=/docs/components-confirmpopup--docs',
+      },
+      { title: 'Dialog', image: 'dialog.png', path: '/?path=/docs/components-dialog--docs' },
+      { title: 'Popover', image: 'popover.png', path: '/?path=/docs/components-popover--docs' },
     ],
   },
 ])
@@ -127,7 +148,7 @@ const searchByTitle = (value: string) => {
   &__list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-template-rows: 240px;
+    grid-auto-rows: 240px;
     gap: 20px;
   }
 

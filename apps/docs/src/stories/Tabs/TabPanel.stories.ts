@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/vue3-vite'
 import { CTabPanel } from 'craftvue'
 
 const meta = {
-  title: 'Components/Tabs/TabPanel',
+  title: 'Navigation/Tabs/TabPanel',
   component: CTabPanel,
   args: {
     value: 'tab1',

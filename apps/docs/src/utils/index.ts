@@ -35,7 +35,7 @@ export const parseColor = (color: string): number[] => {
 
   // RGB/RGBA
   const rgbMatch = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/)
-  if(rgbMatch) {
+  if (rgbMatch) {
     return [
       parseInt(rgbMatch[1]),
       parseInt(rgbMatch[2]),
@@ -55,3 +55,5 @@ export const getLuminance = (color: string): number => {
     return 0
   }
 }
+
+export const generateId = () => Math.random().toString(36).slice(2, 8)

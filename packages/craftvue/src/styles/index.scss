@@ -14,6 +14,12 @@
 // 3. Составные компоненты (импортируются после базовых)
 @use '../components/Button/CButton.style.scss' as *;
 @use '../components/Badge/CBadge.style.scss' as *;
+@use '../components/Tag/CTag.style.scss' as *;
+@use '../components/Checkbox/CCheckbox.style.scss' as *;
+@use '../components/CheckboxGroup/CCheckboxGroup.style.scss' as *;
+@use '../components/Radio/CRadio.style.scss' as *;
+@use '../components/RadioGroup/CRadioGroup.style.scss' as *;
+@use '../components/Switch/CSwitch.style.scss' as *;
 @use '../components/Popup/CPopup.style.scss' as *;
 @use '../components/FormItem/CFormItem.style.scss' as *;
 @use '../components/Select/CSelect.style.scss' as *;
@@ -23,3 +29,8 @@
 @use '../components/TabPanels/CTabPanels.style.scss' as *;
 @use '../components/TabPanel/CTabPanel.style.scss' as *;
 @use '../components/Tooltip/CTooltip.style.scss' as *;
+@use '../components/Popover/CPopover.style.scss' as *;
+@use '../components/ConfirmPopup/CConfirmPopup.style.scss' as *;
+@use '../components/ConfirmDialog/CConfirmDialog.style.scss' as *;
+@use '../components/Dialog/CDialog.style.scss' as *;
+

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/vue3-vite'
 import { CTab } from 'craftvue'
 
 const meta = {
-  title: 'Components/Tabs/Tab',
+  title: 'Navigation/Tabs/Tab',
   component: CTab,
   args: {
     value: 'tab1',

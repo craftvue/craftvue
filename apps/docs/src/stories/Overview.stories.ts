@@ -7,12 +7,13 @@ const meta = {
   parameters: {
     layout: 'fullscreen',
   },
-  tags: ['autodocs']
+  // tags: ['autodocs'],
+  tags: ['!dev'],
 } satisfies Meta<typeof OverviewComponents>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
-  name: 'Все компоненты'
+  name: 'Все компоненты',
 }

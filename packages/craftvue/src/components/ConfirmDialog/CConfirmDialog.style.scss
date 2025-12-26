@@ -1,0 +1,41 @@
+.c-confirm-dialog {
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__icon {
+    --color: var(--c-confirm-dialog-icon-color);
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  &__message {
+    flex: 1;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--c-confirm-dialog-color);
+  }
+
+  &.c-confirm-dialog--info {
+    .c-confirm-dialog__icon {
+      --color: var(--c-confirm-dialog-info-icon-color);
+    }
+  }
+  &.c-confirm-dialog--error {
+    .c-confirm-dialog__icon {
+      --color: var(--c-confirm-dialog-error-icon-color);
+    }
+  }
+  &.c-confirm-dialog--success {
+    .c-confirm-dialog__icon {
+      --color: var(--c-confirm-dialog-success-icon-color);
+    }
+  }
+  &.c-confirm-dialog--warning {
+    .c-confirm-dialog__icon {
+      --color: var(--c-confirm-dialog-warning-icon-color);
+    }
+  }
+}

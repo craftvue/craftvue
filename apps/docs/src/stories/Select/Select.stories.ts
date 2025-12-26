@@ -18,7 +18,7 @@ const countries = ref<{ label: string; value: string; disabled?: boolean }[]>([
 ])
 
 const meta = {
-  title: 'Components/Select/Select',
+  title: 'Form/Select/Select',
   component: CSelect,
   parameters: {
     layout: 'fullscreen',
@@ -588,7 +588,7 @@ export const Form: Story = {
         <CFormItem required label="Выберите страну" :error-message="error" >
           <CSelect v-bind="args" v-model="value" :invalid="!!error" full />
         </CFormItem>
-        <CButton label="Отправить" type="submit" style="width: 100%; margin-top: 10px;" />
+        <CButton label="Отправить" type="submit" style="width: 100%; margin-top: 20px;" />
       </form>
     `,
   }),

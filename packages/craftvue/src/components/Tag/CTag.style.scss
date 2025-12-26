@@ -1,0 +1,280 @@
+.c-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 1.5rem;
+  padding-inline: 0.5rem;
+  border-radius: var(--c-border-radius-md);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s,
+    color 0.3s;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.c-tag__close {
+  position: relative;
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.25rem;
+  background-color: transparent;
+  color: inherit;
+  border-radius: var(--c-border-radius-full);
+  transition: background-color 0.2s;
+
+  &-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.c-tag__prefix-icon,
+.c-tag__suffix-icon {
+  flex-shrink: 0;
+  font-size: .875rem;
+}
+
+.c-tag__prefix-icon {
+  margin-right: 0.375rem;
+}
+
+.c-tag__suffix-icon {
+  margin-left: 0.375rem;
+}
+
+.c-tag--closable {
+  padding-right: 0.25rem;
+}
+
+.c-tag--rounded {
+  border-radius: var(--c-border-radius-full);
+}
+
+.c-tag--sm {
+  height: 1.25rem;
+  padding-inline-start: 0.375rem;
+  font-size: 0.625rem;
+
+  .c-tag__prefix-icon,
+  .c-tag__suffix-icon {
+    font-size: .75rem;
+  }
+
+  .c-tag__prefix-icon {
+    margin-right: 0.25rem;
+  }
+
+  .c-tag__suffix-icon {
+    margin-left: 0.25rem;
+  }
+
+  .c-tag__close {
+    width: 0.875rem;
+    height: 0.875rem;
+    font-size: 0.625rem;
+    margin-left: 0.125rem;
+  }
+
+  &.c-tag--closable {
+    padding-right: 0.125rem;
+  }
+}
+
+.c-tag--lg {
+  height: 1.875rem;
+  padding-inline-start: 0.625rem;
+  font-size: 0.875rem;
+
+  .c-tag__prefix-icon,
+  .c-tag__suffix-icon {
+    font-size: 1rem;
+  }
+
+  .c-tag__prefix-icon {
+    margin-right: 0.5rem;
+  }
+
+  .c-tag__suffix-icon {
+    margin-left: 0.5rem;
+  }
+
+  .c-tag__close {
+    width: 1.125rem;
+    height: 1.125rem;
+    font-size: 0.875rem;
+    margin-left: 0.375rem;
+  }
+
+  &.c-tag--closable {
+    padding-right: 0.375rem;
+  }
+}
+
+.c-tag--filled {
+  .c-tag__close:hover {
+    background-color: var(--c-tag-filled-btn-hover-background);
+  }
+}
+
+.c-tag--soft {
+  .c-tag__close:hover {
+    background-color: var(--c-tag-soft-btn-hover-background);
+  }
+}
+
+.c-tag--primary {
+  &.c-tag--filled {
+    color: var(--c-tag-primary-filled-color);
+    background-color: var(--c-tag-primary-filled-background);
+  }
+
+  &.c-tag--outlined {
+    color: var(--c-tag-primary-outlined-color);
+    border-color: var(--c-tag-primary-outlined-border-color);
+
+    .c-tag__close:hover {
+      background-color: var(--c-tag-primary-outlined-btn-hover-background);
+    }
+  }
+
+  &.c-tag--soft {
+    color: var(--c-tag-primary-soft-color);
+    background-color: var(--c-tag-primary-soft-background);
+  }
+}
+
+.c-tag--secondary {
+  &.c-tag--filled {
+    color: var(--c-tag-secondary-filled-color);
+    background-color: var(--c-tag-secondary-filled-background);
+
+    .c-tag__close:hover {
+      background-color: var(--c-tag-secondary-filled-btn-hover-background);
+    }
+  }
+
+  &.c-tag--outlined {
+    color: var(--c-tag-secondary-outlined-color);
+    border-color: var(--c-tag-secondary-outlined-border-color);
+
+    .c-tag__close:hover {
+      background-color: var(--c-tag-secondary-outlined-btn-hover-background);
+    }
+  }
+
+  &.c-tag--soft {
+    color: var(--c-tag-secondary-soft-color);
+    background-color: var(--c-tag-secondary-soft-background);
+  }
+}
+
+.c-tag--contrast {
+  &.c-tag--filled {
+    color: var(--c-tag-contrast-filled-color);
+    background-color: var(--c-tag-contrast-filled-background);
+  }
+
+  &.c-tag--outlined {
+    color: var(--c-tag-contrast-outlined-color);
+    border-color: var(--c-tag-contrast-outlined-border-color);
+
+    .c-tag__close:hover {
+      background-color: var(--c-tag-contrast-outlined-btn-hover-background);
+    }
+  }
+
+  &.c-tag--soft {
+    color: var(--c-tag-contrast-soft-color);
+    background-color: var(--c-tag-contrast-soft-background);
+  }
+}
+
+.c-tag--success {
+  &.c-tag--filled {
+    color: var(--c-tag-success-filled-color);
+    background-color: var(--c-tag-success-filled-background);
+  }
+
+  &.c-tag--outlined {
+    color: var(--c-tag-success-outlined-color);
+    border-color: var(--c-tag-success-outlined-border-color);
+
+    .c-tag__close:hover {
+      background-color: var(--c-tag-success-outlined-btn-hover-background);
+    }
+  }
+
+  &.c-tag--soft {
+    color: var(--c-tag-success-soft-color);
+    background-color: var(--c-tag-success-soft-background);
+  }
+}
+
+.c-tag--info {
+  &.c-tag--filled {
+    color: var(--c-tag-info-filled-color);
+    background-color: var(--c-tag-info-filled-background);
+  }
+
+  &.c-tag--outlined {
+    color: var(--c-tag-info-outlined-color);
+    border-color: var(--c-tag-info-outlined-border-color);
+
+    .c-tag__close:hover {
+      background-color: var(--c-tag-info-outlined-btn-hover-background);
+    }
+  }
+
+  &.c-tag--soft {
+    color: var(--c-tag-info-soft-color);
+    background-color: var(--c-tag-info-soft-background);
+  }
+}
+
+.c-tag--warning {
+  &.c-tag--filled {
+    color: var(--c-tag-warning-filled-color);
+    background-color: var(--c-tag-warning-filled-background);
+  }
+
+  &.c-tag--outlined {
+    color: var(--c-tag-warning-outlined-color);
+    border-color: var(--c-tag-warning-outlined-border-color);
+
+    .c-tag__close:hover {
+      background-color: var(--c-tag-warning-outlined-btn-hover-background);
+    }
+  }
+
+  &.c-tag--soft {
+    color: var(--c-tag-warning-soft-color);
+    background-color: var(--c-tag-warning-soft-background);
+  }
+}
+
+.c-tag--error {
+  &.c-tag--filled {
+    color: var(--c-tag-error-filled-color);
+    background-color: var(--c-tag-error-filled-background);
+  }
+
+  &.c-tag--outlined {
+    color: var(--c-tag-error-outlined-color);
+    border-color: var(--c-tag-error-outlined-border-color);
+
+    .c-tag__close:hover {
+      background-color: var(--c-tag-error-outlined-btn-hover-background);
+    }
+  }
+
+  &.c-tag--soft {
+    color: var(--c-tag-error-soft-color);
+    background-color: var(--c-tag-error-soft-background);
+  }
+}

@@ -9,7 +9,7 @@ type AllDropdownArgs = Omit<DropdownEmits, 'show'> &
   ComponentPropsAndSlots<typeof CDropdown> & { 'show ': any }
 
 const meta = {
-  title: 'Components/Dropdown/Dropdown',
+  title: 'Navigation/Dropdown/Dropdown',
   component: CDropdown,
   parameters: {
     layout: 'centered',

@@ -1,5 +1,38 @@
 # Changelog
 
+## [1.4.0](https://www.npmjs.com/package/craftvue/v/1.4.0) (2025-12-26)
+
+#### Features
+
+- Added components: `CCheckbox`, `CCheckboxGroup`, `CRadio`, `CRadioGroup`, `CSwitch`, `CConfirmPopup`, `CConfirmDialog`, `Dialog`, `Popover`, `Tag`
+- Added entry points and exports for `Checkbox`, `CheckboxGroup`, `Radio`, `RadioGroup`, `Switch`, `Tag`, `Dialog`, `ConfirmDialog`, `ConfirmPopup`, `Popover` components in `package.json`
+- Added entry points for new components in `vite.config.ts`
+- Added new components to resolver for auto-import: `checkbox`, `checkbox-group`, `radio`, `radio-group`, `switch`, `tag`, `dialog`, `confirm-dialog`, `confirm-popup`, `popover`
+- Extended `error` slot scope in `CFormItem` with `errorClass` property
+- Added `durationEnter` and `durationLeave` props to `CFormItem` for error message animation control
+- Added new icon support in `CIcon`: `minus`, `error`, `info`, `maximize`, `minimize`, `warning`
+- Exposed `close`, `open` and `isOpen` methods from `CPopup` component
+- Added `close` aria-label to accessibility constants
+- Added new base color variables: `--c-info-color`, `--c-warning-color`, `--c-error-color`, `--c-success-color`  
+- Added CSS variables for `Checkbox`, `Radio`, `Switch`, `Popover`, `ConfirmPopup`, `Dialog`, `ConfirmDialog` and `Tag` components
+
+#### Bug fixes
+
+- Changed `FormItem` export path from `form-item` to `formitem` in `package.json`
+- Fixed condition visibility of error message in `showError` computed
+- Added base class `c-dropdown` for `CDropdown`
+- Fixed `CTooltip` to apply base class `c-tooltip` and correctly render `trigger`/`default` slots
+
+#### Refactors
+
+- Refactored `CFormItem` error display: changed from absolute positioning to flex layout with custom animation
+- Changed `font-size` property value for label of `CFormItem`
+- Updated `CPopup` to use `inheritAttrs: false`
+- Removed deprecated `zoom-in-top` transition classes from global styles
+- Updated component exports in `src/components/index.ts` to include new components
+- Added style imports for new components in `styles/index.scss`
+- Updated dependency `@craftvue/icons` to `1.3.0`
+
 ## [1.3.1](https://www.npmjs.com/package/craftvue/v/1.3.1) (2025-11-06)
 
 #### Bug fixes

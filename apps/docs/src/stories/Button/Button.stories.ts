@@ -36,7 +36,7 @@ const customArgsKeys: AllKeys[] = [
 ]
 
 const meta = {
-  title: 'Components/Button/Button',
+  title: 'Basic/Button/Button',
   component: CButton,
   args: {
     onClick: fn(),

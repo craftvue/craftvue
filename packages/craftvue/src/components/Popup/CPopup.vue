@@ -58,6 +58,10 @@ import {
   type IntersectionObserverReturn,
 } from '@/composables'
 
+defineOptions({
+  inheritAttrs: false,
+})
+
 const attrs = useAttrs() as HTMLAttributes
 const slots = defineSlots<PopupSlots>()
 const emits = defineEmits<PopupEmits>()
@@ -884,5 +888,11 @@ onUnmounted(() => {
       hideTimer = null
     }
   }
+})
+
+defineExpose({
+  close: closePopup,
+  open: openPopup,
+  isOpen: showState,
 })
 </script>

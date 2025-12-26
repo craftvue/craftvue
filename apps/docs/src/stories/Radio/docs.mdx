@@ -1,0 +1,148 @@
+import {
+  Meta,
+  Title,
+  Canvas,
+  ArgTypes,
+  Subtitle,
+  TableOfContents,
+} from '@storybook/addon-docs/blocks'
+import * as RadioStories from './Radio.stories'
+import * as RadioGroupStories from './RadioGroup.stories.ts'
+import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+
+<Meta title="Form/Radio" />
+
+<div className='sb-docs-wrapper' >
+  <div className='sb-docs-content'>
+    <Title>Radio</Title>
+
+    <Subtitle>
+      Компонент радиокнопки для выбора одного значения из группы опций с поддержкой группировки и кастомизации
+    </Subtitle>
+
+    <h3>Импорт</h3>
+
+    <CustomSource
+      code={`
+        import CRadio from 'craftvue/radio'
+        import CRadioGroup from 'craftvue/radiogroup'
+      `}
+      actions={['copy']}
+      parser="babel"
+      language="javascript"
+    />
+
+    ### Radio
+    <ArgTypes of={RadioStories.Basic} />
+
+    ### RadioGroup
+    <ArgTypes of={RadioGroupStories.Basic} />
+
+    ## Базовый пример
+
+    <p>Стандартные радиокнопки в базовом состоянии. Для работы радиокнопок необходимо связать их через общий <code>v-model</code> или использовать компонент <code>CRadioGroup</code>.</p>
+
+    <Canvas of={RadioStories.Basic} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="radio" />
+
+    &nbsp;
+
+    ## Заполненный стиль
+
+    <p>Радиокнопка с заполненным фоном вместо стандартной обводки. Устанавливается свойством <code>variant="filled"</code>.</p>
+
+    <Canvas of={RadioStories.Filled} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="radio" name="filled" />
+
+    &nbsp;
+
+    ## Размер
+
+    <p>Размер радиокнопки контролируется свойством <code>size</code>. Доступные значения: <code>sm</code> (маленький), <code>lg</code> (большой). По умолчанию используется средний размер.</p>
+
+    <Canvas of={RadioStories.Size} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="radio" name="size" />
+
+    &nbsp;
+
+    ## Отключенное состояние
+
+    <p>Радиокнопка в неактивном состоянии, недоступная для взаимодействия. Устанавливается свойством <code>disabled</code>.</p>
+
+    <Canvas of={RadioStories.Disabled} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="radio" name="disabled" />
+
+    &nbsp;
+
+    ## Состояние ошибки
+
+    <p>Радиокнопка в состоянии ошибки с красной рамкой. Активируется свойством <code>invalid</code>. Используется для отображения ошибок валидации в формах.</p>
+
+    <Canvas of={RadioStories.Invalid} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="radio" name="invalid" />
+
+    &nbsp;
+
+    ## Группа радиокнопок
+
+    <p>Компонент <code>CRadioGroup</code> для управления несколькими радиокнопками. Поддерживает горизонтальную и вертикальную ориентацию через свойство <code>orientation</code>. Значение представляет собой выбранную опцию из группы.</p>
+
+    <Canvas of={RadioStories.Group} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="radio" name="group" parser='html' />
+
+    &nbsp;
+
+    ## Кастомная иконка
+
+    <p>Радиокнопка с пользовательской иконкой вместо стандартной точки. Иконка настраивается через слот <code>icon</code>, который получает параметры <code>checked</code> и <code>iconClass</code>.</p>
+
+    <Canvas of={RadioStories.CustomIcon} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="radio" name="customIcon" parser="html" />
+
+    &nbsp;
+
+    ## Кастомная метка
+
+    <p>Радиокнопка с пользовательским содержимым метки через слот <code>default</code>. Позволяет использовать HTML-разметку, иконки или другие компоненты вместо простого текста.</p>
+
+    <Canvas of={RadioStories.CustomLabel} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="radio" name="customLabel" parser="html" />
+
+    &nbsp;
+
+    ## В составе формы
+
+    <p>Интеграция с <code>CFormItem</code>: валидация группы радиокнопок, отображение сообщения об ошибке.</p>
+
+    <Canvas of={RadioStories.Form} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="radio" name="form" parser="html" />
+
+  </div>
+
+  <div>
+    <TableOfContents
+      className='sb-docs-toc sb-unstyled'
+      title='Компоненты'
+      contentsSelector='.sb-docs-content'
+      headingSelector="h2"
+      ignoreSelector='.sbdocs-subtitle'
+    />
+  </div>
+</div>
+
+<style>
+  {`
+  .sbdocs .docblock-argstable{
+    margin-top: 0;
+  }
+`}
+</style>

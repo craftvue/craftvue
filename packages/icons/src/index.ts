@@ -1,16 +1,22 @@
-export {default as CloseIcon} from "./components/CloseIcon.vue"
-export {default as SearchIcon} from "./components/SearchIcon.vue"
-export {default as SpinnerIcon} from "./components/SpinnerIcon.vue"
-export {default as EyeIcon} from "./components/EyeIcon.vue"
-export {default as EyeSlashIcon} from "./components/EyeSlashIcon.vue"
-export {default as NextArrowIcon} from "./components/NextArrowIcon.vue"
-export {default as PrevArrowIcon} from "./components/PrevArrowIcon.vue"
-export {default as CheckIcon} from "./components/CheckIcon.vue"
-export {default as EditIcon} from "./components/EditIcon.vue"
-export {default as SaveIcon} from "./components/SaveIcon.vue"
-export {default as DeleteIcon} from "./components/DeleteIcon.vue"
-export {default as HomeIcon} from "./components/HomeIcon.vue"
-export {default as AddIcon} from "./components/AddIcon.vue"
-export {default as EnvelopeIcon} from "./components/EnvelopeIcon.vue"
-export {default as UpArrowIcon} from "./components/UpArrowIcon.vue"
-export {default as DownArrowIcon} from "./components/DownArrowIcon.vue"
+export { default as CloseIcon } from './components/CloseIcon.vue'
+export { default as SearchIcon } from './components/SearchIcon.vue'
+export { default as SpinnerIcon } from './components/SpinnerIcon.vue'
+export { default as EyeIcon } from './components/EyeIcon.vue'
+export { default as EyeSlashIcon } from './components/EyeSlashIcon.vue'
+export { default as NextArrowIcon } from './components/NextArrowIcon.vue'
+export { default as PrevArrowIcon } from './components/PrevArrowIcon.vue'
+export { default as CheckIcon } from './components/CheckIcon.vue'
+export { default as EditIcon } from './components/EditIcon.vue'
+export { default as SaveIcon } from './components/SaveIcon.vue'
+export { default as DeleteIcon } from './components/DeleteIcon.vue'
+export { default as HomeIcon } from './components/HomeIcon.vue'
+export { default as AddIcon } from './components/AddIcon.vue'
+export { default as MinusIcon } from './components/MinusIcon.vue'
+export { default as EnvelopeIcon } from './components/EnvelopeIcon.vue'
+export { default as UpArrowIcon } from './components/UpArrowIcon.vue'
+export { default as DownArrowIcon } from './components/DownArrowIcon.vue'
+export { default as WarningIcon } from './components/WarningIcon.vue'
+export { default as MinimizeIcon } from './components/MinimizeIcon.vue'
+export { default as MaximizeIcon } from './components/MaximizeIcon.vue'
+export { default as InfoIcon } from './components/InfoIcon.vue'
+export { default as ErrorIcon } from './components/ErrorIcon.vue'

@@ -45,6 +45,19 @@
   &-code {
     border-radius: 8px;
     font-size: 14px;
+
+    &::-webkit-scrollbar {
+      height: 10px;
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #262626;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #ffffff2d;
+      border-radius: 20px;
+    }
     // border: 1px solid rgba(255, 255, 255, 0.18);
   }
 

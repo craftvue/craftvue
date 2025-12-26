@@ -1,0 +1,92 @@
+import {
+  Meta,
+  Title,
+  Canvas,
+  ArgTypes,
+  Subtitle,
+  TableOfContents,
+} from '@storybook/addon-docs/blocks'
+import * as ConfirmPopupStories from './ConfirmPopup.stories'
+import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+
+<Meta title="Feedback/ConfirmPopup" />
+
+<div className='sb-docs-wrapper' >
+  <div className='sb-docs-content'>
+    <Title>ConfirmPopup</Title>
+
+    <Subtitle>
+      Компонент всплывающего окна подтверждения для запроса подтверждения действий пользователя с поддержкой кастомизации и позиционирования
+    </Subtitle>
+
+    <h3>Импорт</h3>
+
+    <CustomSource
+      code="import CConfirmPopup from 'craftvue/confirmpopup'"
+      actions={['copy']}
+      parser="babel"
+      language="javascript"
+    />
+
+    <ArgTypes of={ConfirmPopupStories.Basic}  />
+
+    ## Базовый пример
+
+    <p>Стандартное окно подтверждения с сообщением и кнопками "Yes" и "No". Открывается по клику на элемент-триггер через слот <code>trigger</code>.</p>
+
+    <Canvas of={ConfirmPopupStories.Basic} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="confirmPopup" parser='html' />
+
+    &nbsp;
+
+    ## Позиционирование
+
+    <p>Окно подтверждения может быть позиционировано относительно элемента-триггера в четырех направлениях: <code>top</code> (сверху), <code>bottom</code> (снизу), <code>left</code> (слева), <code>right</code> (справа). Выравнивание контролируется свойством <code>align</code> (start, center, end).</p>
+
+    <Canvas of={ConfirmPopupStories.Placement} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="confirmPopup" name="placement" parser='html' />
+
+    &nbsp;
+
+    ## Контролируемое состояние
+
+    <p>Управление видимостью окна подтверждения через свойство <code>show</code> (v-model:show). Позволяет программно открывать и закрывать окно, а также использовать свойство <code>rootEl</code> для указания элемента-триггера.</p>
+
+    <Canvas of={ConfirmPopupStories.Controlled} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="confirmPopup" name="controlled" parser='html' />
+
+    &nbsp;
+
+    ## Кастомизация
+
+    <p>Настройка внешнего вида окна подтверждения: иконка через свойство <code>icon</code>, цвет иконки через <code>iconColor</code>, тексты кнопок через <code>confirmText</code> и <code>cancelText</code>, стили кнопок через <code>confirmVariant</code>/<code>cancelVariant</code> и цветовые палитры через <code>confirmSeverity</code>/<code>cancelSeverity</code>.</p>
+
+    <Canvas of={ConfirmPopupStories.Customization} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="confirmPopup" name="customization" parser='html' />
+
+    &nbsp;
+
+    ## Кастомный шаблон
+
+    <p>Использование слотов <code>default</code> для кастомного содержимого и <code>actions</code> для кастомных кнопок действий. Слот <code>actions</code> получает параметры <code>confirm</code> (функция подтверждения) и <code>cancel</code> (функция отмены) для полного контроля над поведением кнопок.</p>
+
+    <Canvas of={ConfirmPopupStories.Template} sourceState="none" className="sb-canvas" />
+
+    <CustomSource type="confirmPopup" name="template" parser='html' />
+
+  </div>
+
+  <div>
+    <TableOfContents
+      className='sb-docs-toc sb-unstyled'
+      title='Компоненты'
+      contentsSelector='.sb-docs-content'
+      headingSelector="h2"
+      ignoreSelector='.sbdocs-subtitle'
+    />
+  </div>
+</div>

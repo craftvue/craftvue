@@ -1,0 +1,87 @@
+@use '@/styles/mixins.scss' as *;
+
+.c-dialog__overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--c-dialog-overlay-background);
+  z-index: 3000;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.c-dialog__overlay--fullscreen {
+  padding: 0;
+}
+
+.c-dialog__overlay--non-modal {
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.c-dialog__overlay--non-modal .c-dialog {
+  pointer-events: auto;
+}
+
+.c-dialog {
+  background-color: var(--c-dialog-background);
+  border-radius: var(--c-border-radius-xl);
+  border: 1px solid var(--c-dialog-border-color);
+  box-shadow: 0 0.625rem 2.5rem var(--c-dialog-shadow-color);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.c-dialog--fullscreen {
+  border-radius: 0;
+  border: none;
+}
+
+.c-dialog__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem 1rem;
+  flex-shrink: 0;
+}
+
+.c-dialog__title {
+  color: var(--c-dialog-color);
+  font-size: 1.25rem;
+  font-weight: var(--c-font-weight-semibold);
+}
+
+.c-dialog__actions {
+  display: flex;
+  margin-left: auto;
+  gap: 0.3125rem;
+  flex-shrink: 0;
+}
+
+.c-dialog__actions__btn {
+  max-width: 2.1875rem;
+  max-height: 2.1875rem;
+  font-size: 1.125rem;
+}
+
+.c-dialog__body {
+  flex: 1 1 auto;
+  padding: 0 1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include Scroll(5px, 5px);
+}
+
+.c-dialog__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 1rem 1rem 0;
+  flex-shrink: 0;
+}

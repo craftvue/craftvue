@@ -6,7 +6,7 @@ import DeleteIcon from '@craftvue/icons/delete'
 import { ref, watch } from 'vue'
 
 const meta = {
-  title: 'Components/Badge/Badge',
+  title: 'Data/Badge/Badge',
   component: CBadge,
   args: {
     value: '5',

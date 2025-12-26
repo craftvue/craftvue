@@ -1,0 +1,32 @@
+.c-confirm-popup {
+  padding: 0.625rem;
+  min-width: 150px;
+}
+
+.c-confirm-popup__body {
+}
+
+.c-confirm-popup__content {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+}
+
+.c-confirm-popup__icon {
+  --color: var(--c-confirm-popup-icon-color);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.c-confirm-popup__message {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: var(--c-confirm-popup-color);
+}
+
+.c-confirm-popup__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.625rem;
+}

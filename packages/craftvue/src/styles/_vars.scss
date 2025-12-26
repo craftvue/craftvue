@@ -30,6 +30,11 @@
   --c-disabled-opacity: 0.6;
   --c-border-radius: var(--c-border-radius-lg);
 
+  --c-info-color: var(--blue-400);
+  --c-warning-color: var(--orange-300);
+  --c-error-color: var(--red-400);
+  --c-success-color: var(--green-400);
+
   /////////////////////////////
   ///////// SCROLLBAR /////////
   /////////////////////////////
@@ -131,6 +136,86 @@
   --c-form-item-label-color: var(--neutral-300);
 
   //////////////////////////////
+  ///// CHECKBOX VARIABLES /////
+  //////////////////////////////
+  --c-checkbox-label-color: var(--c-main-color);
+  --c-checkbox-border-color: var(--neutral-600);
+  --c-checkbox-background: var(--zinc-950);
+  --c-checkbox-invalid-border-color: var(--c-invalid-border-color);
+  --c-checkbox-hover-border-color: var(--neutral-500);
+  --c-checkbox-disabled-color: var(--neutral-400);
+  --c-checkbox-disabled-background: var(--neutral-700);
+  --c-checkbox-checked-background: var(--c-prime-color);
+  --c-checkbox-checked-border-color: var(--c-prime-color);
+  --c-checkbox-checked-icon-color: var(--black);
+  --c-checkbox-checked-hover-border-color: var(--c-prime-color-light);
+  --c-checkbox-checked-hover-background: var(--c-prime-color-light);
+  --c-checkbox-checked-focus-border-color: var(--c-prime-color);
+  --c-checkbox-checked-focus-hover-border-color: var(--c-prime-color-light);
+  --c-checkbox-focus-border-color: var(--neutral-600);
+  --c-checkbox-focus-ring-color: var(--c-prime-color);
+  --c-checkbox-focus-hover-border-color: var(--neutral-500);
+
+  // filled
+  --c-checkbox-filled-background: var(--neutral-800);
+
+  //////////////////////////////
+  /////// RADIO VARIABLES //////
+  //////////////////////////////
+  --c-radio-label-color: var(--c-main-color);
+  --c-radio-border-color: var(--neutral-600);
+  --c-radio-background: var(--zinc-950);
+  --c-radio-disabled-color: var(--neutral-400);
+  --c-radio-disabled-background: var(--neutral-700);
+  --c-radio-checked-border-color: var(--c-prime-color);
+  --c-radio-checked-color: var(--c-prime-color);
+  --c-radio-checked-hover-border-color: var(--c-prime-color-light);
+  --c-radio-checked-hover-color: var(--c-prime-color-light);
+  --c-radio-checked-focus-border-color: var(--c-prime-color);
+  --c-radio-checked-focus-hover-border-color: var(--c-prime-color-light);
+  --c-radio-invalid-border-color: var(--c-invalid-border-color);
+  --c-radio-focus-ring-color: var(--c-prime-color);
+  --c-radio-focus-border-color: var(--neutral-600);
+  --c-radio-focus-hover-border-color: var(--neutral-500);
+  --c-radio-hover-border-color: var(--neutral-500);
+
+  // filled
+  --c-radio-filled-background: var(--neutral-800);
+
+  //////////////////////////////
+  /////// SWITCH VARIABLES /////
+  //////////////////////////////
+  --c-switch-label-color: var(--c-main-color);
+  --c-switch-border-color: var(--neutral-600);
+  --c-switch-background: var(--zinc-950);
+  --c-switch-thumb-background: var(--neutral-400);
+  --c-switch-thumb-color: var(--zinc-950);
+  --c-switch-disabled-color: var(--neutral-400);
+  --c-switch-disabled-background: var(--neutral-700);
+  --c-switch-disabled-thumb-background: var(--neutral-500);
+  --c-switch-disabled-thumb-color: var(--neutral-400);
+  --c-switch-checked-border-color: var(--c-prime-color);
+  --c-switch-checked-background: var(--c-prime-color);
+  --c-switch-checked-thumb-background: color-mix(in srgb, var(--c-prime-color) 40%, #000 100%);
+  --c-switch-checked-thumb-color: var(--c-prime-color);
+  --c-switch-checked-hover-border-color: var(--c-prime-color-light);
+  --c-switch-checked-hover-background: var(--c-prime-color-light);
+  --c-switch-invalid-border-color: var(--c-invalid-border-color);
+  --c-switch-hover-border-color: var(--neutral-500);
+  --c-switch-focus-border-color: var(--neutral-600);
+  --c-switch-focus-ring-color: var(--c-prime-color);
+  --c-switch-focus-hover-border-color: var(--neutral-500);
+
+  // filled
+  --c-switch-filled-background: var(--neutral-700);
+  --c-switch-filled-border-color: var(--neutral-700);
+
+  --c-switch-gap: 0.125rem;
+  --c-switch-thumb-size: 0.875rem;
+  --c-switch-track-width: 2.25rem;
+  --c-switch-track-height: 1.25rem;
+
+  //////////////////////////////
   /////// TABS VARIABLES ///////
   //////////////////////////////
   --c-tabs-tablist-background: var(--c-ground-back);
@@ -183,6 +268,110 @@
   --c-popup-background: var(--neutral-900);
   --c-popup-border-color: var(--neutral-600);
   --c-popup-shadow-color: var(--black);
+
+  ////////////////////////////
+  //// POPOVER VARIABLES /////
+  ////////////////////////////
+  --c-popover-color: var(--c-main-color);
+
+  /////////////////////////////
+  // CONFIRM POPUP VARIABLES //
+  /////////////////////////////
+  --c-confirm-popup-color: var(--c-main-color);
+  --c-confirm-popup-icon-color: var(--c-prime-color);
+
+  ////////////////////////////
+  ///// DIALOG VARIABLES /////
+  ////////////////////////////
+  --c-dialog-overlay-background: rgba(0, 0, 0, 0.6);
+  --c-dialog-background: var(--neutral-900);
+  --c-dialog-border-color: var(--neutral-600);
+  --c-dialog-shadow-color: rgba(0, 0, 0, 0.8);
+  --c-dialog-color: var(--c-main-color);
+
+  //////////////////////////////
+  // CONFIRM DIALOG VARIABLES //
+  //////////////////////////////
+  --c-confirm-dialog-color: var(--c-main-color);
+  --c-confirm-dialog-icon-color: var(--c-prime-color);
+  --c-confirm-dialog-info-icon-color: var(--c-info-color);
+  --c-confirm-dialog-error-icon-color: var(--c-error-color);
+  --c-confirm-dialog-success-icon-color: var(--c-success-color);
+  --c-confirm-dialog-warning-icon-color: var(--c-warning-color);
+
+  ////////////////////////////
+  ///// TAG VARIABLES ////////
+  ////////////////////////////
+  --c-tag-filled-btn-hover-background: rgba(0, 0, 0, 0.2);
+  --c-tag-soft-btn-hover-background: rgba(255, 255, 255, 0.1);
+
+  // primary
+  --c-tag-primary-filled-color: var(--black);
+  --c-tag-primary-filled-background: var(--c-prime-color);
+  --c-tag-primary-outlined-color: var(--c-prime-color);
+  --c-tag-primary-outlined-border-color: color-mix(in srgb, var(--c-prime-color) 60%, #000 40%);
+  --c-tag-primary-soft-color: var(--c-prime-color-light);
+  --c-tag-primary-soft-background: color-mix(in srgb, var(--c-prime-color), transparent 84%);
+  --c-tag-primary-outlined-btn-hover-background: color-mix(
+    in srgb,
+    var(--c-prime-color),
+    transparent 84%
+  );
+
+  // secondary
+  --c-tag-secondary-filled-color: var(--white);
+  --c-tag-secondary-filled-background: var(--c-secondary-back);
+  --c-tag-secondary-outlined-color: var(--white);
+  --c-tag-secondary-outlined-border-color: var(--neutral-700);
+  --c-tag-secondary-soft-color: var(--neutral-300);
+  --c-tag-secondary-soft-background: var(--c-secondary-back);
+  --c-tag-secondary-outlined-btn-hover-background: var(--c-secondary-back);
+  --c-tag-secondary-filled-btn-hover-background: rgba(255, 255, 255, 0.1);
+
+  // contrast
+  --c-tag-contrast-filled-color: var(--white);
+  --c-tag-contrast-filled-background: var(--c-prime-color-dark);
+  --c-tag-contrast-outlined-color: var(--white);
+  --c-tag-contrast-outlined-border-color: var(--c-prime-color-dark);
+  --c-tag-contrast-soft-color: color-mix(in srgb, var(--c-prime-color) 50%, #fff 50%);
+  --c-tag-contrast-soft-background: color-mix(in srgb, var(--c-prime-color-dark), transparent 64%);
+  --c-tag-contrast-outlined-btn-hover-background: color-mix(in srgb, var(--c-prime-color-dark), transparent 64%);
+
+  // success
+  --c-tag-success-filled-color: var(--black);
+  --c-tag-success-filled-background: var(--c-success-color);
+  --c-tag-success-outlined-color: var(--c-success-color);
+  --c-tag-success-outlined-border-color: color-mix(in srgb, var(--c-success-color) 60%, #000 40%);
+  --c-tag-success-soft-color: var(--green-300);
+  --c-tag-success-soft-background: color-mix(in srgb, var(--c-success-color), transparent 84%);
+  --c-tag-success-outlined-btn-hover-background: color-mix(in srgb, var(--c-success-color), transparent 84%);
+
+  // info
+  --c-tag-info-filled-color: var(--black);
+  --c-tag-info-filled-background: var(--c-info-color);
+  --c-tag-info-outlined-color: var(--c-info-color);
+  --c-tag-info-outlined-border-color: color-mix(in srgb, var(--c-info-color) 60%, #000 40%);
+  --c-tag-info-soft-color: var(--blue-300);
+  --c-tag-info-soft-background: color-mix(in srgb, var(--c-info-color), transparent 84%);
+  --c-tag-info-outlined-btn-hover-background: color-mix(in srgb, var(--c-info-color), transparent 84%);
+
+  // warning
+  --c-tag-warning-filled-color: var(--black);
+  --c-tag-warning-filled-background: var(--c-warning-color);
+  --c-tag-warning-outlined-color: var(--c-warning-color);
+  --c-tag-warning-outlined-border-color: color-mix(in srgb, var(--c-warning-color) 60%, #000 40%);
+  --c-tag-warning-soft-color: var(--orange-200);
+  --c-tag-warning-soft-background: color-mix(in srgb, var(--c-warning-color), transparent 84%);
+  --c-tag-warning-outlined-btn-hover-background: color-mix(in srgb, var(--c-warning-color), transparent 84%);
+
+  // error
+  --c-tag-error-filled-color: var(--black);
+  --c-tag-error-filled-background: var(--c-error-color);
+  --c-tag-error-outlined-color: var(--c-error-color);
+  --c-tag-error-outlined-border-color: color-mix(in srgb, var(--c-error-color) 60%, #000 40%);
+  --c-tag-error-soft-color: var(--red-300);
+  --c-tag-error-soft-background: color-mix(in srgb, var(--c-error-color), transparent 84%);
+  --c-tag-error-outlined-btn-hover-background: color-mix(in srgb, var(--c-error-color), transparent 84%);
 }
 
 :root {

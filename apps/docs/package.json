@@ -11,7 +11,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@craftvue/icons": "^1.2.0",
+    "@craftvue/icons": "^1.3.0",
     "@formkit/auto-animate": "^0.9.0",
     "react": "^19.1.1",
     "react-syntax-highlighter": "^15.6.6",

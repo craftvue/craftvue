@@ -26,6 +26,12 @@ export type IconName =
   | 'home'
   | 'add'
   | 'envelope'
+  | 'minus'
+  | 'error'
+  | 'info'
+  | 'maximize'
+  | 'minimize'
+  | 'warning'
 
 export interface IconSlots {
   default(): VNode[]

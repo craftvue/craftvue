@@ -12,7 +12,8 @@ const meta = {
       },
     },
   },
-  tags: ['autodocs'],
+  // tags: ['autodocs'],
+  tags: ['!dev'],
 } satisfies Meta<typeof IconGallery>
 
 export default meta

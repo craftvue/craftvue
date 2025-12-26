@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Meta, StoryObj } from '@storybook/vue3-vite'
-import { CFormItem, CInput, CButton } from 'craftvue'
+import { CFormItem, CInput, CButton, CRadio, CRadioGroup } from 'craftvue'
 import { ref } from 'vue'
 
 const meta = {
-  title: 'Components/FormItem/FormItem',
+  title: 'Form/FormItem/FormItem',
   component: CFormItem,
   args: {
     label: 'Label',
@@ -229,7 +229,7 @@ export const Form: Story = {
     for: { control: false },
   },
   render: () => ({
-    components: { CFormItem, CInput, CButton },
+    components: { CFormItem, CInput, CButton, CRadio, CRadioGroup },
     setup() {
       const form = ref({
         name: '',
@@ -246,7 +246,7 @@ export const Form: Story = {
 
       const submit = () => {
         errors.value.name = form.value.name ? '' : 'Please enter name'
-        errors.value.email = form.value.email ? '' : 'Please enter email'
+        errors.value.email = form.value.email ? '' : 'Please enter email Please enter email Please enter email'
         errors.value.resources = form.value.resources ? '' : 'Please select resource'
       }
 
@@ -268,8 +268,8 @@ export const Form: Story = {
       return { form, errors, submit, reset }
     },
     template: `
-        <form @submit.prevent="submit" style="display: flex; flex-direction: column; gap: 5px; width: 400px; padding: 20px; border: 1px solid var(--prime-color); border-radius: 8px;">
-        <h3 style="margin-bottom: 20px; font-size: 20px;">Contact form</h3>
+      <form @submit.prevent="submit" style="display: flex; flex-direction: column; gap: 1rem; width: 400px; padding: 20px; border: 1px solid var(--prime-color); border-radius: 8px;">
+        <h1 style="margin-bottom: 10px; font-size: 24px;">Contact form</h1>
 
         <CFormItem label="Name" required :errorMessage="errors.name">
           <CInput v-model="form.name" placeholder="Your name" :invalid="!!errors.name" style="width: 100%;"/>
@@ -284,16 +284,10 @@ export const Form: Story = {
         </CFormItem>
 
         <CFormItem label="Resources" required :errorMessage="errors.resources">
-          <div style="display: flex; gap: 20px;">
-            <label style="display: flex; gap: 4px;">
-              <input v-model="form.resources" type="radio" name="resources" value="online" />
-              <span>Online resource</span>
-            </label>
-            <label style="display: flex; gap: 4px;">
-              <input v-model="form.resources" type="radio" name="resources" value="offline" />
-              <span>Offline resource</span>
-            </label>
-          </div>
+          <CRadioGroup v-model="form.resources" orientation="horizontal">
+            <CRadio value="online" label="Online resource" />
+            <CRadio value="offline" label="Offline resource" />
+          </CRadioGroup>
         </CFormItem>
 
         <div style="margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr;  gap: 10px;">

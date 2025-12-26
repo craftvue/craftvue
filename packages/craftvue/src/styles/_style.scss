@@ -4,20 +4,3 @@ body {
   font-size: var(--c-font-size-base);
   line-height: var(--c-line-height-base);
 }
-
-// transitions
-.zoom-in-top-enter-active,
-.zoom-in-top-leave-active {
-  opacity: 1;
-  transform: scaleY(1);
-  transform-origin: center top;
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
-}
-
-.zoom-in-top-enter-from,
-.zoom-in-top-leave-to {
-  opacity: 0;
-  transform: scaleY(0);
-}

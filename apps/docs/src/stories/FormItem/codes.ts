@@ -15,7 +15,7 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
       </template>
       <script setup>
         import { ref } from 'vue'
-        import CFormItem from 'craftvue/form-item'
+        import CFormItem from 'craftvue/formitem'
         import CInput from 'craftvue/input'
 
         const value = ref('')
@@ -36,7 +36,7 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
       </template>
       <script setup>
         import { ref } from 'vue'
-        import CFormItem from 'craftvue/form-item'
+        import CFormItem from 'craftvue/formitem'
         import CInput from 'craftvue/input'
 
         const email = ref('')
@@ -57,7 +57,7 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
       </template>
       <script setup>
         import { ref } from 'vue'
-        import CFormItem from 'craftvue/form-item'
+        import CFormItem from 'craftvue/formitem'
         import CInput from 'craftvue/input'
 
         const value = ref('')
@@ -78,7 +78,7 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
       </template>
       <script setup>
         import { ref } from 'vue'
-        import CFormItem from 'craftvue/form-item'
+        import CFormItem from 'craftvue/formitem'
         import CInput from 'craftvue/input'
 
         const value = ref('craftvue@gmail.com')
@@ -105,7 +105,7 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
       </template>
       <script setup>
         import { ref } from 'vue'
-        import CFormItem from 'craftvue/form-item'
+        import CFormItem from 'craftvue/formitem'
         import CInput from 'craftvue/input'
 
         const value = ref('')
@@ -138,7 +138,7 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
       </template>
       <script setup>
         import { ref } from 'vue'
-        import CFormItem from 'craftvue/form-item'
+        import CFormItem from 'craftvue/formitem'
         import CInput from 'craftvue/input'
 
         const value = ref('123456')
@@ -159,7 +159,7 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
       </template>
       <script setup>
         import { ref } from 'vue'
-        import CFormItem from 'craftvue/form-item'
+        import CFormItem from 'craftvue/formitem'
         import CInput from 'craftvue/input'
 
         const phone = ref('')
@@ -169,7 +169,7 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
   form: {
     simple: `
       <form @submit.prevent="submit">
-        <h3>Contact form</h3>
+        <h1>Contact form</h1>
 
         <CFormItem label="Name" required :error-message="errors.name">
           <CInput v-model="form.name" placeholder="Your name" :invalid="!!errors.name"/>
@@ -184,14 +184,10 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
         </CFormItem>
 
         <CFormItem label="Resources" required :errorMessage="errors.resources">
-          <label>
-            <input v-model="form.resources" type="radio" name="resources" value="online" />
-            <span>Online resource</span>
-          </label>
-          <label>
-            <input v-model="form.resources" type="radio" name="resources" value="offline" />
-            <span>Offline resource</span>
-          </label>
+          <CRadioGroup v-model="form.resources" orientation="horizontal">
+            <CRadio value="online" label="Online resource" />
+            <CRadio value="offline" label="Offline resource" />
+          </CRadioGroup>
         </CFormItem>
 
         <CButton label="Submit" type="submit" />
@@ -200,8 +196,8 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
     `,
     full: `
       <template>
-        <form @submit.prevent="submit" style="display: flex; flex-direction: column; gap: 5px; width: 400px; padding: 20px; border: 1px solid var(--c-prime-color); border-radius: 8px;">
-          <h3 style="margin-bottom: 20px; font-size: 20px;">Contact form</h3>
+        <form @submit.prevent="submit" style="display: flex; flex-direction: column; gap: 1rem; width: 400px; padding: 20px; border: 1px solid var(--c-prime-color); border-radius: 8px;">
+          <h1 style="margin-bottom: 10px; font-size: 24px;">Contact form</h1>
 
           <CFormItem label="Name" required :errorMessage="errors.name">
             <CInput v-model="form.name" placeholder="Your name" :invalid="!!errors.name" style="width: 100%;"/>
@@ -216,16 +212,10 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
           </CFormItem>
 
           <CFormItem label="Resources" required :errorMessage="errors.resources">
-            <div style="display: flex; gap: 20px;">
-              <label style="display: flex; gap: 4px;">
-                <input v-model="form.resources" type="radio" name="resources" value="online" />
-                <span>Online resource</span>
-              </label>
-              <label style="display: flex; gap: 4px;">
-                <input v-model="form.resources" type="radio" name="resources" value="offline" />
-                <span>Offline resource</span>
-              </label>
-            </div>
+            <CRadioGroup v-model="form.resources" orientation="horizontal">
+              <CRadio value="online" label="Online resource" />
+              <CRadio value="offline" label="Offline resource" />
+            </CRadioGroup>
           </CFormItem>
 
           <div style="margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr;  gap: 10px;">
@@ -236,9 +226,11 @@ const formItemCodeTexts: CodeTexts<FormItemStoryName> = {
       </template>
       <script setup>
         import { ref } from 'vue'
-        import CFormItem from 'craftvue/form-item'
+        import CFormItem from 'craftvue/formitem'
         import CInput from 'craftvue/input'
         import CButton from 'craftvue/button'
+        import CRadio from 'craftvue/radio'
+        import CRadioGroup from 'craftvue/radiogroup'
 
         const form = ref({
           name: '',

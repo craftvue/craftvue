@@ -1,6 +1,6 @@
 {
   "name": "@craftvue/icons",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "private": false,
   "type": "module",
   "author": "Craft",
@@ -110,6 +110,36 @@
       "types": "./dist/components/EnvelopeIcon.d.ts",
       "import": "./dist/components/EnvelopeIcon.mjs",
       "require": "./dist/components/EnvelopeIcon.cjs"
+    },
+    "./error": {
+      "types": "./dist/components/ErrorIcon.d.ts",
+      "import": "./dist/components/ErrorIcon.mjs",
+      "require": "./dist/components/ErrorIcon.cjs"
+    },
+    "./info": {
+      "types": "./dist/components/InfoIcon.d.ts",
+      "import": "./dist/components/InfoIcon.mjs",
+      "require": "./dist/components/InfoIcon.cjs"
+    },
+    "./maximize": {
+      "types": "./dist/components/MaximizeIcon.d.ts",
+      "import": "./dist/components/MaximizeIcon.mjs",
+      "require": "./dist/components/MaximizeIcon.cjs"
+    },
+    "./minimize": {
+      "types": "./dist/components/MinimizeIcon.d.ts",
+      "import": "./dist/components/MinimizeIcon.mjs",
+      "require": "./dist/components/MinimizeIcon.cjs"
+    },
+    "./warning": {
+      "types": "./dist/components/WarningIcon.d.ts",
+      "import": "./dist/components/WarningIcon.mjs",
+      "require": "./dist/components/WarningIcon.cjs"
+    },
+    "./minus": {
+      "types": "./dist/components/MinusIcon.d.ts",
+      "import": "./dist/components/MinusIcon.mjs",
+      "require": "./dist/components/MinusIcon.cjs"
     }
   },
   "files": [
