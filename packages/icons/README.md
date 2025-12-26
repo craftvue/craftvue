@@ -1,6 +1,6 @@
 # @craftvue/icons
 
-Icon components for [CraftVue](https://github.com/matmon12/craftvue) library.
+Icon components for [CraftVue](https://github.com/craftvue/craftvue) library.
 
 ## Installation
 
@@ -25,7 +25,7 @@ The easiest way to use icons is through the `CIcon` component from `craftvue`:
 </template>
 
 <script setup>
-  import CIcon from 'craftvue/icon'
+import CIcon from 'craftvue/icon'
 </script>
 ```
 

@@ -12,15 +12,15 @@
     "components",
     "craftvue"
   ],
-  "homepage": "https://matmon12.github.io/craftvue/",
+  "homepage": "https://craftvue.github.io/craftvue/",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matmon12/craftvue.git",
+    "url": "git+https://github.com/craftvue/craftvue.git",
     "directory": "packages/icons"
   },
   "bugs": {
-    "url": "https://github.com/matmon12/craftvue/issues"
+    "url": "https://github.com/craftvue/craftvue/issues"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",

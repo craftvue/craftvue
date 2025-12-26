@@ -60,7 +60,7 @@ import 'craftvue/style'
 
 ## Documentation
 
-For detailed documentation, examples, and component API, visit the [Storybook documentation](https://matmon12.github.io/craftvue/).
+For detailed documentation, examples, and component API, visit the [Storybook documentation](https://craftvue.github.io/craftvue/).
 
 ## Requirements
 
