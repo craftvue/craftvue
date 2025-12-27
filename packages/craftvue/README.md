@@ -10,7 +10,7 @@
 
 </div>
 
-# CraftVue
+<!-- # CraftVue -->
 
 A modern Vue.js component library with beautiful, accessible components.
 
