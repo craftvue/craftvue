@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.4.6](https://www.npmjs.com/package/craftvue/v/1.4.6) (2025-12-27)
+
+#### Bug fixes
+
+- Fixed paths for components in `OverviewComponents.vue`
+
+#### Refactors
+
+- Updated repository URLs to craftvue organization
+- Updated README file for `craftvue`
+
 ## [1.4.0](https://www.npmjs.com/package/craftvue/v/1.4.0) (2025-12-26)
 
 #### Features
