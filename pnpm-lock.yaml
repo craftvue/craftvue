@@ -164,7 +164,7 @@ importers:
   packages/craftvue:
     dependencies:
       '@craftvue/icons':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../icons
       '@vueuse/core':
         specifier: ^13.9.0

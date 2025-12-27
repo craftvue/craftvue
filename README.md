@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="./public/Logo.svg" alt="CraftVue Logo" width="250" height="auto" />
-
-&nbsp;
+  <p>
+    <img src="./public/Logo.svg" alt="CraftVue Logo" width="250" height="auto" />
+  </p>
 
 [![npm version](https://img.shields.io/npm/v/craftvue?style=flat&colorA=F6EEDA&colorB=7A5228)](https://www.npmjs.com/package/craftvue)
 [![npm downloads](https://img.shields.io/npm/dm/craftvue?style=flat&colorA=F6EEDA&colorB=7A5228)](https://www.npmjs.com/package/craftvue)

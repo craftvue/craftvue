@@ -1,3 +1,15 @@
+<div align="center">
+  <p>
+    <img src="../../public/Logo_light.svg" alt="CraftVue Logo" width="250" height="auto" />
+  </p>
+
+[![npm version](https://img.shields.io/npm/v/craftvue?style=for-the-badge&colorA=e2c996&colorB=6b5235)](https://www.npmjs.com/package/craftvue)
+[![npm downloads](https://img.shields.io/npm/dm/craftvue?style=for-the-badge&colorA=e2c996&colorB=6b5235)](https://www.npmjs.com/package/craftvue)
+[![GitHub license](https://img.shields.io/github/license/craftvue/craftvue?style=for-the-badge&colorA=e2c996&colorB=6b5235)](https://github.com/craftvue/craftvue/blob/main/LICENSE)
+[![Vue 3](https://img.shields.io/badge/Vue-3.x-green?style=for-the-badge&colorA=e2c996&colorB=6b5235)](https://vuejs.org/)
+
+</div>
+
 # CraftVue
 
 A modern Vue.js component library with beautiful, accessible components.

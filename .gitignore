@@ -35,6 +35,9 @@ coverage
 .env.local
 .env.*.local
 
+# npm config (может содержать настройки прокси)
+.npmrc
+
 # Build outputs
 dist/
 build/

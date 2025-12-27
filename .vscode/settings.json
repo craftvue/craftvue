@@ -17,7 +17,7 @@
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "svg.preview.background": "dark-transparent",
+  "svg.preview.background": "white",
   "[svg]": {
     "editor.defaultFormatter": "jock.svg"
   }
