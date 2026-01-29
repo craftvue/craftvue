@@ -2,20 +2,30 @@
   <div class="overview">
     <CInput
       v-model="search"
-      placeholder="Поиск по компонентам"
+      :placeholder="t('overview.searchPlaceholder')"
       size="lg"
       :prefix-icon="SearchIcon"
       class="overview-input"
       @update:model-value="searchByTitle"
     />
 
-    <div v-for="group in filteredComponents" :key="group.name" class="overview__group">
+    <div
+      v-for="group in filteredComponents"
+      :key="group.name"
+      class="overview__group"
+    >
       <div class="overview__group-head">
-        <h1 class="overview__group-title">{{ group.name }}</h1>
+        <h1 class="overview__group-title">
+          {{ t(`overview.categories.${group.name}`) }}
+        </h1>
         <CBadge :value="group.items.length" size="lg" />
       </div>
       <ul class="group__list">
-        <li v-for="component in group.items" :key="component.title" class="group__item">
+        <li
+          v-for="component in group.items"
+          :key="component.title"
+          class="group__item"
+        >
           <a :href="`${BASE_PATH}${component.path}`" class="group__link">
             <h1 class="group__item-title">
               {{ component.title }}
@@ -23,7 +33,7 @@
             <div class="group__item-content">
               <img
                 :src="getImageUrl('components', component.image)"
-                alt="компонент"
+                :alt="t('overview.componentAlt')"
                 class="group__item-img"
               />
             </div>
@@ -40,6 +50,7 @@ import SearchIcon from '@craftvue/icons/search'
 import { getImageUrl } from 'docs/utils'
 import { ref } from 'vue'
 import { BASE_PATH } from 'docs/constants'
+import { useI18n } from 'docs/composables/useI18n'
 
 interface Component {
   title: string
@@ -52,44 +63,94 @@ interface ComponentCategory {
   items: Component[]
 }
 
+const { t } = useI18n()
+
 const search = ref<string>('')
 const components = ref<ComponentCategory[]>([
   {
-    name: 'Базовые',
+    name: 'basic',
     items: [
-      { title: 'Button', image: 'button.png', path: '/?path=/docs/basic-button--docs' },
-      { title: 'Icon', image: 'icon.png', path: '/?path=/docs/basic-icon--docs' },
+      {
+        title: 'Button',
+        image: 'button.png',
+        path: '/?path=/docs/basic-button--docs',
+      },
+      {
+        title: 'Icon',
+        image: 'icon.png',
+        path: '/?path=/docs/basic-icon--docs',
+      },
     ],
   },
   {
-    name: 'Форма',
+    name: 'form',
     items: [
-      { title: 'Input', image: 'input.png', path: '/?path=/docs/form-input--docs' },
-      { title: 'FormItem', image: 'formitem.png', path: '/?path=/docs/form-formitem--docs' },
-      { title: 'Select', image: 'select.png', path: '/?path=/docs/form-select--docs' },
-      { title: 'Checkbox', image: 'checkbox.png', path: '/?path=/docs/form-checkbox--docs' },
-      { title: 'Radio', image: 'radio.png', path: '/?path=/docs/form-radio--docs' },
-      { title: 'Switch', image: 'switch.png', path: '/?path=/docs/form-switch--docs' },
+      {
+        title: 'Input',
+        image: 'input.png',
+        path: '/?path=/docs/form-input--docs',
+      },
+      {
+        title: 'FormItem',
+        image: 'formitem.png',
+        path: '/?path=/docs/form-formitem--docs',
+      },
+      {
+        title: 'Select',
+        image: 'select.png',
+        path: '/?path=/docs/form-select--docs',
+      },
+      {
+        title: 'Checkbox',
+        image: 'checkbox.png',
+        path: '/?path=/docs/form-checkbox--docs',
+      },
+      {
+        title: 'Radio',
+        image: 'radio.png',
+        path: '/?path=/docs/form-radio--docs',
+      },
+      {
+        title: 'Switch',
+        image: 'switch.png',
+        path: '/?path=/docs/form-switch--docs',
+      },
     ],
   },
   {
-    name: 'Данные',
+    name: 'data',
     items: [
-      { title: 'Badge', image: 'badge.png', path: '/?path=/docs/data-badge--docs' },
+      {
+        title: 'Badge',
+        image: 'badge.png',
+        path: '/?path=/docs/data-badge--docs',
+      },
       { title: 'Tag', image: 'tag.png', path: '/?path=/docs/data-tag--docs' },
     ],
   },
   {
-    name: 'Навигация',
+    name: 'navigation',
     items: [
-      { title: 'Tabs', image: 'tabs.png', path: '/?path=/docs/navigation-tabs--docs' },
-      { title: 'Dropdown', image: 'dropdown.png', path: '/?path=/docs/navigation-dropdown--docs' },
+      {
+        title: 'Tabs',
+        image: 'tabs.png',
+        path: '/?path=/docs/navigation-tabs--docs',
+      },
+      {
+        title: 'Dropdown',
+        image: 'dropdown.png',
+        path: '/?path=/docs/navigation-dropdown--docs',
+      },
     ],
   },
   {
-    name: 'Обратная связь',
+    name: 'feedback',
     items: [
-      { title: 'Tooltip', image: 'tooltip.png', path: '/?path=/docs/feedback-tooltip--docs' },
+      {
+        title: 'Tooltip',
+        image: 'tooltip.png',
+        path: '/?path=/docs/feedback-tooltip--docs',
+      },
       {
         title: 'ConfirmDialog',
         image: 'confirmdialog.png',
@@ -100,8 +161,16 @@ const components = ref<ComponentCategory[]>([
         image: 'confirmpopup.png',
         path: '/?path=/docs/feedback-confirmpopup--docs',
       },
-      { title: 'Dialog', image: 'dialog.png', path: '/?path=/docs/feedback-dialog--docs' },
-      { title: 'Popover', image: 'popover.png', path: '/?path=/docs/feedback-popover--docs' },
+      {
+        title: 'Dialog',
+        image: 'dialog.png',
+        path: '/?path=/docs/feedback-dialog--docs',
+      },
+      {
+        title: 'Popover',
+        image: 'popover.png',
+        path: '/?path=/docs/feedback-popover--docs',
+      },
     ],
   },
 ])
@@ -115,7 +184,10 @@ const searchByTitle = (value: string) => {
     )
 
     if (filteredItems.length) {
-      filteredComponents.value.push({ name: group.name, items: [...filteredItems] })
+      filteredComponents.value.push({
+        name: group.name,
+        items: [...filteredItems],
+      })
     }
   })
 }

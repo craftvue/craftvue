@@ -1,0 +1,16 @@
+{
+  "checkboxgroup": {
+    "argTypes": {
+      "modelValue": "Array of selected checkbox values in group",
+      "disabled": "Disables all checkboxes in group, making them unavailable for interaction",
+      "invalid": "Marks checkbox group as invalid",
+      "size": "Size of all checkboxes in group: sm (small), normal (default), lg (large)",
+      "variant": "Style variant of all checkboxes in group: outlined (with border) or filled (filled)",
+      "name": "Name attribute for all checkboxes in group (used for grouping in forms)",
+      "orientation": "Orientation of checkbox arrangement",
+      "default": "Slot for placing child CCheckbox components",
+      "updatemodelValue": "Event for updating array of selected values",
+      "change": "Event fired when selected values in group change"
+    }
+  }
+}

@@ -1,6 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import type { ComponentPropsAndSlots, Meta, StoryObj } from '@storybook/vue3-vite'
+import type {
+  ComponentPropsAndSlots,
+  Meta,
+  StoryObj,
+} from '@storybook/vue3-vite'
 import { fn } from 'storybook/test'
 import { CButton, CIcon, CInput, CTooltip, TooltipEmits } from 'craftvue'
 import { ref, useTemplateRef, watch } from 'vue'
@@ -45,88 +49,90 @@ const meta = {
     content: {
       control: 'text',
       description:
-        'Текст подсказки, отображаемый в tooltip. Может быть переопределён через слот content.',
+        'Tooltip text displayed inside tooltip. Can be overridden via `content` slot',
     },
     show: {
       control: false,
       description:
-        'Управляет видимостью tooltip. В режиме управления извне используется для контроля состояния открытия/закрытия.',
+        'Controls tooltip visibility. In controlled mode used to manage open/close state',
     },
     rootEl: {
       control: false,
       description:
-        'Ссылка на DOM-элемент, относительно которого позиционируется tooltip. Используется для явного указания элемента-триггера.',
+        'DOM element reference relative to which tooltip is positioned. Used to explicitly define trigger element',
     },
     placement: {
       control: 'select',
       description:
-        'Позиция tooltip относительно элемента-триггера: top (сверху) | bottom (снизу, по умолчанию) | left (слева) | right (справа).',
+        'Tooltip position relative to trigger element: top, bottom (default), left, right',
     },
     align: {
       control: 'select',
       description:
-        'Выравнивание tooltip относительно элемента-триггера: start (начало) | center (центр, по умолчанию) | end (конец).',
+        'Tooltip alignment relative to trigger element: start, center (default), end',
     },
     trigger: {
       control: 'select',
-      description:
-        'Способ активации tooltip: hover (при наведении, по умолчанию) | click (при клике).',
+      description: 'Tooltip activation mode: hover (default) or click',
     },
     offset: {
       control: 'number',
       description:
-        'Расстояние в пикселях между элементом-триггером и tooltip. По умолчанию: 0. При наличии стрелки автоматически увеличивается на размер стрелки.',
+        'Distance in pixels between trigger element and tooltip. Default is 0. When arrow is present, distance is automatically increased by arrow size',
     },
     boundaryPadding: {
       control: 'number',
       description:
-        'Минимальный отступ в пикселях от краёв экрана при позиционировании. Предотвращает выход tooltip за пределы видимой области. По умолчанию: 5.',
+        'Minimum padding in pixels from screen edges when positioning tooltip to prevent overflow. Default is 5',
     },
     zIndex: {
       control: 'number',
-      description: 'Значение z-index для tooltip. По умолчанию: 2000.',
+      description: 'Z-index value for tooltip. Default is 2000',
     },
     maxWidth: {
       control: 'number',
       description:
-        'Максимальная ширина tooltip в пикселях или CSS-единицах. При превышении контент переносится на новую строку. По умолчанию: 200.',
+        'Maximum tooltip width in pixels or CSS units. If exceeded, content wraps to next line. Default is 200',
     },
     teleportTo: {
       control: 'text',
       description:
-        'Селектор CSS или DOM-элемент, в который телепортируется tooltip (использует Vue Teleport). По умолчанию: "body". Установите false для отключения телепорта.',
+        'CSS selector or DOM element where tooltip is teleported (Vue Teleport). Default is "body". Set to false to disable teleport',
     },
     autoHide: {
       control: 'boolean',
       description:
-        'По умолчанию tooltip скрывается при уходе курсора с элемента-триггера. При установке в false подсказка остаётся видимой, когда курсор находится на tooltip. По умолчанию: true.',
+        'By default tooltip hides when cursor leaves trigger. When false, tooltip stays visible while cursor is over it. Default is true',
     },
     showDelay: {
       control: 'number',
-      description: 'Задержка в миллисекундах перед показом tooltip при наведении. По умолчанию: 0.',
+      description:
+        'Delay in milliseconds before showing tooltip on hover. Default is 0',
     },
     hideDelay: {
       control: 'number',
       description:
-        'Задержка в миллисекундах перед скрытием tooltip при уходе курсора. По умолчанию: 0.',
+        'Delay in milliseconds before hiding tooltip when cursor leaves. Default is 0',
     },
     durationEnter: {
       control: 'number',
-      description: 'Длительность анимации появления tooltip в миллисекундах. По умолчанию: 300.',
+      description:
+        'Duration of tooltip appearance animation in milliseconds. Default is 300',
     },
     durationLeave: {
       control: 'number',
-      description: 'Длительность анимации исчезновения tooltip в миллисекундах. По умолчанию: 0.',
+      description:
+        'Duration of tooltip disappearance animation in milliseconds. Default is 0',
     },
     default: {
       control: false,
       description:
-        'Основной слот для элемента-триггера. Если не используется слот trigger, содержимое default становится триггером.',
+        'Main slot for trigger element. If `trigger` slot is not used, default content becomes trigger',
     },
     'content ': {
       control: false,
       description:
-        'Слот для кастомного содержимого tooltip. Позволяет отображать форматированный текст, иконки и другие элементы вместо простого текста из пропса content.',
+        'Slot for custom tooltip content. Allows displaying formatted text, icons and other elements instead of plain `content` text',
       table: {
         category: 'slots',
         type: {
@@ -137,7 +143,7 @@ const meta = {
     'trigger ': {
       control: false,
       description:
-        'Слот для кастомизации элемента-триггера. Предоставляет доступ к параметрам: isOpen (состояние открытия), open (функция открытия), close (функция закрытия).',
+        'Slot to customize trigger element. Provides: isOpen (open state), open (open function), close (close function)',
       table: {
         category: 'slots',
         type: {
@@ -147,16 +153,16 @@ const meta = {
     },
     hide: {
       control: false,
-      description: 'Событие, срабатывающее при закрытии tooltip.',
+      description: 'Event fired when tooltip is hidden',
     },
     'show ': {
       control: false,
-      description: 'Событие, срабатывающее при открытии tooltip.',
+      description: 'Event fired when tooltip is shown',
       table: {
         category: 'events',
         type: {
           summary: '[]',
-        }
+        },
       },
     },
   },

@@ -1,0 +1,68 @@
+{
+  "confirmdialog": {
+    "title": "ConfirmDialog",
+    "subtitle": "Modal confirmation dialog component for requesting user action confirmation with preset types and customization",
+    "import": {
+      "title": "Import"
+    },
+    "basic": {
+      "title": "Basic Example",
+      "description": "Standard confirmation dialog with message, title and \"Yes\" and \"No\" buttons. Controlled via `show` property"
+    },
+    "type": {
+      "title": "Dialog Types",
+      "description": "Dialog supports four preset types via `type` property: `warning` (warning), `success` (success), `error` (error), `info` (info). Each type has its own icon and style"
+    },
+    "template": {
+      "title": "Custom Template",
+      "description": "Using `header` slot for custom header, `default` slot for custom content and `actions` slot for custom action buttons. `header` slot receives `close` parameter (close), `actions` slot receives `confirm` (confirm) and `cancel` (cancel) parameters"
+    },
+    "oneAction": {
+      "title": "Single Button Dialog",
+      "description": "Dialog can be displayed with only one action button. Use `showCancel: false` to show only confirm button or `showConfirm: false` to show only cancel button. Useful for informational messages or mandatory confirmations"
+    },
+    "tableOfContents": "Components",
+    "argTypes": {
+      "message": "Confirmation message text displayed in dialog",
+      "type": "Dialog type, determining preset icon and style: warning, success, error, info",
+      "icon": "Vue component icon displayed next to message (has priority over type)",
+      "iconColor": "Icon color (CSS color in any format)",
+      "confirmText": "Text on confirm button",
+      "cancelText": "Text on cancel button",
+      "confirmSeverity": "Confirm button color palette: primary, secondary, contrast",
+      "cancelSeverity": "Cancel button color palette: primary, secondary, contrast",
+      "confirmVariant": "Confirm button style variant: filled, outlined, text",
+      "cancelVariant": "Cancel button style variant: filled, outlined, text",
+      "showCancel": "Show cancel button",
+      "showConfirm": "Show confirm button",
+      "closeOnConfirm": "Automatically close dialog when confirm button is clicked",
+      "closeOnCancel": "Automatically close dialog when cancel button is clicked",
+      "show": "Controls dialog visibility",
+      "width": "Dialog width in pixels (number) or string with units",
+      "maxHeight": "Maximum dialog height (number in pixels or string with units, e.g. \"90vh\")",
+      "maxWidth": "Maximum dialog width (number in pixels or string with units, e.g. \"90vw\")",
+      "modal": "Makes dialog modal (with darkened background, blocking interaction with rest of content)",
+      "closeOnOverlayClick": "Close dialog when clicking on darkened background (overlay)",
+      "closeOnEscape": "Close dialog when pressing Escape key",
+      "lockScroll": "Lock page scrolling when dialog is open",
+      "teleportTo": "Selector or element to which dialog is teleported (default \"body\", false - no teleport)",
+      "zIndex": "Z-index for dialog (used to control stacking order)",
+      "title": "Dialog title displayed in header (if header slot is not used)",
+      "showClose": "Show close button in header",
+      "durationEnter": "Duration of appearance animation in milliseconds",
+      "durationLeave": "Duration of disappearance animation in milliseconds",
+      "animation": "Type of appearance/disappearance animation: fade (fade), zoom (scaling), slide (slide)",
+      "closeIcon": "Vue component icon for close button (if not specified, default icon is used)",
+      "header": "Slot for custom header. Receives parameter: close (close)",
+      "default": "Slot for custom dialog content (instead of message)",
+      "actions": "Slot for custom action buttons. Receives parameters: confirm (confirm function), cancel (cancel function)",
+      "confirm": "Event fired when confirm button is clicked",
+      "cancel": "Event fired when cancel button is clicked",
+      "updateshow": "Event for updating dialog visibility",
+      "show ": "Event fired when dialog is shown",
+      "hide": "Event fired when dialog is hidden",
+      "overlayClick": "Event fired when clicking on darkened background (overlay)",
+      "escape": "Event fired when Escape key is pressed"
+    }
+  }
+}

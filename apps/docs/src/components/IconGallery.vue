@@ -1,6 +1,10 @@
 <template>
   <div class="gallery">
-    <CInput v-model="search" placeholder="Поиск иконки" class="gallery-input" />
+    <CInput
+      v-model="search"
+      :placeholder="t('icons.gallery.searchPlaceholder')"
+      class="gallery-input"
+    />
 
     <ul ref="parent" class="gallery__list">
       <template v-for="(IconComponent, name) in icons" :key="name">
@@ -9,7 +13,8 @@
             <component :is="IconComponent" />
           </CIcon>
           <p class="gallery__item-text">
-            {{ removeEntryName(name)[0] }}<span class="text-highlighted">{{ search }}</span
+            {{ removeEntryName(name)[0]
+            }}<span class="text-highlighted">{{ search }}</span
             >{{ removeEntryName(name)[1] }}
           </p>
         </li>
@@ -23,15 +28,19 @@ import { ref } from 'vue'
 import { CIcon, CInput } from 'craftvue'
 import * as icons from '@craftvue/icons'
 import { useAutoAnimate } from '@formkit/auto-animate/vue'
+import { useI18n } from 'docs/composables/useI18n'
 
+const { t } = useI18n()
 const [parent] = useAutoAnimate()
 
 const search = ref('')
 
-const formateName = (name: string): string => name.replace('Icon', '').toLowerCase()
+const formateName = (name: string): string =>
+  name.replace('Icon', '').toLowerCase()
 const showIcon = (name: string): boolean =>
   !search.value || formateName(name).includes(search.value)
-const removeEntryName = (name: string) => formateName(name).replace(search.value, ' ').split(' ')
+const removeEntryName = (name: string) =>
+  formateName(name).replace(search.value, ' ').split(' ')
 </script>
 
 <style scoped lang="scss">
@@ -77,7 +86,7 @@ const removeEntryName = (name: string) => formateName(name).replace(search.value
   color: #8f8f8f;
   word-break: break-word;
 
-  .text-highlighted{
+  .text-highlighted {
     font-weight: 500;
     color: var(--prime-color-light);
   }

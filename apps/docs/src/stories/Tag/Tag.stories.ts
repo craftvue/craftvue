@@ -1,6 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import type { Meta, StoryObj, ComponentPropsAndSlots } from '@storybook/vue3-vite'
+import type {
+  Meta,
+  StoryObj,
+  ComponentPropsAndSlots,
+} from '@storybook/vue3-vite'
 import { fn } from 'storybook/test'
 import { CTag } from 'craftvue'
 import type { TagEmits } from 'craftvue'
@@ -32,16 +36,17 @@ const meta = {
   argTypes: {
     value: {
       control: 'text',
-      description: 'Текст тега, отображаемый внутри элемента',
+      description: 'Tag text displayed inside element',
     },
     severity: {
       control: 'select',
       description:
-        'Цветовая палитра тега: primary, secondary, contrast, success, error, warning, info',
+        'Tag color palette: primary, secondary, contrast, success, error, warning, info',
     },
     variant: {
       control: 'select',
-      description: 'Вариант стиля тега: filled (заполненный), outlined (с обводкой), soft (мягкий)',
+      description:
+        'Tag style variant: filled (filled), outlined (with outline), soft (soft)',
     },
     size: {
       control: {
@@ -50,16 +55,16 @@ const meta = {
       },
       options: [0, 1, 2],
       mapping: { 0: 'sm', 1: undefined, 2: 'lg' },
-      description: 'Размер тега: sm (маленький), нормальный (по умолчанию), lg (большой)',
+      description: 'Tag size: sm (small), normal (default), lg (large)',
     },
     closable: {
       control: 'boolean',
       description:
-        'Показывать кнопку закрытия в теге (при клике на которую возникает событие close)',
+        'Show close button in tag (clicking which triggers close event)',
     },
     rounded: {
       control: 'boolean',
-      description: 'Применяет скругленные углы к тегу',
+      description: 'Applies rounded corners to tag',
     },
     prefixIcon: {
       control: {
@@ -68,7 +73,7 @@ const meta = {
       },
       options: [0, 1],
       mapping: { 0: undefined, 1: markRaw(CheckIcon) },
-      description: 'Иконка компонента Vue, отображаемая перед текстом тега',
+      description: 'Vue component icon displayed before tag text',
     },
     suffixIcon: {
       control: {
@@ -77,25 +82,25 @@ const meta = {
       },
       options: [0, 1],
       mapping: { 0: undefined, 1: markRaw(AddIcon) },
-      description: 'Иконка компонента Vue, отображаемая после текста тега',
+      description: 'Vue component icon displayed after tag text',
     },
     close: {
       control: false,
-      description: 'Событие, возникающее при клике на кнопку закрытия тега',
+      description: 'Event fired when close button is clicked',
     },
     default: {
       control: false,
-      description: 'Слот для кастомного содержимого тега',
+      description: 'Slot for custom tag content',
     },
     prefix: {
       control: false,
       description:
-        'Слот для кастомного содержимого перед текстом тега (имеет приоритет над prefixIcon)',
+        'Slot for custom content before tag text (has priority over prefixIcon)',
     },
     suffix: {
       control: false,
       description:
-        'Слот для кастомного содержимого после текста тега (имеет приоритет над suffixIcon)',
+        'Slot for custom content after tag text (has priority over suffixIcon)',
     },
   },
 } satisfies Meta<AllTagArgs>

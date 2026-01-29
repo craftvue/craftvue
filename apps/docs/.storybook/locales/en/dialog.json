@@ -1,0 +1,73 @@
+{
+  "dialog": {
+    "title": "Dialog",
+    "subtitle": "Modal dialog component for displaying content, forms and user interactions with fullscreen mode and customization support",
+    "import": {
+      "title": "Import"
+    },
+    "basic": {
+      "title": "Basic Example",
+      "description": "Standard modal dialog with title, close button and main content. Controlled via `show` property"
+    },
+    "fullscreen": {
+      "title": "Fullscreen Mode",
+      "description": "Dialog with fullscreen toggle. Enabled via `fullscreen` property, which adds a button in header to expand/collapse dialog"
+    },
+    "animation": {
+      "title": "Animations",
+      "description": "Dialog supports three appearance/disappearance animations: `fade`, `zoom`, `slide`. Controlled via `animation` property"
+    },
+    "nonModal": {
+      "title": "Non-modal Mode",
+      "description": "Dialog in non-modal mode (`modal: false`) does not block interaction with rest of page content and has no overlay"
+    },
+    "template": {
+      "title": "Header and Footer Template",
+      "description": "Using `header` and `footer` slots to create structured content. `header` slot receives: `close` (close), `toggleFullscreen` (toggle fullscreen), `isFullscreen` (state), `fullscreenIcon` (icon)"
+    },
+    "size": {
+      "title": "Sizes",
+      "description": "Dialog size is controlled via `width`, `maxWidth` and `maxHeight` properties. You can use numbers (pixels) or strings with units (e.g. \"90vh\", \"90vw\")"
+    },
+    "withoutHeader": {
+      "title": "Without Header",
+      "description": "Dialog without title and close button. Created by setting `title=\"\"` and `showClose: false`"
+    },
+    "customIcons": {
+      "title": "Custom Icons",
+      "description": "Configure icons for dialog control buttons: `closeIcon` (close), `maximizeIcon` (expand), `minimizeIcon` (collapse). All icons must be Vue components"
+    },
+    "tableOfContents": "Components",
+    "argTypes": {
+      "show": "Controls dialog visibility",
+      "width": "Dialog width in pixels (number) or string with units",
+      "maxHeight": "Maximum dialog height (number in pixels or string with units, e.g. \"90vh\")",
+      "maxWidth": "Maximum dialog width (number in pixels or string with units, e.g. \"90vw\")",
+      "fullscreen": "Enables fullscreen toggle (shows button in header to expand/collapse)",
+      "modal": "Makes dialog modal (with darkened background, blocking interaction with rest of content)",
+      "closeOnOverlayClick": "Closes dialog when clicking on overlay",
+      "closeOnEscape": "Closes dialog when pressing Escape key",
+      "lockScroll": "Locks page scrolling when dialog is open",
+      "teleportTo": "Selector or element to which dialog is teleported (default \"body\", false - no teleport)",
+      "zIndex": "Z-index for dialog (used to control stacking order)",
+      "title": "Dialog title displayed in header (if header slot is not used)",
+      "showClose": "Show close button in header",
+      "durationEnter": "Duration of appearance animation in milliseconds",
+      "durationLeave": "Duration of disappearance animation in milliseconds",
+      "animation": "Type of appearance/disappearance animation: fade (fade), zoom (scaling), slide (slide)",
+      "closeIcon": "Vue component icon for close button (if not specified, default icon is used)",
+      "maximizeIcon": "Vue component icon for button that expands to fullscreen",
+      "minimizeIcon": "Vue component icon for button that collapses from fullscreen",
+      "updateshow": "Event for updating dialog visibility",
+      "show ": "Event fired when dialog is shown",
+      "hide": "Event fired when dialog is hidden",
+      "maximize": "Event fired when dialog is expanded to fullscreen",
+      "minimize": "Event fired when dialog is collapsed from fullscreen",
+      "overlayClick": "Event fired when clicking on overlay",
+      "escape": "Event fired when Escape key is pressed",
+      "header": "Slot for custom header. Receives: close, toggleFullscreen, isFullscreen, fullscreenIcon",
+      "default": "Slot for main dialog content",
+      "footer": "Slot for dialog footer (displayed at the bottom)"
+    }
+  }
+}

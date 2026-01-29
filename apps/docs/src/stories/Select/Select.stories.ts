@@ -1,7 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import type { ComponentPropsAndSlots, Meta, StoryObj } from '@storybook/vue3-vite'
-import { AddIcon, DeleteIcon, EnvelopeIcon, NextArrowIcon, SearchIcon } from '@craftvue/icons'
+import type {
+  ComponentPropsAndSlots,
+  Meta,
+  StoryObj,
+} from '@storybook/vue3-vite'
+import {
+  AddIcon,
+  DeleteIcon,
+  EnvelopeIcon,
+  NextArrowIcon,
+  SearchIcon,
+} from '@craftvue/icons'
 import { CButton, CFormItem, CIcon, CSelect, SelectEmits } from 'craftvue'
 import { markRaw, ref, watch } from 'vue'
 import { fn } from 'storybook/test'
@@ -10,11 +20,11 @@ type AllSelectArgs = SelectEmits &
   ComponentPropsAndSlots<typeof CSelect> & { 'clear ': any; 'loading ': any }
 
 const countries = ref<{ label: string; value: string; disabled?: boolean }[]>([
-  { label: 'Россия', value: 'ru' },
-  { label: 'США', value: 'us' },
-  { label: 'Япония', value: 'jp' },
-  { label: 'Китай', value: 'cn' },
-  { label: 'Бразилия', value: 'br' },
+  { label: 'Russia', value: 'ru' },
+  { label: 'USA', value: 'us' },
+  { label: 'Japan', value: 'jp' },
+  { label: 'China', value: 'cn' },
+  { label: 'Brazil', value: 'br' },
 ])
 
 const meta = {
@@ -37,7 +47,7 @@ const meta = {
   args: {
     modelValue: false,
     options: countries.value,
-    placeholder: 'Выберите страну',
+    placeholder: 'Select country',
     disabled: false,
     multiple: false,
     clearable: false,
@@ -51,9 +61,9 @@ const meta = {
     optionLabel: 'label',
     optionValue: 'value',
     optionDisabled: 'disabled',
-    filterPlaceholder: 'Поиск...',
-    noOptionsText: 'Нет доступных опций',
-    loadingText: 'Загрузка...',
+    filterPlaceholder: 'Search...',
+    noOptionsText: 'No options available',
+    loadingText: 'Loading...',
     clearIcon: 0 as any,
     dropdownIcon: 0 as any,
     loadingIcon: 0 as any,
@@ -71,92 +81,92 @@ const meta = {
     modelValue: {
       control: 'boolean',
       description:
-        'Текущее значение select. Для multiple — массив значений, иначе одно значение или null.',
+        'Current select value. For multiple — array of values, otherwise single value or null',
     },
     options: {
       control: false,
       description:
-        'Список опций. Каждый элемент: { label: string; value: any; disabled?: boolean }',
+        'List of options. Each element: { label: string; value: any; disabled?: boolean }',
     },
     placeholder: {
       control: 'text',
-      description: 'Текст-заполнитель, когда значение не выбрано.',
+      description: 'Placeholder text when value is not selected',
     },
     disabled: {
       control: 'boolean',
-      description: 'Отключает select и взаимодействие с ним.',
+      description: 'Disables select and interaction with it',
     },
     multiple: {
       control: 'boolean',
-      description: 'Режим множественного выбора.',
+      description: 'Multiple selection mode',
     },
     clearable: {
       control: 'boolean',
-      description: 'Показывает кнопку очистки выбранного значения.',
+      description: 'Shows clear button for selected value',
     },
     searchable: {
       control: 'boolean',
-      description: 'Включает поле поиска по опциям.',
+      description: 'Enables search field for options',
     },
     size: {
       control: {
         type: 'select',
-        labels: { 0: 'Маленький', 1: 'Нормальный', 2: 'Большой' },
+        labels: { 0: 'Small', 1: 'Normal', 2: 'Large' },
       },
       options: [0, 1, 2],
       mapping: { 0: 'sm', 1: undefined, 2: 'lg' },
-      description: 'Размер компонента: sm | (по умолчанию) | lg.',
+      description: 'Component size: sm | (default) | lg',
     },
     variant: {
       control: 'select',
-      description: 'Вариант оформления: outlined | filled.',
+      description: 'Styling variant: outlined | filled',
     },
     invalid: {
       control: 'boolean',
-      description: 'Состояние ошибки (меняет стили).',
+      description: 'Error state (changes styles)',
     },
     loading: {
       control: 'boolean',
-      description: 'Отображает состояние загрузки и блокирует взаимодействие.',
+      description: 'Displays loading state and blocks interaction',
     },
     checkmark: {
       control: 'boolean',
-      description: 'Показывать иконку отметки у выбранной опции.',
+      description: 'Show checkmark icon for selected option',
     },
     full: {
       control: 'boolean',
-      description: 'Растянуть select на всю доступную ширину.',
+      description: 'Stretch select to full available width',
     },
     optionLabel: {
       control: 'text',
-      description: 'Название поля для текста опции в объекте options.',
+      description: 'Field name for option text in options object',
     },
     optionValue: {
       control: 'text',
-      description: 'Название поля для значения опции в объекте options.',
+      description: 'Field name for option value in options object',
     },
     optionDisabled: {
       control: 'text',
-      description: 'Название поля, указывающего на отключённую опцию.',
+      description: 'Field name indicating disabled option',
     },
     filterPlaceholder: {
       control: 'text',
-      description: 'Плейсхолдер в поле поиска.',
+      description: 'Placeholder in search field',
     },
     noOptionsText: {
       control: 'text',
-      description: 'Текст при отсутствии доступных опций.',
+      description: 'Text when no available options',
     },
     loadingText: {
       control: 'text',
-      description: 'Текст при загрузке опций.',
+      description: 'Text when loading options',
     },
     clearIcon: {
       control: {
         type: 'select',
         labels: {
-          0: 'По-умолчанию',
-          1: 'Кастомная иконка',
+          0: 'Default',
+          1: 'Custom icon',
         },
       },
       options: [0, 1],
@@ -164,14 +174,14 @@ const meta = {
         0: undefined,
         1: markRaw(DeleteIcon),
       },
-      description: 'Иконка для действия очистки значения.',
+      description: 'Icon for clear value action',
     },
     dropdownIcon: {
       control: {
         type: 'select',
         labels: {
-          0: 'По-умолчанию',
-          1: 'Кастомная иконка',
+          0: 'Default',
+          1: 'Custom icon',
         },
       },
       options: [0, 1],
@@ -179,14 +189,14 @@ const meta = {
         0: undefined,
         1: markRaw(NextArrowIcon),
       },
-      description: 'Иконка индикатора раскрывающегося списка.',
+      description: 'Dropdown list indicator icon',
     },
     loadingIcon: {
       control: {
         type: 'select',
         labels: {
-          0: 'По-умолчанию',
-          1: 'Кастомная иконка',
+          0: 'Default',
+          1: 'Custom icon',
         },
       },
       options: [0, 1],
@@ -194,14 +204,14 @@ const meta = {
         0: undefined,
         1: markRaw(SearchIcon),
       },
-      description: 'Иконка состояния загрузки.',
+      description: 'Loading state icon',
     },
     checkmarkIcon: {
       control: {
         type: 'select',
         labels: {
-          0: 'По-умолчанию',
-          1: 'Кастомная иконка',
+          0: 'Default',
+          1: 'Custom icon',
         },
       },
       options: [0, 1],
@@ -209,62 +219,70 @@ const meta = {
         0: undefined,
         1: markRaw(EnvelopeIcon),
       },
-      description: 'Иконка отметки выбранной опции.',
+      description: 'Selected option checkmark icon',
+    },
+    overlayClass: {
+      control: false,
+      description: 'Additional class for dropdown overlay',
+    },
+    overlayStyle: {
+      control: false,
+      description: 'Additional styles for dropdown overlay',
     },
     'update:modelValue': {
-      description: 'Событие при изменении значения модели (v-model).',
+      description: 'Event fired when model value changes (v-model)',
     },
     change: {
-      description: 'Событие при подтверждении выбора пользователем.',
+      description: 'Event fired when user confirms selection',
     },
     search: {
-      description: 'Событие при вводе текста в поле поиска.',
+      description: 'Event fired when text is entered in search field',
     },
     select: {
-      description: 'Событие при выборе опции.',
+      description: 'Event fired when option is selected',
     },
     remove: {
-      description: 'Событие при удалении выбранной опции (в multiple).',
+      description: 'Event fired when selected option is removed (in multiple)',
     },
     clear: {
-      description: 'Событие при очистке значения.',
+      description: 'Event fired when value is cleared',
     },
     option: {
       control: false,
-      description: 'Слот шаблона отдельной опции.',
+      description: 'Slot template for individual option',
     },
     value: {
       control: false,
-      description: 'Слот значения (отображение выбранного значения в триггере).',
+      description: 'Value slot (display selected value in trigger)',
     },
     footer: {
       control: false,
-      description: 'Слот нижней части выпадающего списка.',
+      description: 'Slot for bottom part of dropdown list',
     },
     header: {
       control: false,
-      description: 'Слот верхней части выпадающего списка.',
+      description: 'Slot for top part of dropdown list',
     },
     noOptions: {
       control: {
         type: 'select',
         labels: {
-          0: 'По-умолчанию',
+          0: 'Default',
           1: 'template #noOptions',
         },
       },
       options: [0, 1],
       mapping: {
         0: undefined,
-        1: 'Ничего не найдено',
+        1: 'Nothing found',
       },
-      description: 'Слот при отсутствии доступных опций.',
+      description: 'Slot when no available options',
     },
     dropdown: {
       control: {
         type: 'select',
         labels: {
-          0: 'По-умолчанию',
+          0: 'Default',
           1: 'template #dropdown',
         },
       },
@@ -273,7 +291,7 @@ const meta = {
         0: undefined,
         1: 'Open',
       },
-      description: 'Слот открытия выпадающего списка.',
+      description: 'Slot for dropdown opening',
     },
     'clear ': {
       control: false,
@@ -283,7 +301,7 @@ const meta = {
           summary: 'any',
         },
       },
-      description: 'Слот элемента очистки значения.',
+      description: 'Slot for clear value element',
     },
     'loading ': {
       control: false,
@@ -293,7 +311,7 @@ const meta = {
           summary: 'any',
         },
       },
-      description: 'Слот элемента загрузки.',
+      description: 'Slot for loading element',
     },
   },
   decorators: [
@@ -306,7 +324,13 @@ const meta = {
     components: { CSelect, CIcon },
     setup() {
       const value = ref(
-        args.multiple ? (args.modelValue ? ['ru', 'cn'] : []) : args.modelValue ? 'ru' : null,
+        args.multiple
+          ? args.modelValue
+            ? ['ru', 'cn']
+            : []
+          : args.modelValue
+            ? 'ru'
+            : null,
       )
 
       watch(
@@ -368,7 +392,10 @@ export const Disabled: Story = {
 
 export const DisabledOption: Story = {
   args: {
-    options: [...countries.value, { label: 'Казахстан', value: 'kz', disabled: true }],
+    options: [
+      ...countries.value,
+      { label: 'Kazakhstan', value: 'kz', disabled: true },
+    ],
   },
 }
 
@@ -546,11 +573,11 @@ export const Template: Story = {
           <CIcon name="home" size="20" />
         </template>
         <template #header>
-          <div style="padding: 10px 10px 5px;">Список доступных стран</div>
+          <div style="padding: 10px 10px 5px;">List of available countries</div>
         </template>
         <template #footer>
           <div style="padding: 8px;">
-            <CButton label="Добавить" :icon="AddIcon" size="sm" style="width: 100%;" />
+            <CButton label="Add" :icon="AddIcon" size="sm" style="width: 100%;" />
           </div>
         </template>
       </CSelect>
@@ -578,17 +605,17 @@ export const Form: Story = {
       const error = ref('')
 
       const submit = () => {
-        error.value = value.value ? '' : 'Необходимо выбрать город'
+        error.value = value.value ? '' : 'Please select a city'
       }
 
       return { args, value, submit, error }
     },
     template: `
       <form @submit.prevent="submit" style="width: 15rem;">
-        <CFormItem required label="Выберите страну" :error-message="error" >
+        <CFormItem required label="Select country" :error-message="error" >
           <CSelect v-bind="args" v-model="value" :invalid="!!error" full />
         </CFormItem>
-        <CButton label="Отправить" type="submit" style="width: 100%; margin-top: 20px;" />
+        <CButton label="Submit" type="submit" style="width: 100%; margin-top: 20px;" />
       </form>
     `,
   }),

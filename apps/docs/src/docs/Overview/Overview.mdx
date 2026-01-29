@@ -1,0 +1,30 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+import * as OverviewStories from './Overview.stories.ts'
+import { OverviewContent } from './OverviewContent.jsx'
+
+<Meta title="Overview" />
+
+<OverviewContent />
+
+<Canvas
+  of={OverviewStories.Basic}
+  className="config-canvas"
+  sourceState="none"
+/>
+
+<style>
+  {`
+    .config-canvas.sbdocs  {
+      background: transparent;
+      border: none;
+      overflow: visible;
+      margin: 0;
+    }
+    .config-canvas .docs-story{
+      overflow: visible;
+    }
+    .config-canvas .docs-story > div {
+      overflow: visible;
+    }
+  `}
+</style>

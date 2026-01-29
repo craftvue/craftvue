@@ -1,185 +1,53 @@
-import {
-  Meta,
-  Title,
-  Canvas,
-  ArgTypes,
-  Subtitle,
-  TableOfContents,
-} from '@storybook/addon-docs/blocks'
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
 import * as SelectStories from './Select.stories.ts'
-import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+import { SelectContent } from './SelectContent.tsx'
 
 <Meta title="Form/Select" />
 
-<div className='sb-docs-wrapper' >
-  <div className='sb-docs-content'>
-    <Title>Select</Title>
-
-    <Subtitle>
-      Выпадающий список для выбора одного или нескольких значений с поиском, иконками и поддержкой клавиатурной навигации.
-    </Subtitle>
-
-    <h3>Импорт</h3>
-
-    <CustomSource
-      code="import CSelect from 'craftvue/select'"
-      actions={['copy']}
-      parser="babel"
-      language="javascript"
-    />
-
-    <ArgTypes of={SelectStories.Basic}  />
-
-    ## Базовый пример
-
-    <p>Минимальная конфигурация компонента с плейсхолдером и выбором одного значения.</p>
-
-    <Canvas of={SelectStories.Basic} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="select" />
-
-    &nbsp;
-
-    ## Отключённый
-
-    <p>Состояние, при котором выбор недоступен. Все интеракции и фокус заблокированы.</p>
-
-    <Canvas of={SelectStories.Disabled} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="select" name="disabled" />
-
-    &nbsp;
-
-    ## Отключённая опция
-
-    <p>Пример списка, где часть опций недоступна для выбора (disabled).</p>
-
-    <Canvas of={SelectStories.DisabledOption} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="select" name="disabledOption" />
-
-    &nbsp;
-
-    ## Очистка значения
-
-    <p>Показывает кнопку очистки для быстрого сброса выбранного значения.</p>
-
-    <Canvas of={SelectStories.Clearable} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="select" name="clearable" />
-
-    &nbsp;
-
-    ## Неверное состояние
-
-    <p>Визуально подчёркивает ошибку валидации, например при незаполненном поле формы.</p>
-
-    <Canvas of={SelectStories.Invalid} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="select" name="invalid" />
-
-    &nbsp;
-
-    ## Множественный выбор
-
-    <p>Разрешает выбирать сразу несколько значений; выбранные элементы отображаются как теги.</p>
-
-    <Canvas of={SelectStories.Multiple} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="select" name="multiple" />
-
-    &nbsp;
-
-    ## Вариант Filled
-
-    <p>Альтернативный вариант оформления с заливкой поля вместо стандартной обводки.</p>
-
-    <Canvas of={SelectStories.Filled} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="select" name="filled" />
-
-    &nbsp;
-
-    ## На всю ширину
-
-    <p>Компонент растягивается на 100% доступной ширины контейнера.</p>
-
-    <Canvas of={SelectStories.FullWidth} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="select" name="fullWidth" />
-
-    &nbsp;
-
-    ## Загрузка
-
-    <p>Показывает индикатор загрузки и блокирует взаимодействие на время получения данных.</p>
-
-    <Canvas of={SelectStories.Loading} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="select" name="loading" />
-
-    &nbsp;
-
-    ## Поиск по опциям
-
-    <p>Включает поле быстрого поиска по списку опций, фильтруя результаты по мере ввода.</p>
-
-    <Canvas of={SelectStories.Filter} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="select" name="filter" />
-
-    &nbsp;
-
-    ## Размеры
-
-    <p>Демонстрация трёх типовых размеров: маленький, стандартный и большой.</p>
-
-    <Canvas of={SelectStories.Size} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="select" name="size" />
-
-    &nbsp;
-
-    ## Отметка выбранного
-
-    <p>Добавляет иконку-галочку у выбранной опции для лучшей визуальной обратной связи.</p>
-
-    <Canvas of={SelectStories.Checkmark} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="select" name="checkmark" />
-
-    &nbsp;
-
-    ## Кастомные шаблоны
-
-    <p>Пример кастомизации отображения значения, опций и иконок через слоты.</p>
-
-    <Canvas of={SelectStories.Template} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="select" name="template" parser='html' />
-
-    &nbsp;
-
-    ## В составе формы
-
-    <p>Интеграция с <code>CFormItem</code>: валидация, сообщение об ошибке и отправка формы.</p>
-
-    <Canvas of={SelectStories.Form} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="select" name="form" parser='html' />
-
-  </div>
-
-  <div>
-    <TableOfContents
-      className='sb-docs-toc sb-unstyled'
-      title='Компоненты'
-      contentsSelector='.sb-docs-content'
-      headingSelector="h2"
-      ignoreSelector='.sbdocs-subtitle'
-    />
-  </div>
-</div>
+<SelectContent>
+  <Canvas of={SelectStories.Basic} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={SelectStories.Disabled}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={SelectStories.DisabledOption}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={SelectStories.Clearable}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas of={SelectStories.Invalid} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={SelectStories.Multiple}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas of={SelectStories.Filled} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={SelectStories.FullWidth}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas of={SelectStories.Loading} sourceState="none" className="sb-canvas" />
+  <Canvas of={SelectStories.Filter} sourceState="none" className="sb-canvas" />
+  <Canvas of={SelectStories.Size} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={SelectStories.Checkmark}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={SelectStories.Template}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas of={SelectStories.Form} sourceState="none" className="sb-canvas" />
+</SelectContent>
 
 <style>
   {`

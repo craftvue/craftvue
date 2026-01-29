@@ -11,7 +11,7 @@ const meta = {
   },
   argTypes: {
     default: {
-      description: 'Слот для контейнера панелей вкладок',
+      description: 'Slot for tab panels container',
     },
   },
   tags: ['!dev'],

@@ -1,0 +1,107 @@
+{
+  "select": {
+    "title": "Select",
+    "subtitle": "Dropdown list for selecting one or multiple values with search, icons and keyboard navigation support",
+    "import": {
+      "title": "Import"
+    },
+    "basic": {
+      "title": "Basic Example",
+      "description": "Minimal component configuration with placeholder and single value selection"
+    },
+    "disabled": {
+      "title": "Disabled",
+      "description": "State where selection is unavailable. All interactions and focus are blocked"
+    },
+    "disabledOption": {
+      "title": "Disabled Option",
+      "description": "Example of a list where some options are unavailable for selection (disabled)"
+    },
+    "clearable": {
+      "title": "Clear Value",
+      "description": "Shows clear button for quick reset of selected value"
+    },
+    "invalid": {
+      "title": "Invalid State",
+      "description": "Visually emphasizes validation error, for example when form field is not filled"
+    },
+    "multiple": {
+      "title": "Multiple Selection",
+      "description": "Allows selecting multiple values at once; selected items are displayed as tags"
+    },
+    "filled": {
+      "title": "Filled Variant",
+      "description": "Alternative styling variant with filled field instead of standard outline"
+    },
+    "fullWidth": {
+      "title": "Full Width",
+      "description": "Component stretches to 100% of available container width"
+    },
+    "loading": {
+      "title": "Loading",
+      "description": "Shows loading indicator and blocks interaction while data is being fetched"
+    },
+    "filter": {
+      "title": "Option Search",
+      "description": "Enables quick search field for options list, filtering results as you type"
+    },
+    "size": {
+      "title": "Sizes",
+      "description": "Demonstration of three standard sizes: small, standard and large"
+    },
+    "checkmark": {
+      "title": "Selected Mark",
+      "description": "Adds checkmark icon to selected option for better visual feedback"
+    },
+    "template": {
+      "title": "Custom Templates",
+      "description": "Example of customizing value, options and icons display via slots"
+    },
+    "form": {
+      "title": "In Form",
+      "description": "Integration with `CFormItem`: validation, error message and form submission"
+    },
+    "tableOfContents": "Components",
+    "argTypes": {
+      "modelValue": "Current select value. For multiple — array of values, otherwise single value or null",
+      "options": "List of options. Each element: { label: string; value: any; disabled?: boolean }",
+      "placeholder": "Placeholder text when value is not selected",
+      "disabled": "Disables select and interaction with it",
+      "multiple": "Multiple selection mode",
+      "clearable": "Shows clear button for selected value",
+      "searchable": "Enables search field for options",
+      "size": "Component size: sm | (default) | lg",
+      "variant": "Styling variant: outlined | filled",
+      "invalid": "Error state (changes styles)",
+      "loading": "Displays loading state and blocks interaction",
+      "checkmark": "Show checkmark icon for selected option",
+      "full": "Stretch select to full available width",
+      "optionLabel": "Field name for option text in options object",
+      "optionValue": "Field name for option value in options object",
+      "optionDisabled": "Field name indicating disabled option",
+      "filterPlaceholder": "Placeholder in search field",
+      "noOptionsText": "Text when no available options",
+      "loadingText": "Text when loading options",
+      "clearIcon": "Icon for clear value action",
+      "dropdownIcon": "Dropdown list indicator icon",
+      "loadingIcon": "Loading state icon",
+      "checkmarkIcon": "Selected option checkmark icon",
+      "overlayStyle": "Additional styles for dropdown overlay",
+      "overlayClass": "Additional class for dropdown overlay",
+      "updatemodelValue": "Event fired when model value changes (v-model)",
+      "change": "Event fired when user confirms selection",
+      "search": "Event fired when text is entered in search field",
+      "select": "Event fired when option is selected",
+      "remove": "Event fired when selected option is removed (in multiple)",
+      "clear": "Event fired when value is cleared",
+      "option": "Slot template for individual option",
+      "value": "Value slot (display selected value in trigger)",
+      "footer": "Slot for bottom part of dropdown list",
+      "header": "Slot for top part of dropdown list",
+      "noOptions": "Slot when no available options",
+      "dropdown": "Slot for dropdown opening",
+      "clear ": "Slot for clear value element",
+      "loading ": "Slot for loading element"
+    }
+  }
+}

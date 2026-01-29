@@ -9,7 +9,12 @@ import { CloseIcon, DeleteIcon, EyeIcon, SearchIcon } from '@craftvue/icons'
 
 type AllKeys = keyof InputEmits | keyof InputSlots | keyof BaseInputProps
 
-const slotsArgskeys: (keyof InputSlots)[] = ['append', 'prefix', 'prepend', 'suffix']
+const slotsArgskeys: (keyof InputSlots)[] = [
+  'append',
+  'prefix',
+  'prepend',
+  'suffix',
+]
 
 const propsArgskeys: (keyof BaseInputProps)[] = [
   'clearIcon',
@@ -72,70 +77,71 @@ const meta = {
     variant: {
       control: 'select',
       description:
-        'Визуальный вариант отображения ввода. Определяет стиль оформления (заливка, контур).',
+        'Visual display variant of input. Defines the style (filled, outlined).',
     },
     size: {
       control: {
         type: 'select',
-        labels: { 0: 'Маленький', 1: 'Нормальный', 2: 'Большой' },
+        labels: { 0: 'Small', 1: 'Normal', 2: 'Large' },
       },
       options: [0, 1, 2],
       mapping: { 0: 'sm', 1: undefined, 2: 'lg' },
       description:
-        'Размер ввода. Контролирует масштаб элемента через предопределенные размерные варианты.',
+        'Input size. Controls element scale through predefined size variants',
     },
     invalid: {
       control: 'boolean',
       description:
-        'Состояние ошибки. Включает визуальную индикацию ошибки и блокирует взаимодействие.',
+        'Error state. Enables visual error indication and blocks interaction',
     },
     disabled: {
       type: 'boolean',
       description:
-        'Состояние отключения. Включает визуальную индикацию отключенного состояния и блокирует взаимодействие.',
+        'Disabled state. Enables visual indication of disabled state and blocks interaction',
     },
     clearable: {
       type: 'boolean',
       description:
-        'Возможность очистки значения. Включает кнопку очистки и позволяет удалять введенные данные.',
+        'Clear value capability. Enables clear button and allows deleting entered data',
     },
     showPassword: {
       type: 'boolean',
       description:
-        'Показывать пароль. Включает отображение пароля в виде текста и скрывает его в виде точек.',
+        'Show password. Enables displaying password as text and hides it as dots',
     },
     showWordLimit: {
       type: 'boolean',
       description:
-        'Показывать лимит символов. Включает отображение лимита символов и количества введенных символов.',
+        'Show character limit. Enables displaying character limit and count of entered characters',
     },
     formatter: {
       control: {
         type: 'select',
         labels: {
-          0: 'Без форматирования',
-          1: 'Формат $ 1,000,000',
+          0: 'No formatting',
+          1: 'Format $ 1,000,000',
         },
       },
       options: [0, 1],
       mapping: {
         0: undefined,
-        1: (value: string) => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ','),
+        1: (value: string) =>
+          `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ','),
       },
       description:
-        'Функция форматирования значения. Преобразует введенное значение в соответствии с предопределенным форматом.',
+        'Value formatting function. Transforms entered value according to predefined format',
     },
     modelValue: {
       control: false,
       description:
-        'Значение ввода. Может быть использовано для инициализации значения или для отображения текущего значения.',
+        'Input value. Can be used to initialize value or display current value',
     },
     parser: {
       control: {
         type: 'select',
         labels: {
-          0: 'Без парсера',
-          1: 'Парсер $ 1,000,000',
+          0: 'No parser',
+          1: 'Parser $ 1,000,000',
         },
       },
       options: [0, 1],
@@ -143,14 +149,15 @@ const meta = {
         0: undefined,
         1: (value: string) => value.replace(/\D/g, ''),
       },
-      description: 'Функция парсинга значения. Преобразует форматированное значение в исходное.',
+      description:
+        'Value parsing function. Transforms formatted value back to original',
     },
     clearIcon: {
       control: {
         type: 'select',
         labels: {
-          0: 'По-умолчанию',
-          1: 'Кастомная иконка',
+          0: 'Default',
+          1: 'Custom icon',
         },
       },
       options: [0, 1],
@@ -158,14 +165,14 @@ const meta = {
         0: markRaw(CloseIcon),
         1: markRaw(DeleteIcon),
       },
-      description: 'Иконка очистки. Графический элемент, используемый для очистки значения ввода.',
+      description: 'Clear icon. Graphic element used to clear input value',
     },
     prefixIcon: {
       control: {
         type: 'select',
         labels: {
-          0: 'Без иконки',
-          1: 'С иконкой',
+          0: 'No icon',
+          1: 'With icon',
         },
       },
       options: [0, 1],
@@ -174,14 +181,14 @@ const meta = {
         1: markRaw(SearchIcon),
       },
       description:
-        'Иконка префикса. Графический элемент, используемый для отображения префикса значения ввода.',
+        'Prefix icon. Graphic element used to display prefix of input value',
     },
     suffixIcon: {
       control: {
         type: 'select',
         labels: {
-          0: 'Без иконки',
-          1: 'С иконкой',
+          0: 'No icon',
+          1: 'With icon',
         },
       },
       options: [0, 1],
@@ -190,48 +197,48 @@ const meta = {
         1: markRaw(EyeIcon),
       },
       description:
-        'Иконка суффикса. Графический элемент, используемый для отображения суффикса значения ввода.',
+        'Suffix icon. Graphic element used to display suffix of input value',
     },
     prepend: {
       control: {
         type: 'select',
-        labels: { 0: 'Пустой слот', 1: 'template #prepend' },
+        labels: { 0: 'Empty slot', 1: 'template #prepend' },
       },
       options: [0, 1],
       mapping: {
         0: undefined,
         1: 'Https://',
       },
-      description: 'Контент слота prepend. Заменяет стандартный контент prepend произвольным HTML.',
+      description: 'Slot for content before input field',
     },
     append: {
       control: {
         type: 'select',
-        labels: { 0: 'Пустой слот', 1: 'template #append' },
+        labels: { 0: 'Empty slot', 1: 'template #append' },
       },
       options: [0, 1],
       mapping: {
         0: undefined,
         1: markRaw(SearchIcon),
       },
-      description: 'Контент слота append. Заменяет стандартный контент append произвольным HTML.',
+      description: 'Slot for content after input field',
     },
     suffix: {
       control: {
         type: 'select',
-        labels: { 0: 'Пустой слот', 1: 'template #suffix' },
+        labels: { 0: 'Empty slot', 1: 'template #suffix' },
       },
       options: [0, 1],
       mapping: {
         0: undefined,
         1: 'check',
       },
-      description: 'Контент слота suffix. Заменяет стандартный контент suffix произвольным HTML.',
+      description: 'Slot for suffix content (after input)',
     },
     prefix: {
       control: {
         type: 'select',
-        labels: { 0: 'Пустой слот', 1: 'template #prefix' },
+        labels: { 0: 'Empty slot', 1: 'template #prefix' },
       },
       options: [0, 1],
       mapping: {
@@ -241,10 +248,10 @@ const meta = {
       table: {
         category: 'slots',
         type: {
-          summary: "any",
-        }
+          summary: 'any',
+        },
       },
-      description: 'Контент слота prefix. Заменяет стандартный контент prefix произвольным HTML.',
+      description: 'Slot for prefix content (before input)',
     },
   },
   decorators: [
@@ -567,7 +574,16 @@ export const WithIcon: Story = {
         return obj
       })
 
-      return { args, value1, value2, value3, value4, allowedArgs, SearchIcon, DeleteIcon }
+      return {
+        args,
+        value1,
+        value2,
+        value3,
+        value4,
+        allowedArgs,
+        SearchIcon,
+        DeleteIcon,
+      }
     },
     template: `
       <div style="display: flex; flex-direction: column;">

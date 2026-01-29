@@ -1,0 +1,54 @@
+{
+  "tabs": {
+    "title": "Tabs",
+    "subtitle": "Tab component for organizing content into separate panels. Supports horizontal and vertical orientation, scrolling, lazy loading and customization",
+    "import": {
+      "title": "Import"
+    },
+    "basic": {
+      "title": "Basic Example",
+      "description": "Basic usage of tabs component with three content panels"
+    },
+    "vertical": {
+      "title": "Vertical Orientation",
+      "description": "Tabs can be displayed vertically using `orientation=\"vertical\"` property"
+    },
+    "dynamic": {
+      "title": "Dynamic Tabs",
+      "description": "Creating tabs dynamically using `v-for` and reactive data"
+    },
+    "template": {
+      "title": "Custom Templates",
+      "description": "Using slots to create custom content for tabs and panels"
+    },
+    "controlled": {
+      "title": "Controlled Tabs",
+      "description": "Full control over tabs state using `v-model` and event handlers"
+    },
+    "scrollable": {
+      "title": "Scrollable Tabs",
+      "description": "Tabs with navigation buttons for scrolling when there are many elements"
+    },
+    "disabled": {
+      "title": "Disabled Tabs",
+      "description": "Individual tabs can be disabled using `disabled` property"
+    },
+    "navigation": {
+      "title": "Navigation Menu",
+      "description": "Navigation menu implemented using tabs without panels. Tab content can use, for example, router-view"
+    },
+    "tableOfContents": "Components",
+    "argTypes": {
+      "value": "Active tab by default",
+      "orientation": "Tab orientation",
+      "showNavigators": "Show navigation buttons",
+      "lazy": "Lazy load content",
+      "tabindex": "Element index in tab order",
+      "selectOnFocus": "Automatically select tab on focus",
+      "updatevalue": "Event for updating active tab value",
+      "nexticon": "Template for \"Next\" button icon for scrollable component",
+      "previcon": "Template for \"Previous\" button icon for scrollable component",
+      "default": "Slot for tabs component content"
+    }
+  }
+}

@@ -1,27 +1,30 @@
-import type { DropdownStoryName, CodeTexts } from 'docs/components/CustomSource/CustomSource.types'
+import type {
+  DropdownStoryName,
+  CodeTexts,
+} from 'docs/components/CustomSource/CustomSource.types'
 
 const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
   basic: {
     simple: `
-      <CButton ref="rootElRef">Список доступных стран</CButton>
+      <CButton ref="rootElRef">List of available countries</CButton>
       <CDropdown :show="show" :root-el="rootElRef?.$el" @hide="close" @show="open">
         <ul style="display: flex; flex-direction: column; padding: 4px;">
-          <li style="padding: 7px 10px;">Россия</li>
-          <li style="padding: 7px 10px;">США</li>
-          <li style="padding: 7px 10px;">Украина</li>
-          <li style="padding: 7px 10px;">Великобритания</li>
+          <li style="padding: 7px 10px;">Russia</li>
+          <li style="padding: 7px 10px;">USA</li>
+          <li style="padding: 7px 10px;">Ukraine</li>
+          <li style="padding: 7px 10px;">United Kingdom</li>
         </ul>
       </CDropdown>
     `,
     full: `
       <template>
-        <CButton ref="rootElRef">Список доступных стран</CButton>
+        <CButton ref="rootElRef">List of available countries</CButton>
         <CDropdown :show="show" :root-el="rootElRef?.$el" @hide="close" @show="open">
           <ul style="display: flex; flex-direction: column; padding: 4px;">
-            <li style="padding: 7px 10px;">Россия</li>
-            <li style="padding: 7px 10px;">США</li>
-            <li style="padding: 7px 10px;">Украина</li>
-            <li style="padding: 7px 10px;">Великобритания</li>
+            <li style="padding: 7px 10px;">Russia</li>
+            <li style="padding: 7px 10px;">USA</li>
+            <li style="padding: 7px 10px;">Ukraine</li>
+            <li style="padding: 7px 10px;">United Kingdom</li>
           </ul>
         </CDropdown>
       </template>
@@ -47,22 +50,22 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
       <CButton ref="rootElRef5" severity="secondary">bottom</CButton>
       <CButton ref="rootElRef6" severity="secondary">bottomEnd</CButton>
       <CDropdown :root-el="rootElRef1?.$el" placement="top">
-        <div>Содержимое выпадающего списка, находящегося сверху элемента-триггера.</div>
+        <div>Dropdown content positioned above the trigger element.</div>
       </CDropdown>
       <CDropdown :root-el="rootElRef2?.$el" placement="top" align="center">
-        <div>Содержимое выпадающего списка, находящегося сверху элемента-триггера.</div>
+        <div>Dropdown content positioned above the trigger element.</div>
       </CDropdown>
       <CDropdown :root-el="rootElRef3?.$el" placement="top" align="end">
-        <div>Содержимое выпадающего списка, находящегося сверху элемента-триггера.</div>
+        <div>Dropdown content positioned above the trigger element.</div>
       </CDropdown>
       <CDropdown :root-el="rootElRef4?.$el">
-        <div>Содержимое выпадающего списка, находящегося снизу элемента-триггера.</div>
+        <div>Dropdown content positioned below the trigger element.</div>
       </CDropdown>
       <CDropdown :root-el="rootElRef5?.$el" align="center">
-        <div>Содержимое выпадающего списка, находящегося снизу элемента-триггера.</div>
+        <div>Dropdown content positioned below the trigger element.</div>
       </CDropdown>
       <CDropdown :root-el="rootElRef6?.$el" align="end">
-        <div>Содержимое выпадающего списка, находящегося снизу элемента-триггера.</div>
+        <div>Dropdown content positioned below the trigger element.</div>
       </CDropdown>
     `,
     full: `
@@ -76,22 +79,22 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
           <CButton ref="rootElRef6" severity="secondary">bottomEnd</CButton>
         </div>
         <CDropdown :root-el="rootElRef1?.$el" placement="top">
-          <div style="padding: 5px 10px;">Содержимое выпадающего списка, находящегося сверху элемента-триггера.</div>
+          <div style="padding: 5px 10px;">Dropdown content positioned above the trigger element.</div>
         </CDropdown>
         <CDropdown :root-el="rootElRef2?.$el" placement="top" align="center">
-          <div style="padding: 5px 10px;">Содержимое выпадающего списка, находящегося сверху элемента-триггера.</div>
+          <div style="padding: 5px 10px;">Dropdown content positioned above the trigger element.</div>
         </CDropdown>
         <CDropdown :root-el="rootElRef3?.$el" placement="top" align="end">
-          <div style="padding: 5px 10px;">Содержимое выпадающего списка, находящегося сверху элемента-триггера.</div>
+          <div style="padding: 5px 10px;">Dropdown content positioned above the trigger element.</div>
         </CDropdown>
         <CDropdown :root-el="rootElRef4?.$el">
-          <div style="padding: 5px 10px;">Содержимое выпадающего списка, находящегося снизу элемента-триггера.</div>
+          <div style="padding: 5px 10px;">Dropdown content positioned below the trigger element.</div>
         </CDropdown>
         <CDropdown :root-el="rootElRef5?.$el" align="center">
-          <div style="padding: 5px 10px;">Содержимое выпадающего списка, находящегося снизу элемента-триггера.</div>
+          <div style="padding: 5px 10px;">Dropdown content positioned below the trigger element.</div>
         </CDropdown>
         <CDropdown :root-el="rootElRef6?.$el" align="end">
-          <div style="padding: 5px 10px;">Содержимое выпадающего списка, находящегося снизу элемента-триггера.</div>
+          <div style="padding: 5px 10px;">Dropdown content positioned below the trigger element.</div>
         </CDropdown>
       </template>
       <script setup>
@@ -110,25 +113,25 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
   },
   sameWidth: {
     simple: `
-      <CButton ref="rootElRef">Список доступных стран</CButton>
+      <CButton ref="rootElRef">List of available countries</CButton>
       <CDropdown :show="show" :root-el="rootElRef?.$el" @hide="close" @show="open" same-width>
         <ul style="display: flex; flex-direction: column; padding: 4px;">
-          <li style="padding: 7px 10px;">Россия</li>
-          <li style="padding: 7px 10px;">США</li>
-          <li style="padding: 7px 10px;">Украина</li>
-          <li style="padding: 7px 10px;">Великобритания</li>
+          <li style="padding: 7px 10px;">Russia</li>
+          <li style="padding: 7px 10px;">USA</li>
+          <li style="padding: 7px 10px;">Ukraine</li>
+          <li style="padding: 7px 10px;">United Kingdom</li>
         </ul>
       </CDropdown>
     `,
     full: `
       <template>
-        <CButton ref="rootElRef">Список доступных стран</CButton>
+        <CButton ref="rootElRef">List of available countries</CButton>
         <CDropdown :show="show" :root-el="rootElRef?.$el" @hide="close" @show="open" same-width>
           <ul style="display: flex; flex-direction: column; padding: 4px;">
-            <li style="padding: 7px 10px;">Россия</li>
-            <li style="padding: 7px 10px;">США</li>
-            <li style="padding: 7px 10px;">Украина</li>
-            <li style="padding: 7px 10px;">Великобритания</li>
+            <li style="padding: 7px 10px;">Russia</li>
+            <li style="padding: 7px 10px;">USA</li>
+            <li style="padding: 7px 10px;">Ukraine</li>
+            <li style="padding: 7px 10px;">United Kingdom</li>
           </ul>
         </CDropdown>
       </template>
@@ -147,25 +150,25 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
   },
   arrow: {
     simple: `
-      <CButton ref="rootElRef">Список доступных стран</CButton>
+      <CButton ref="rootElRef">List of available countries</CButton>
       <CDropdown :show="show" :root-el="rootElRef?.$el" @hide="close" @show="open" arrow>
         <ul style="display: flex; flex-direction: column; padding: 4px;">
-          <li style="padding: 7px 10px;">Россия</li>
-          <li style="padding: 7px 10px;">США</li>
-          <li style="padding: 7px 10px;">Украина</li>
-          <li style="padding: 7px 10px;">Великобритания</li>
+          <li style="padding: 7px 10px;">Russia</li>
+          <li style="padding: 7px 10px;">USA</li>
+          <li style="padding: 7px 10px;">Ukraine</li>
+          <li style="padding: 7px 10px;">United Kingdom</li>
         </ul>
       </CDropdown>
     `,
     full: `
       <template>
-        <CButton ref="rootElRef">Список доступных стран</CButton>
+        <CButton ref="rootElRef">List of available countries</CButton>
         <CDropdown :show="show" :root-el="rootElRef?.$el" @hide="close" @show="open" arrow>
           <ul style="display: flex; flex-direction: column; padding: 4px;">
-            <li style="padding: 7px 10px;">Россия</li>
-            <li style="padding: 7px 10px;">США</li>
-            <li style="padding: 7px 10px;">Украина</li>
-            <li style="padding: 7px 10px;">Великобритания</li>
+            <li style="padding: 7px 10px;">Russia</li>
+            <li style="padding: 7px 10px;">USA</li>
+            <li style="padding: 7px 10px;">Ukraine</li>
+            <li style="padding: 7px 10px;">United Kingdom</li>
           </ul>
         </CDropdown>
       </template>
@@ -187,13 +190,13 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
       <CButton ref="rootElRef1" variant="outlined">Opacity</CButton>
       <CButton ref="rootElRef2">Zoom</CButton>
       <CDropdown :root-el="rootElRef1?.$el" >
-        <div style="padding: 5px 10px;">Содержимое выпадающего списка с анимацией 'opacity'.</div>
+        <div style="padding: 5px 10px;">Dropdown content with 'opacity' animation.</div>
       </CDropdown>
       <CDropdown
         :root-el="rootElRef2?.$el"
         animation="zoom"
       >
-        <div style="padding: 5px 10px;">Содержимое выпадающего списка с анимацией 'zoom'.</div>
+        <div style="padding: 5px 10px;">Dropdown content with 'zoom' animation.</div>
       </CDropdown>
     `,
     full: `
@@ -205,13 +208,13 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
         <CDropdown
           :root-el="rootElRef1?.$el"
         >
-          <div style="padding: 5px 10px;">Содержимое выпадающего списка с анимацией 'opacity'.</div>
+          <div style="padding: 5px 10px;">Dropdown content with 'opacity' animation.</div>
         </CDropdown>
         <CDropdown
           :root-el="rootElRef2?.$el"
           animation="zoom"
         >
-          <div style="padding: 5px 10px;">Содержимое выпадающего списка с анимацией 'zoom'.</div>
+          <div style="padding: 5px 10px;">Dropdown content with 'zoom' animation.</div>
         </CDropdown>
       </template>
       <script setup>
@@ -226,29 +229,25 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
   },
   template: {
     simple: `
-      <CButton ref="rootElRef">Список доступных стран</CButton>
+      <CButton ref="rootElRef">List of available countries</CButton>
       <CDropdown :show="show" :root-el="rootElRef?.$el" @hide="close" @show="open">
         <template #header>
-          <div>
-            <CInput v-model="input"/>
-          </div>
+          <CInput v-model="input"/>
         </template>
         <ul style="display: flex; flex-direction: column; padding: 4px;">
-          <li style="padding: 7px 10px;">Россия</li>
-          <li style="padding: 7px 10px;">США</li>
-          <li style="padding: 7px 10px;">Украина</li>
-          <li style="padding: 7px 10px;">Великобритания</li>
+          <li style="padding: 7px 10px;">Russia</li>
+          <li style="padding: 7px 10px;">USA</li>
+          <li style="padding: 7px 10px;">Ukraine</li>
+          <li style="padding: 7px 10px;">United Kingdom</li>
         </ul>
         <template #footer>
-          <div>
-            <CButton size="sm">Добавить</CButton>
-          </div>
+          <CButton size="sm">Add</CButton>
         </template>
       </CDropdown>
     `,
     full: `
       <template>
-        <CButton ref="rootElRef">Список доступных стран</CButton>
+        <CButton ref="rootElRef">List of available countries</CButton>
         <CDropdown :show="show" :root-el="rootElRef?.$el" @hide="close" @show="open">
           <template #header>
             <div style="padding: 7px 7px 0;">
@@ -256,14 +255,14 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
             </div>
           </template>
           <ul style="display: flex; flex-direction: column; padding: 4px;">
-            <li style="padding: 7px 10px;">Россия</li>
-            <li style="padding: 7px 10px;">США</li>
-            <li style="padding: 7px 10px;">Украина</li>
-            <li style="padding: 7px 10px;">Великобритания</li>
+            <li style="padding: 7px 10px;">Russia</li>
+            <li style="padding: 7px 10px;">USA</li>
+            <li style="padding: 7px 10px;">Ukraine</li>
+            <li style="padding: 7px 10px;">United Kingdom</li>
           </ul>
           <template #footer>
             <div style="padding: 0 7px 7px;">
-              <CButton size="sm" style="width: 100%;">Добавить</CButton>
+              <CButton size="sm" style="width: 100%;">Add</CButton>
             </div>
           </template>
         </CDropdown>
@@ -284,20 +283,20 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
   },
   maxSize: {
     simple: `
-      <CButton ref="rootElRef1">Ограничение по высоте</CButton>
-      <CButton ref="rootElRef2" severity="secondary">Ограничение по ширине</CButton>
+      <CButton ref="rootElRef1">Height limit</CButton>
+      <CButton ref="rootElRef2" severity="secondary">Width limit</CButton>
       <CDropdown
         :root-el="rootElRef1?.$el"
         :max-height="150"
       >
         <ul>
-          <li>Россия</li>
-          <li>США</li>
-          <li>Украина</li>
-          <li>Великобритания</li>
-          <li>Германия</li>
-          <li>Франция</li>
-          <li>Италия</li>
+          <li>Russia</li>
+          <li>USA</li>
+          <li>Ukraine</li>
+          <li>United Kingdom</li>
+          <li>Germany</li>
+          <li>France</li>
+          <li>Italy</li>
         </ul>
       </CDropdown>
       <CDropdown
@@ -305,28 +304,28 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
         :max-width="150"
       >
         <div>
-          Это очень длинный текст, который будет ограничен по ширине и перенесется на новую строку при необходимости.
+          This is a very long text that will be limited by width and wrapped to a new line if necessary.
         </div>
       </CDropdown>
     `,
     full: `
       <template>
         <div style="display: flex; gap: 15px;">
-          <CButton ref="rootElRef1">Ограничение по высоте</CButton>
-          <CButton ref="rootElRef2" severity="secondary">Ограничение по ширине</CButton>
+          <CButton ref="rootElRef1">Height limit</CButton>
+          <CButton ref="rootElRef2" severity="secondary">Width limit</CButton>
         </div>
         <CDropdown
           :root-el="rootElRef1?.$el"
           :max-height="150"
         >
           <ul style="display: flex; flex-direction: column; padding: 4px;">
-            <li style="padding: 7px 10px;">Россия</li>
-            <li style="padding: 7px 10px;">США</li>
-            <li style="padding: 7px 10px;">Украина</li>
-            <li style="padding: 7px 10px;">Великобритания</li>
-            <li style="padding: 7px 10px;">Германия</li>
-            <li style="padding: 7px 10px;">Франция</li>
-            <li style="padding: 7px 10px;">Италия</li>
+            <li style="padding: 7px 10px;">Russia</li>
+            <li style="padding: 7px 10px;">USA</li>
+            <li style="padding: 7px 10px;">Ukraine</li>
+            <li style="padding: 7px 10px;">United Kingdom</li>
+            <li style="padding: 7px 10px;">Germany</li>
+            <li style="padding: 7px 10px;">France</li>
+            <li style="padding: 7px 10px;">Italy</li>
           </ul>
         </CDropdown>
         <CDropdown
@@ -334,7 +333,7 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
           :max-width="150"
         >
           <div style="padding: 5px 10px;">
-            Это очень длинный текст, который будет ограничен по ширине и перенесется на новую строку при необходимости.
+            This is a very long text that will be limited by width and wrapped to a new line if necessary.
           </div>
         </CDropdown>
       </template>
@@ -350,31 +349,31 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
   },
   boundaryPadding: {
     simple: `
-      <CButton ref="rootElRef1">Отступ от края 5px</CButton>
-      <CButton ref="rootElRef2">Отступ от края 15px</CButton>
+      <CButton ref="rootElRef1">Edge padding 5px</CButton>
+      <CButton ref="rootElRef2">Edge padding 15px</CButton>
       <CDropdown
         :root-el="rootElRef1?.$el"
         placement="top"
         boundary-padding="5"
       >
-        <div>Dropdown с boundaryPadding 5px.</div>
+        <div>Dropdown with boundaryPadding 5px.</div>
       </CDropdown>
       <CDropdown
         :root-el="rootElRef2?.$el"
         placement="top"
         boundary-padding="15"
       >
-        <div>Dropdown с boundaryPadding 15px.</div>
+        <div>Dropdown with boundaryPadding 15px.</div>
       </CDropdown>
     `,
     full: `
       <template>
         <div style="height: 130px;">
           <div style="position: fixed; top: 40px; left: 20px;">
-            <CButton ref="rootElRef1">Отступ от края 5px</CButton>
+            <CButton ref="rootElRef1">Edge padding 5px</CButton>
           </div>
           <div style="position: fixed; top: 40px; right: 20px;">
-            <CButton ref="rootElRef2">Отступ от края 15px</CButton>
+            <CButton ref="rootElRef2">Edge padding 15px</CButton>
           </div>
         </div>
         <CDropdown
@@ -382,14 +381,14 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
           placement="top"
           :boundary-padding="5"
         >
-          <div style="padding: 2px 7px;">Dropdown с boundaryPadding 5px.</div>
+          <div style="padding: 2px 7px;">Dropdown with boundaryPadding 5px.</div>
         </CDropdown>
         <CDropdown
           :root-el="rootElRef2?.$el"
           placement="top"
           :boundary-padding="15"
         >
-          <div style="padding: 2px 7px;">Dropdown с boundaryPadding 15px.</div>
+          <div style="padding: 2px 7px;">Dropdown with boundaryPadding 15px.</div>
         </CDropdown>
       </template>
       <script setup>
@@ -404,32 +403,32 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
   },
   offset: {
     simple: `
-      <CButton ref="rootElRef1">Offset: 5px (по умолчанию)</CButton>
+      <CButton ref="rootElRef1">Offset: 5px (default)</CButton>
       <CButton ref="rootElRef2">Offset: 15px</CButton>
       <CButton ref="rootElRef3">Offset: 30px</CButton>
       <CDropdown
         :root-el="rootElRef1?.$el"
         :offset="5"
       >
-        <div>Dropdown с отступом 5px от триггера.</div>
+        <div>Dropdown with 5px offset from trigger.</div>
       </CDropdown>
       <CDropdown
         :root-el="rootElRef2?.$el"
         :offset="15"
       >
-        <div>Dropdown с отступом 15px от триггера.</div>
+        <div>Dropdown with 15px offset from trigger.</div>
       </CDropdown>
       <CDropdown
         :root-el="rootElRef3?.$el"
         :offset="30"
       >
-        <div>Dropdown с отступом 30px от триггера.</div>
+        <div>Dropdown with 30px offset from trigger.</div>
       </CDropdown>
     `,
     full: `
       <template>
         <div style="display: flex; gap: 15px; flex-direction: column; align-items: center;">
-          <CButton ref="rootElRef1">Offset: 5px (по умолчанию)</CButton>
+          <CButton ref="rootElRef1">Offset: 5px (default)</CButton>
           <CButton ref="rootElRef2">Offset: 15px</CButton>
           <CButton ref="rootElRef3">Offset: 30px</CButton>
         </div>
@@ -437,19 +436,19 @@ const dropdownCodeTexts: CodeTexts<DropdownStoryName> = {
           :root-el="rootElRef1?.$el"
           :offset="5"
         >
-          <div style="padding: 5px 10px;">Dropdown с отступом 5px от триггера.</div>
+          <div style="padding: 5px 10px;">Dropdown with 5px offset from trigger.</div>
         </CDropdown>
         <CDropdown
           :root-el="rootElRef2?.$el"
           :offset="15"
         >
-          <div style="padding: 5px 10px;">Dropdown с отступом 15px от триггера.</div>
+          <div style="padding: 5px 10px;">Dropdown with 15px offset from trigger.</div>
         </CDropdown>
         <CDropdown
           :root-el="rootElRef3?.$el"
           :offset="30"
         >
-          <div style="padding: 5px 10px;">Dropdown с отступом 30px от триггера.</div>
+          <div style="padding: 5px 10px;">Dropdown with 30px offset from trigger.</div>
         </CDropdown>
       </template>
       <script setup>

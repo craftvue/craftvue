@@ -27,43 +27,44 @@ const meta = {
   argTypes: {
     value: {
       control: 'text',
-      description: 'Значение бейджа. Может быть строкой или числом.',
+      description: 'Badge value. Can be string or number',
     },
     size: {
       control: {
         type: 'select',
-        labels: { 0: 'Маленький', 1: 'Нормальный', 2: 'Большой' },
+        labels: { 0: 'Small', 1: 'Normal', 2: 'Large' },
       },
       options: [0, 1, 2],
       mapping: { 0: 'sm', 1: undefined, 2: 'lg' },
-      description: 'Размер бейджа. Влияет на размер шрифта и отступы',
+      description: 'Badge size. Affects font size and padding',
     },
     severity: {
       control: 'select',
-      description: 'Цветовая схема бейджа. Определяет основной цвет и стиль',
+      description: 'Badge color scheme. Determines main color and style',
     },
     location: {
       control: 'select',
       description:
-        'Позиция бейджа относительно родительского элемента. Используется только когда есть содержимое в слоте default',
+        'Badge position relative to parent element. Used only when there is content in default slot',
     },
     bordered: {
       control: 'boolean',
-      description: 'Добавляет рамку вокруг бейджа для лучшей видимости',
+      description: 'Adds border around badge for better visibility',
     },
     max: {
       control: 'number',
       description:
-        'Максимальное значение для числовых бейджей. Если value превышает max, отображается как "max+"',
+        'Maximum value for numeric badges. If value exceeds max, displayed as "max+"',
     },
     content: {
       control: 'boolean',
-      description: 'Показывает кастомное содержимое в слоте content вместо стандартного значения',
+      description:
+        'Shows custom content in content slot instead of standard value',
     },
     default: {
       control: 'boolean',
       description:
-        'Показывает содержимое в слоте default (например, кнопку), относительно которого позиционируется бейдж',
+        'Shows content in default slot (e.g., button), relative to which badge is positioned',
     },
   },
   render: (args) => ({

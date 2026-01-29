@@ -1,102 +1,30 @@
-import {
-  Meta,
-  Title,
-  Canvas,
-  ArgTypes,
-  Subtitle,
-  TableOfContents,
-} from '@storybook/addon-docs/blocks'
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
 import * as PopoverStories from './Popover.stories'
-import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+import { PopoverContent } from './PopoverContent.tsx'
 
 <Meta title="Feedback/Popover" />
 
-<div className='sb-docs-wrapper' >
-  <div className='sb-docs-content'>
-    <Title>Popover</Title>
-
-    <Subtitle>
-      Компонент всплывающего окна для отображения дополнительного контента с поддержкой позиционирования, триггеров и кастомизации
-    </Subtitle>
-
-    <h3>Импорт</h3>
-
-    <CustomSource
-      code="import CPopover from 'craftvue/popover'"
-      actions={['copy']}
-      parser="babel"
-      language="javascript"
-    />
-
-    <ArgTypes of={PopoverStories.Basic}  />
-
-    ## Базовый пример
-
-    <p>Стандартный поповер с формой входа. Открывается по клику на кнопку. Требует указания элемента-триггера через свойство <code>rootEl</code>.</p>
-
-    <Canvas of={PopoverStories.Basic} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="popover" parser="html" />
-
-    &nbsp;
-
-    ## Позиционирование
-
-    <p>Поповер может быть позиционирован относительно элемента-триггера в четырех направлениях: <code>top</code> (сверху), <code>bottom</code> (снизу), <code>left</code> (слева), <code>right</code> (справа). Выравнивание контролируется свойством <code>align</code>.</p>
-
-    <Canvas of={PopoverStories.Placement} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="popover" name='placement' parser='html' />
-
-    &nbsp;
-
-    ## Триггеры
-
-    <p>Поповер может открываться по клику (<code>trigger="click"</code>) или при наведении (<code>trigger="hover"</code>). Для hover-триггера можно настроить задержки через свойства <code>showDelay</code> и <code>hideDelay</code>.</p>
-
-    <Canvas of={PopoverStories.Trigger} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="popover" name="trigger" parser='html' />
-
-    &nbsp;
-
-    ## Стрелка
-
-    <p>Поповер может отображаться со стрелкой, указывающей на элемент-триггер, или без неё. Управляется свойством <code>arrow</code>.</p>
-
-    <Canvas of={PopoverStories.Arrow} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="popover" name='arrow' parser="html" />
-
-    &nbsp;
-
-    ## Кастомный триггер
-
-    <p>Использование слота <code>trigger</code> для создания кастомного элемента-триггера. Слот получает параметры: <code>isOpen</code> (состояние открытости), <code>open</code> (функция открытия), <code>close</code> (функция закрытия). Позволяет полностью контролировать внешний вид и поведение триггера.</p>
-
-    <Canvas of={PopoverStories.TriggerSlot} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="popover" name="triggerSlot" parser="html" />
-
-    &nbsp;
-
-    ## Шаблон с header и footer
-
-    <p>Поповер с использованием слотов <code>header</code> и <code>footer</code> для создания структурированного контента. Заголовок отображается в верхней части, футер - в нижней.</p>
-
-    <Canvas of={PopoverStories.Template} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="popover" name="template" parser="html" />
-
-  </div>
-
-  <div>
-    <TableOfContents
-      className='sb-docs-toc sb-unstyled'
-      title='Компоненты'
-      contentsSelector='.sb-docs-content'
-      headingSelector="h2"
-      ignoreSelector='.sbdocs-subtitle'
-    />
-  </div>
-</div>
+<PopoverContent>
+  <Canvas of={PopoverStories.Basic} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={PopoverStories.Placement}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={PopoverStories.Trigger}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas of={PopoverStories.Arrow} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={PopoverStories.TriggerSlot}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={PopoverStories.Template}
+    sourceState="none"
+    className="sb-canvas"
+  />
+</PopoverContent>

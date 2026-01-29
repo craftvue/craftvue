@@ -1,5 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { Meta, StoryObj, ComponentPropsAndSlots } from '@storybook/vue3-vite'
+import type {
+  Meta,
+  StoryObj,
+  ComponentPropsAndSlots,
+} from '@storybook/vue3-vite'
 import { CButton, CFormItem, CRadio, CRadioGroup } from 'craftvue'
 import type { RadioEmits, RadioGroupEmits } from 'craftvue'
 import { AddPrefixKey } from 'docs/types'
@@ -67,79 +71,89 @@ const meta = {
   },
   argTypes: {
     modelValue: {
-      control: { type: 'select', labels: { 0: 'Option 1', 1: 'Option 2', 2: '-' } },
+      control: {
+        type: 'select',
+        labels: { 0: 'Option 1', 1: 'Option 2', 2: '-' },
+      },
       options: [0, 1, 2],
       mapping: {
         0: 'option1',
         1: 'option2',
         2: undefined,
       },
-      description: 'Выбранное значение радиокнопки (должно совпадать с value выбранной опции)',
+      description:
+        'Selected radio button value (must match value of selected option)',
     },
     disabled: {
       control: 'boolean',
-      description: 'Отключает радиокнопку, делая её недоступной для взаимодействия',
+      description:
+        'Disables radio button, making it unavailable for interaction',
     },
     invalid: {
       control: 'boolean',
-      description: 'Помечает радиокнопку как невалидную',
+      description: 'Marks radio button as invalid',
     },
     size: {
       control: {
         type: 'select',
-        labels: { 0: 'Маленький', 1: 'Нормальный', 2: 'Большой' },
+        labels: { 0: 'Small', 1: 'Normal', 2: 'Large' },
       },
       options: [0, 1, 2],
       mapping: { 0: 'sm', 1: undefined, 2: 'lg' },
-      description: 'Размер радиокнопки: sm (маленький), нормальный (по умолчанию), lg (большой)',
+      description:
+        'Radio button size: sm (small), normal (default), lg (large)',
     },
     label: {
       control: 'text',
-      description: 'Текстовая метка, отображаемая рядом с радиокнопкой',
+      description: 'Text label displayed next to radio button',
     },
     value: {
       control: false,
-      description: 'Значение радиокнопки, которое устанавливается в modelValue при выборе',
+      description: 'Radio button value that is set to modelValue when selected',
     },
     variant: {
       control: 'select',
-      description: 'Вариант стиля радиокнопки: outlined (с обводкой) или filled (заполненный)',
+      description:
+        'Radio button style variant: outlined (with border) or filled (filled)',
     },
     name: {
       control: false,
-      description: 'Атрибут name для элемента input (используется для группировки в RadioGroup)',
+      description:
+        'Name attribute for input element (used for grouping in RadioGroup)',
     },
     id: {
       control: false,
-      description: 'Уникальный идентификатор элемента (генерируется автоматически, если не указан)',
+      description:
+        'Unique element identifier (generated automatically if not specified)',
     },
     ariaLabel: {
       control: false,
-      description: 'ARIA-метка для доступности (альтернатива label для скринридеров)',
+      description:
+        'ARIA label for accessibility (alternative to label for screen readers)',
     },
     ariaLabelledby: {
       control: false,
-      description: 'ID элемента, который служит меткой для радиокнопки (ARIA)',
+      description: 'ID of element that serves as label for radio button (ARIA)',
     },
     focus: {
-      description: 'Событие, возникающее при получении фокуса радиокнопкой',
+      description: 'Event fired when radio button receives focus',
     },
     blur: {
-      description: 'Событие, возникающее при потере фокуса радиокнопкой',
+      description: 'Event fired when radio button loses focus',
     },
     'update:modelValue': {
-      description: 'Событие для обновления выбранного значения',
+      description: 'Event for updating selected value',
     },
     change: {
-      description: 'Событие, возникающее при изменении выбранной опции',
+      description: 'Event fired when selected option changes',
     },
     default: {
       control: 'boolean',
-      description: 'Слот для кастомного содержимого метки',
+      description: 'Slot for custom label content',
     },
     icon: {
       control: 'boolean',
-      description: 'Слот для кастомной иконки радиокнопки',
+      description: 'Slot for custom radio button icon',
     },
   },
   render: (args) => ({
@@ -350,7 +364,7 @@ export const Group: Story = {
     'Group.size': {
       control: {
         type: 'select',
-        labels: { 0: 'Маленький', 1: 'Нормальный', 2: 'Большой' },
+        labels: { 0: 'Small', 1: 'Normal', 2: 'Large' },
       },
       options: [0, 1, 2],
       mapping: { 0: 'sm', 1: undefined, 2: 'lg' },
@@ -408,7 +422,9 @@ export const Group: Story = {
     components: { CRadio, CRadioGroup },
     setup() {
       const radioArgs = computed<Record<string, any>>(() => {
-        return Object.fromEntries(Object.entries(args).filter(([key]) => !key.startsWith('Group.')))
+        return Object.fromEntries(
+          Object.entries(args).filter(([key]) => !key.startsWith('Group.')),
+        )
       })
       const radioGroupArgs = computed<Record<string, any>>(() => {
         return Object.fromEntries(
@@ -428,7 +444,14 @@ export const Group: Story = {
         },
       )
 
-      return { args, radioArgs, radioGroupArgs, selectedCountry, countries, generateId }
+      return {
+        args,
+        radioArgs,
+        radioGroupArgs,
+        selectedCountry,
+        countries,
+        generateId,
+      }
     },
     template: `
       <CRadioGroup v-bind="radioGroupArgs" :name="generateId()" v-model="selectedCountry">
@@ -484,7 +507,15 @@ export const Form: Story = {
         error.value = ''
       }
 
-      return { args, selectedCountry, countries, error, submit, handleChange, generateId }
+      return {
+        args,
+        selectedCountry,
+        countries,
+        error,
+        submit,
+        handleChange,
+        generateId,
+      }
     },
     template: `
       <CFormItem label="Select country" required :errorMessage="error">

@@ -16,7 +16,7 @@ const meta = {
   },
   argTypes: {
     value: {
-      description: 'Значение панели (должно соответствовать вкладке)',
+      description: 'Panel value (should match tab)',
       table: {
         type: {
           summary: 'string | number',
@@ -24,13 +24,13 @@ const meta = {
       },
     },
     as: {
-      description: 'HTML элемент для рендеринга',
+      description: 'HTML element for rendering',
     },
     asChild: {
-      description: 'Использовать дочерний элемент как корневой',
+      description: 'Use child element as root',
     },
     default: {
-      description: 'Слот для содержимого панели вкладки',
+      description: 'Slot for tab panel content',
     },
   },
   tags: ['!dev'],

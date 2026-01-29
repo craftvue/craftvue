@@ -1,10 +1,20 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import type { ComponentPropsAndSlots, Meta, StoryObj } from '@storybook/vue3-vite'
+import type {
+  ComponentPropsAndSlots,
+  Meta,
+  StoryObj,
+} from '@storybook/vue3-vite'
 import { fn } from 'storybook/test'
 import { CButton, CConfirmDialog, CIcon, ConfirmDialogEmits } from 'craftvue'
 import { markRaw, ref, watch } from 'vue'
-import { CheckIcon, CloseIcon, ErrorIcon, InfoIcon, WarningIcon } from '@craftvue/icons'
+import {
+  CheckIcon,
+  CloseIcon,
+  ErrorIcon,
+  InfoIcon,
+  WarningIcon,
+} from '@craftvue/icons'
 import IconLogo from 'docs/components/IconLogo.vue'
 
 type AllConfirmDialogArgs = ComponentPropsAndSlots<typeof CConfirmDialog> &
@@ -33,7 +43,8 @@ const meta = {
     },
   },
   args: {
-    message: 'Are you sure you want to save these changes? This action cannot be undone.',
+    message:
+      'Are you sure you want to save these changes? This action cannot be undone.',
     type: 0 as any,
     icon: 0 as any,
     iconColor: undefined,
@@ -74,12 +85,18 @@ const meta = {
   argTypes: {
     message: {
       control: 'text',
-      description: 'Текст сообщения подтверждения, отображаемый в диалоге',
+      description: 'Confirmation message text displayed in dialog',
     },
     type: {
       control: {
         type: 'select',
-        labels: { 0: 'none', 1: 'warning', 2: 'success', 3: 'error', 4: 'info' },
+        labels: {
+          0: 'none',
+          1: 'warning',
+          2: 'success',
+          3: 'error',
+          4: 'info',
+        },
       },
       options: [0, 1, 2, 3, 4],
       mapping: {
@@ -90,12 +107,18 @@ const meta = {
         4: 'info',
       },
       description:
-        'Тип диалога, определяющий предустановленную иконку и стиль: warning, success, error, info',
+        'Dialog type, determining preset icon and style: warning, success, error, info',
     },
     icon: {
       control: {
         type: 'select',
-        labels: { 0: 'none', 1: 'warning', 2: 'success', 3: 'error', 4: 'info' },
+        labels: {
+          0: 'none',
+          1: 'warning',
+          2: 'success',
+          3: 'error',
+          4: 'info',
+        },
       },
       options: [0, 1, 2, 3, 4],
       mapping: {
@@ -106,116 +129,118 @@ const meta = {
         4: markRaw(InfoIcon),
       },
       description:
-        'Иконка компонента Vue, отображаемая рядом с сообщением (имеет приоритет над type)',
+        'Vue component icon displayed next to message (has priority over type)',
     },
     iconColor: {
       control: 'color',
-      description: 'Цвет иконки (CSS-цвет в любом формате)',
+      description: 'Icon color (CSS color in any format)',
     },
     confirmText: {
       control: 'text',
-      description: 'Текст на кнопке подтверждения',
+      description: 'Text on confirm button',
     },
     cancelText: {
       control: 'text',
-      description: 'Текст на кнопке отмены',
+      description: 'Text on cancel button',
     },
     confirmSeverity: {
       control: 'select',
-      description: 'Цветовая палитра кнопки подтверждения: primary, secondary, contrast',
+      description: 'Confirm button color palette: primary, secondary, contrast',
     },
     cancelSeverity: {
       control: 'select',
-      description: 'Цветовая палитра кнопки отмены: primary, secondary, contrast',
+      description: 'Cancel button color palette: primary, secondary, contrast',
     },
     confirmVariant: {
       control: 'select',
-      description: 'Вариант стиля кнопки подтверждения: filled, outlined, text',
+      description: 'Confirm button style variant: filled, outlined, text',
     },
     cancelVariant: {
       control: 'select',
-      description: 'Вариант стиля кнопки отмены: filled, outlined, text',
+      description: 'Cancel button style variant: filled, outlined, text',
     },
     showCancel: {
       control: 'boolean',
-      description: 'Показывать кнопку отмены',
+      description: 'Show cancel button',
     },
     showConfirm: {
       control: 'boolean',
-      description: 'Показывать кнопку подтверждения',
+      description: 'Show confirm button',
     },
     closeOnConfirm: {
       control: 'boolean',
-      description: 'Автоматически закрывать диалог при нажатии на кнопку подтверждения',
+      description: 'Automatically close dialog when confirm button is clicked',
     },
     closeOnCancel: {
       control: 'boolean',
-      description: 'Автоматически закрывать диалог при нажатии на кнопку отмены',
+      description: 'Automatically close dialog when cancel button is clicked',
     },
     show: {
       control: 'boolean',
-      description: 'Управляет видимостью диалога',
+      description: 'Controls dialog visibility',
     },
     width: {
       control: 'number',
-      description: 'Ширина диалога в пикселях (число) или строка с единицами измерения',
+      description: 'Dialog width in pixels (number) or string with units',
     },
     maxHeight: {
       control: 'text',
       description:
-        'Максимальная высота диалога (число в пикселях или строка с единицами, например "90vh")',
+        'Maximum dialog height (number in pixels or string with units, e.g. "90vh")',
     },
     maxWidth: {
       control: 'text',
       description:
-        'Максимальная ширина диалога (число в пикселях или строка с единицами, например "90vw")',
+        'Maximum dialog width (number in pixels or string with units, e.g. "90vw")',
     },
     modal: {
       control: 'boolean',
       description:
-        'Делает диалог модальным (с затемненным фоном, блокирующим взаимодействие с остальным контентом)',
+        'Makes dialog modal (with darkened background, blocking interaction with rest of content)',
     },
     closeOnOverlayClick: {
       control: 'boolean',
-      description: 'Закрывает диалог при клике на затемненный фон (overlay)',
+      description:
+        'Close dialog when clicking on darkened background (overlay)',
     },
     closeOnEscape: {
       control: 'boolean',
-      description: 'Закрывает диалог при нажатии клавиши Escape',
+      description: 'Close dialog when pressing Escape key',
     },
     lockScroll: {
       control: 'boolean',
-      description: 'Блокирует прокрутку страницы при открытом диалоге',
+      description: 'Lock page scrolling when dialog is open',
     },
     teleportTo: {
       control: 'text',
       description:
-        'Селектор или элемент, в который телепортируется диалог (по умолчанию "body", false - без телепорта)',
+        'Selector or element to which dialog is teleported (default "body", false - no teleport)',
     },
     zIndex: {
       control: 'number',
-      description: 'Z-index для диалога (используется для управления порядком наложения)',
+      description: 'Z-index for dialog (used to control stacking order)',
     },
     title: {
       control: 'text',
-      description: 'Заголовок диалога, отображаемый в header (если не используется слот header)',
+      description:
+        'Dialog title displayed in header (if header slot is not used)',
     },
     showClose: {
       control: 'boolean',
-      description: 'Показывать кнопку закрытия в header',
+      description: 'Show close button in header',
     },
     durationEnter: {
       control: 'number',
-      description: 'Длительность анимации появления в миллисекундах',
+      description: 'Duration of appearance animation in milliseconds',
     },
     durationLeave: {
       control: 'number',
-      description: 'Длительность анимации исчезновения в миллисекундах',
+      description: 'Duration of disappearance animation in milliseconds',
     },
     animation: {
       control: 'select',
       description:
-        'Тип анимации появления/исчезновения: fade (затухание), zoom (масштабирование), slide (слайд)',
+        'Type of appearance/disappearance animation: fade (fade), zoom (scaling), slide (slide)',
     },
     closeIcon: {
       control: {
@@ -228,36 +253,36 @@ const meta = {
         1: markRaw(ErrorIcon),
       },
       description:
-        'Иконка компонента Vue для кнопки закрытия (если не указана, используется иконка по умолчанию)',
+        'Vue component icon for close button (if not specified, default icon is used)',
     },
     header: {
       control: false,
-      description: 'Слот для кастомного заголовка. Получает параметр: close (закрыть)',
+      description: 'Slot for custom header. Receives parameter: close (close)',
     },
     default: {
       control: false,
-      description: 'Слот для кастомного содержимого диалога (вместо message)',
+      description: 'Slot for custom dialog content (instead of message)',
     },
     actions: {
       control: false,
       description:
-        'Слот для кастомных кнопок действий. Получает параметры: confirm (функция подтверждения), cancel (функция отмены)',
+        'Slot for custom action buttons. Receives parameters: confirm (confirm function), cancel (cancel function)',
     },
     confirm: {
       control: false,
-      description: 'Событие, возникающее при нажатии на кнопку подтверждения',
+      description: 'Event fired when confirm button is clicked',
     },
     cancel: {
       control: false,
-      description: 'Событие, возникающее при нажатии на кнопку отмены',
+      description: 'Event fired when cancel button is clicked',
     },
     'update:show': {
       control: false,
-      description: 'Событие для обновления видимости диалога',
+      description: 'Event for updating dialog visibility',
     },
     'show ': {
       control: false,
-      description: 'Событие, возникающее при показе диалога',
+      description: 'Event fired when dialog is shown',
       table: {
         category: 'events',
         type: {
@@ -267,15 +292,15 @@ const meta = {
     },
     hide: {
       control: false,
-      description: 'Событие, возникающее при скрытии диалога',
+      description: 'Event fired when dialog is hidden',
     },
     overlayClick: {
       control: false,
-      description: 'Событие, возникающее при клике на затемненный фон (overlay)',
+      description: 'Event fired when clicking on darkened background (overlay)',
     },
     escape: {
       control: false,
-      description: 'Событие, возникающее при нажатии клавиши Escape',
+      description: 'Event fired when Escape key is pressed',
     },
   },
   render: (args) => ({
@@ -300,7 +325,14 @@ const meta = {
         },
       )
 
-      return { args, isOpen, openDialog, handleConfirm, handleCancel, keyForRerender }
+      return {
+        args,
+        isOpen,
+        openDialog,
+        handleConfirm,
+        handleCancel,
+        keyForRerender,
+      }
     },
     template: `
       <CButton severity="secondary" @click="openDialog">
@@ -335,7 +367,14 @@ export const Type: Story = {
     title: { control: false },
   },
   render: (args) => ({
-    components: { CConfirmDialog, CButton, WarningIcon, InfoIcon, CheckIcon, ErrorIcon },
+    components: {
+      CConfirmDialog,
+      CButton,
+      WarningIcon,
+      InfoIcon,
+      CheckIcon,
+      ErrorIcon,
+    },
     setup() {
       const isOpen = ref(false)
       const info = ref<{
@@ -490,7 +529,13 @@ export const OneAction: Story = {
       const openDialogConfirm = () => (isOpenConfirm.value = true)
       const openDialogCancel = () => (isOpenCancel.value = true)
 
-      return { args, isOpenCancel, isOpenConfirm, openDialogConfirm, openDialogCancel }
+      return {
+        args,
+        isOpenCancel,
+        isOpenConfirm,
+        openDialogConfirm,
+        openDialogCancel,
+      }
     },
     template: `
       <div style="display: flex; gap: 10px;">

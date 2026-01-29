@@ -1,7 +1,7 @@
 <template>
   <div class="palette">
     <div v-for="color in value" :key="color.title" class="palette__color">
-      <h1 class="palette__color-title">{{ color.title }}</h1>
+      <h1 class="palette__color-title">{{ t(color.title) }}</h1>
       <ul class="palette__list">
         <li
           v-for="(shade, key) in color.colors"
@@ -9,7 +9,11 @@
           class="palette__item"
           :style="{ backgroundColor: shade }"
         >
-          <span class="palette__item-text" :style="{ ...getStyleText(shade) }">{{ key }}</span>
+          <span
+            class="palette__item-text"
+            :style="{ ...getStyleText(shade) }"
+            >{{ key }}</span
+          >
         </li>
       </ul>
     </div>
@@ -19,8 +23,11 @@
 <script setup lang="ts">
 import { getLuminance } from 'docs/utils'
 import { CSSProperties } from 'vue'
+import { useI18n } from 'docs/composables/useI18n'
 
 defineProps<{ value: { title: string; colors: Record<number, string> }[] }>()
+
+const { t } = useI18n()
 
 const getStyleText = (color: string): CSSProperties => {
   const luminance = getLuminance(color)

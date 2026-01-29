@@ -1,92 +1,13 @@
-import {
-  Meta,
-  Title,
-  Canvas,
-  ArgTypes,
-  Subtitle,
-  TableOfContents,
-} from '@storybook/addon-docs/blocks'
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
 import * as IconStories from './Icon.stories.ts'
-import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+import { IconContent } from './IconContent.tsx'
 
 <Meta title="Basic/Icon" />
 
-<div className='sb-docs-wrapper' >
-  <div className='sb-docs-content'>
-    <Title>Иконка</Title>
-
-    <Subtitle>
-      Универсальный компонент для отображения иконок с поддержкой встроенных иконок и кастомных SVG
-    </Subtitle>
-
-    <h3>Импорт</h3>
-
-    <CustomSource
-      code="import CIcon from 'craftvue/icon'"
-      actions={['copy']}
-      parser="babel"
-      language="javascript"
-    />
-
-    <ArgTypes of={IconStories.Basic} />
-
-    ## Базовый пример
-
-    <p>Базовое состояние иконки с именем, размером и цветом. Имя иконки задается свойством `name`</p>
-
-    <Canvas of={IconStories.Basic} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="icon" />
-
-    &nbsp;
-
-    ## Имена иконок
-
-    <p>Компонент поддерживает множество встроенных иконок: home, delete, envelope, save, search и другие</p>
-
-    <Canvas of={IconStories.Name} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="icon" name="name" />
-
-    &nbsp;
-
-    ## Цвета
-
-    <p>Цвет иконки можно изменить с помощью свойства `color`. Поддерживаются любые CSS цвета</p>
-
-    <Canvas of={IconStories.Color} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="icon" name="color" />
-
-    &nbsp;
-
-    ## Размеры
-
-    <p>Размер иконки задается свойством `size`. Можно использовать числа (пиксели) или строки с единицами измерения</p>
-
-    <Canvas of={IconStories.Size} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="icon" name="size" />
-
-    &nbsp;
-
-    ## Кастомные иконки
-
-    <p>Для использования собственных SVG иконок используйте слот `default`. Это позволяет вставлять любые кастомные иконки</p>
-
-    <Canvas of={IconStories.Template} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="icon" name="template" parser='html' />
-
-  </div>
-
-  <div>
-    <TableOfContents
-      className='sb-docs-toc sb-unstyled'
-      title='Компоненты'
-      contentsSelector='.sb-docs-content'
-      headingSelector="h2"
-      ignoreSelector='.sbdocs-subtitle'
-    />
-  </div>
-</div>
+<IconContent>
+  <Canvas of={IconStories.Basic} sourceState="none" className="sb-canvas" />
+  <Canvas of={IconStories.Name} sourceState="none" className="sb-canvas" />
+  <Canvas of={IconStories.Color} sourceState="none" className="sb-canvas" />
+  <Canvas of={IconStories.Size} sourceState="none" className="sb-canvas" />
+  <Canvas of={IconStories.Template} sourceState="none" className="sb-canvas" />
+</IconContent>

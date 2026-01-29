@@ -35,7 +35,7 @@
       left: 0;
     }
   }
-  .sb-docs-toc .toc-list-item{
+  .sb-docs-toc .toc-list-item {
     margin-left: 0;
     padding-left: 20px;
   }
@@ -73,6 +73,33 @@
   }
 
   .sb-docs-toc h2 {
+  }
+
+  // palette, typeset
+  .palette {
+    margin-top: 20px;
+  }
+
+  .docblock-typeset {
+    background-color: var(--ground-back);
+    border-radius: 8px;
+    margin-bottom: 0;
+  }
+
+  // changelog
+  .changelog {
+    h1 {
+      display: none;
+    }
+
+    h2:not(:first-of-type) {
+      margin-top: 50px;
+    }
+  }
+
+  // icons
+  .config-canvas {
+    margin-bottom: 0;
   }
 }
 

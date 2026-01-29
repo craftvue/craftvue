@@ -1,11 +1,21 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import type { ComponentPropsAndSlots, Meta, StoryObj } from '@storybook/vue3-vite'
+import type {
+  ComponentPropsAndSlots,
+  Meta,
+  StoryObj,
+} from '@storybook/vue3-vite'
 import { fn } from 'storybook/test'
 import { CButton, CDialog, CFormItem, CIcon, CInput } from 'craftvue'
 import type { DialogEmits } from 'craftvue'
 import { markRaw, ref, watch } from 'vue'
-import { AddIcon, CloseIcon, ErrorIcon, MaximizeIcon, MinusIcon } from '@craftvue/icons'
+import {
+  AddIcon,
+  CloseIcon,
+  ErrorIcon,
+  MaximizeIcon,
+  MinusIcon,
+} from '@craftvue/icons'
 
 type AllDialogArgs = ComponentPropsAndSlots<typeof CDialog> & {
   'show ': []
@@ -63,73 +73,74 @@ const meta = {
   argTypes: {
     show: {
       control: 'boolean',
-      description: 'Управляет видимостью диалога',
+      description: 'Controls dialog visibility',
     },
     width: {
       control: 'number',
-      description: 'Ширина диалога в пикселях (число) или строка с единицами измерения',
+      description: 'Dialog width in pixels (number) or string with units',
     },
     maxHeight: {
       control: 'text',
       description:
-        'Максимальная высота диалога (число в пикселях или строка с единицами, например "90vh")',
+        'Maximum dialog height (number in pixels or string with units, e.g. "90vh")',
     },
     maxWidth: {
       control: 'text',
       description:
-        'Максимальная ширина диалога (число в пикселях или строка с единицами, например "90vw")',
+        'Maximum dialog width (number in pixels or string with units, e.g. "90vw")',
     },
     fullscreen: {
       control: 'boolean',
       description:
-        'Включает возможность переключения в полноэкранный режим (показывает кнопку в header для разворачивания/сворачивания)',
+        'Enables fullscreen toggle (shows button in header to expand/collapse)',
     },
     modal: {
       control: 'boolean',
       description:
-        'Делает диалог модальным (с затемненным фоном, блокирующим взаимодействие с остальным контентом)',
+        'Makes dialog modal (with darkened background, blocking interaction with rest of content)',
     },
     closeOnOverlayClick: {
       control: 'boolean',
-      description: 'Закрывает диалог при клике на затемненный фон (overlay)',
+      description: 'Closes dialog when clicking on overlay',
     },
     closeOnEscape: {
       control: 'boolean',
-      description: 'Закрывает диалог при нажатии клавиши Escape',
+      description: 'Closes dialog when pressing Escape key',
     },
     lockScroll: {
       control: 'boolean',
-      description: 'Блокирует прокрутку страницы при открытом диалоге',
+      description: 'Locks page scrolling when dialog is open',
     },
     teleportTo: {
       control: 'text',
       description:
-        'Селектор или элемент, в который телепортируется диалог (по умолчанию "body", false - без телепорта)',
+        'Selector or element to which dialog is teleported (default "body", false - no teleport)',
     },
     zIndex: {
       control: 'number',
-      description: 'Z-index для диалога (используется для управления порядком наложения)',
+      description: 'Z-index for dialog (used to control stacking order)',
     },
     title: {
       control: 'text',
-      description: 'Заголовок диалога, отображаемый в header (если не используется слот header)',
+      description:
+        'Dialog title displayed in header (if header slot is not used)',
     },
     showClose: {
       control: 'boolean',
-      description: 'Показывать кнопку закрытия в header',
+      description: 'Show close button in header',
     },
     durationEnter: {
       control: 'number',
-      description: 'Длительность анимации появления в миллисекундах',
+      description: 'Duration of appearance animation in milliseconds',
     },
     durationLeave: {
       control: 'number',
-      description: 'Длительность анимации исчезновения в миллисекундах',
+      description: 'Duration of disappearance animation in milliseconds',
     },
     animation: {
       control: 'select',
       description:
-        'Тип анимации появления/исчезновения: fade (затухание), zoom (масштабирование), slide (слайд)',
+        'Type of appearance/disappearance animation: fade (fade), zoom (scaling), slide (slide)',
     },
     closeIcon: {
       control: {
@@ -142,23 +153,24 @@ const meta = {
         1: markRaw(ErrorIcon),
       },
       description:
-        'Иконка компонента Vue для кнопки закрытия (если не указана, используется иконка по умолчанию)',
+        'Vue component icon for close button (if not specified, default icon is used)',
     },
     maximizeIcon: {
       control: false,
-      description: 'Иконка компонента Vue для кнопки разворачивания в полноэкранный режим',
+      description: 'Vue component icon for button that expands to fullscreen',
     },
     minimizeIcon: {
       control: false,
-      description: 'Иконка компонента Vue для кнопки сворачивания из полноэкранного режима',
+      description:
+        'Vue component icon for button that collapses from fullscreen',
     },
     'update:show': {
       control: false,
-      description: 'Событие для обновления видимости диалога',
+      description: 'Event for updating dialog visibility',
     },
     'show ': {
       control: false,
-      description: 'Событие, возникающее при показе диалога',
+      description: 'Event fired when dialog is shown',
       table: {
         category: 'events',
         type: {
@@ -168,36 +180,36 @@ const meta = {
     },
     hide: {
       control: false,
-      description: 'Событие, возникающее при скрытии диалога',
+      description: 'Event fired when dialog is hidden',
     },
     maximize: {
       control: false,
-      description: 'Событие, возникающее при разворачивании диалога в полноэкранный режим',
+      description: 'Event fired when dialog is expanded to fullscreen',
     },
     minimize: {
       control: false,
-      description: 'Событие, возникающее при сворачивании диалога из полноэкранного режима',
+      description: 'Event fired when dialog is collapsed from fullscreen',
     },
     overlayClick: {
       control: false,
-      description: 'Событие, возникающее при клике на затемненный фон (overlay)',
+      description: 'Event fired when clicking on overlay',
     },
     escape: {
       control: false,
-      description: 'Событие, возникающее при нажатии клавиши Escape',
+      description: 'Event fired when Escape key is pressed',
     },
     header: {
       control: false,
       description:
-        'Слот для кастомного заголовка. Получает параметры: close (закрыть), toggleFullscreen (переключить полноэкранный режим), isFullscreen (состояние), fullscreenIcon (иконка)',
+        'Slot for custom header. Receives: close, toggleFullscreen, isFullscreen, fullscreenIcon',
     },
     default: {
       control: false,
-      description: 'Слот для основного содержимого диалога',
+      description: 'Slot for main dialog content',
     },
     footer: {
       control: false,
-      description: 'Слот для футера диалога (отображается в нижней части)',
+      description: 'Slot for dialog footer (displayed at the bottom)',
     },
   },
   render: (args) => ({

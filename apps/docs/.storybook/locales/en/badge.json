@@ -1,0 +1,52 @@
+{
+  "badge": {
+    "title": "Badge",
+    "subtitle": "Component for displaying notifications, counters and status indicators",
+    "import": {
+      "title": "Import"
+    },
+    "basic": {
+      "title": "Basic Example",
+      "description": "Standard badge with numeric value. Displayed as simple indicator"
+    },
+    "severity": {
+      "title": "Color Schemes",
+      "description": "Badge color scheme is determined by `severity` property. Available variants: primary, secondary, contrast"
+    },
+    "size": {
+      "title": "Sizes",
+      "description": "Badge size is controlled by `size` property. Available values: sm (small), lg (large)"
+    },
+    "maxValue": {
+      "title": "Maximum Value",
+      "description": "For numeric badges, maximum value can be set via `max` property. If value exceeds maximum, displayed as \"max+\""
+    },
+    "customizations": {
+      "title": "Customization",
+      "description": "Badge supports text values and custom content via `content` slot"
+    },
+    "overlay": {
+      "title": "Overlay on Elements",
+      "description": "Badge can overlay other elements via `default` slot. `bordered` property adds border for better visibility"
+    },
+    "positionOverlay": {
+      "title": "Positioning",
+      "description": "Badge position relative to parent element is configured via `location` property. All 4 corners are available"
+    },
+    "button": {
+      "title": "Button Integration",
+      "description": "Badge can be used as button property to display notification counters"
+    },
+    "tableOfContents": "Components",
+    "argTypes": {
+      "value": "Badge value. Can be string or number",
+      "size": "Badge size. Affects font size and padding",
+      "severity": "Badge color scheme. Determines main color and style",
+      "location": "Badge position relative to parent element. Used only when there is content in default slot",
+      "bordered": "Adds border around badge for better visibility",
+      "max": "Maximum value for numeric badges. If value exceeds max, displayed as \"max+\"",
+      "content": "Shows custom content in content slot instead of standard value",
+      "default": "Shows content in default slot (e.g., button), relative to which badge is positioned"
+    }
+  }
+}

@@ -1,4 +1,8 @@
-import type { Meta, StoryObj, ComponentPropsAndSlots } from '@storybook/vue3-vite'
+import type {
+  Meta,
+  StoryObj,
+  ComponentPropsAndSlots,
+} from '@storybook/vue3-vite'
 import {
   CTab,
   CTabList,
@@ -55,7 +59,7 @@ const meta = {
     value: {
       control: 'select',
       options: ['1', '2', '3'],
-      description: 'Активная вкладка по умолчанию',
+      description: 'Active tab by default',
       table: {
         type: {
           summary: 'string | number',
@@ -65,26 +69,26 @@ const meta = {
     orientation: {
       control: 'select',
       options: ['horizontal', 'vertical'],
-      description: 'Ориентация вкладок',
+      description: 'Tab orientation',
     },
     showNavigators: {
       control: 'boolean',
-      description: 'Показывать кнопки навигации',
+      description: 'Show navigation buttons',
     },
     lazy: {
       control: 'boolean',
-      description: 'Ленивая загрузка содержимого',
+      description: 'Lazy load content',
     },
     tabindex: {
       control: 'number',
-      description: 'Индекс элемента в порядке табуляции.',
+      description: 'Element index in tab order',
     },
     selectOnFocus: {
       control: 'boolean',
-      description: 'Автоматически выбирать вкладку при фокусе',
+      description: 'Automatically select tab on focus',
     },
     'update:value': {
-      description: 'Событие обновления значения активной вкладки',
+      description: 'Event for updating active tab value',
       table: {
         type: {
           summary: '[value: string | number]',
@@ -137,15 +141,16 @@ const meta = {
     },
     default: {
       control: false,
-      description: 'Слот для содержимого компонента вкладок',
+      description: 'Slot for tabs component content',
     },
     nexticon: {
       control: 'boolean',
-      description: 'Шаблон значка кнопки «Далее» для прокручиваемого компонента.',
+      description: 'Template for "Next" button icon for scrollable component',
     },
     previcon: {
       control: 'boolean',
-      description: 'Шаблон значка кнопки «Назад» для прокручиваемого компонента.',
+      description:
+        'Template for "Previous" button icon for scrollable component',
     },
     'TabsList.default': {
       control: false,
@@ -233,7 +238,12 @@ export const Basic: Story = {
 
       // перерендер при изменении ориентации для правильного позиционирования активного бара
       watch(
-        () => [args.orientation, args['Tab.disabled'], args.nexticon, args.previcon],
+        () => [
+          args.orientation,
+          args['Tab.disabled'],
+          args.nexticon,
+          args.previcon,
+        ],
         () => {
           keyForRerender.value++
         },
@@ -503,14 +513,27 @@ export const Controlled: Story = {
     },
   },
   render: (args) => ({
-    components: { CTabs, CTab, CTabList, CTabPanel, CTabPanels, CIcon, CButton },
+    components: {
+      CTabs,
+      CTab,
+      CTabList,
+      CTabPanel,
+      CTabPanels,
+      CIcon,
+      CButton,
+    },
     setup() {
       const keyForRerender = ref(0)
       const value = ref('1')
 
       // перерендер при изменении ориентации для правильного позиционирования активного бара
       watch(
-        () => [args.orientation, args['Tab.disabled'], args.nexticon, args.previcon],
+        () => [
+          args.orientation,
+          args['Tab.disabled'],
+          args.nexticon,
+          args.previcon,
+        ],
         () => {
           keyForRerender.value++
         },

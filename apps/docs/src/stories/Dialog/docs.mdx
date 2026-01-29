@@ -1,122 +1,40 @@
-import {
-  Meta,
-  Title,
-  Canvas,
-  ArgTypes,
-  Subtitle,
-  TableOfContents,
-} from '@storybook/addon-docs/blocks'
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
 import * as DialogStories from './Dialog.stories'
-import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+import { DialogContent } from './DialogContent.tsx'
 
 <Meta title="Feedback/Dialog" />
 
-<div className='sb-docs-wrapper' >
-  <div className='sb-docs-content'>
-    <Title>Dialog</Title>
-
-    <Subtitle>
-      Компонент модального диалогового окна для отображения контента, форм и взаимодействия с пользователем с поддержкой полноэкранного режима и кастомизации
-    </Subtitle>
-
-    <h3>Импорт</h3>
-
-    <CustomSource
-      code="import CDialog from 'craftvue/dialog'"
-      actions={['copy']}
-      parser="babel"
-      language="javascript"
-    />
-
-    <ArgTypes of={DialogStories.Basic}  />
-
-    ## Базовый пример
-
-    <p>Стандартный модальный диалог с заголовком, кнопкой закрытия и основным содержимым. Управляется через свойство <code>show</code>.</p>
-
-    <Canvas of={DialogStories.Basic} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="dialog" parser="html" />
-
-    &nbsp;
-
-    ## Полноэкранный режим
-
-    <p>Диалог с возможностью переключения в полноэкранный режим. Активируется свойством <code>fullscreen</code>, которое добавляет кнопку в header для разворачивания/сворачивания диалога.</p>
-
-    <Canvas of={DialogStories.Fullscreen} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="dialog" name="fullscreen" parser="html" />
-
-    &nbsp;
-
-    ## Анимации
-
-    <p>Диалог поддерживает три типа анимации появления/исчезновения: <code>fade</code> (затухание), <code>zoom</code> (масштабирование), <code>slide</code> (слайд). Настраивается через свойство <code>animation</code>.</p>
-
-    <Canvas of={DialogStories.Animation} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="dialog" name="animation" parser="html" />
-
-    &nbsp;
-
-    ## Немодальный режим
-
-    <p>Диалог в немодальном режиме (<code>modal: false</code>) не блокирует взаимодействие с остальным контентом страницы и не имеет затемненного фона.</p>
-
-    <Canvas of={DialogStories.NonModal} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="dialog" name="nonModal" parser="html" />
-
-    &nbsp;
-
-    ## Шаблон с header и footer
-
-    <p>Использование слотов <code>header</code> и <code>footer</code> для создания структурированного контента. Слот <code>header</code> получает параметры: <code>close</code> (закрыть), <code>toggleFullscreen</code> (переключить полноэкранный режим), <code>isFullscreen</code> (состояние), <code>fullscreenIcon</code> (иконка).</p>
-
-    <Canvas of={DialogStories.Template} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="dialog" name="template" parser="html" />
-
-    &nbsp;
-
-    ## Размеры
-
-    <p>Размеры диалога контролируются свойствами <code>width</code>, <code>maxWidth</code> и <code>maxHeight</code>. Можно использовать числа (пиксели) или строки с единицами измерения (например, "90vh", "90vw").</p>
-
-    <Canvas of={DialogStories.Size} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="dialog" name="size" parser="html" />
-
-    &nbsp;
-
-    ## Без заголовка
-
-    <p>Диалог без заголовка и кнопки закрытия. Создается путем установки <code>title=""</code> и <code>showClose: false</code>.</p>
-
-    <Canvas of={DialogStories.WithoutHeader} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="dialog" name="withoutHeader" parser="html" />
-
-    &nbsp;
-
-    ## Кастомные иконки
-
-    <p>Настройка иконок для кнопок управления диалогом: <code>closeIcon</code> (закрытие), <code>maximizeIcon</code> (разворачивание), <code>minimizeIcon</code> (сворачивание). Все иконки должны быть компонентами Vue.</p>
-
-    <Canvas of={DialogStories.CustomIcons} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="dialog" name="customIcons" parser="html" />
-
-  </div>
-
-  <div>
-    <TableOfContents
-      className='sb-docs-toc sb-unstyled'
-      title='Компоненты'
-      contentsSelector='.sb-docs-content'
-      headingSelector="h2"
-      ignoreSelector='.sbdocs-subtitle'
-    />
-  </div>
-</div>
+<DialogContent>
+  <Canvas of={DialogStories.Basic} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={DialogStories.Fullscreen}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={DialogStories.Animation}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={DialogStories.NonModal}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={DialogStories.Template}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas of={DialogStories.Size} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={DialogStories.WithoutHeader}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={DialogStories.CustomIcons}
+    sourceState="none"
+    className="sb-canvas"
+  />
+</DialogContent>

@@ -1,0 +1,124 @@
+.config {
+  .css-2qy8by, .css-bp0xxt {
+    flex: 0 0 30%;
+  }
+  .config-block{
+    background-color: var(--ground-back);
+    border-radius: 20px;
+    padding: 30px;
+  }
+  .config-intro {
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+  .config-intro__logo {
+    margin-bottom: 1.5rem;
+    width: 220px;
+  }
+  .config-intro__title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .config-intro__description {
+    font-size: 1.1rem;
+    color: #9ca3af;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .config-intro__links{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .config-intro__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+  }
+  .docs{
+    background-color: var(--prime-color);
+    color: var(--black);
+    font-weight: 500;
+
+    &:hover {
+      background-color: var(--prime-color-light);
+    }
+    svg{
+
+    }
+  }
+  .github {
+    background-color: var(--secondary-back);
+    color: #f3f4f6;
+
+    &:hover{
+      background-color: #404040;
+    }
+  }
+  .config-menu__wrapper {
+    margin-top: 50px;
+  }
+  .config-menu{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 130px);
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .config-menu__item{
+    display: flex;
+    padding: 15px;
+    gap: 25px;
+    border: 1px solid var(--ground-back);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .config-menu__item:hover {
+    border-color: var(--prime-color);
+    box-shadow: 0 0 10px #525252;
+  }
+  .config-menu__total{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--main-color);
+  }
+  .config-menu__content{
+    padding-top: 5px;
+  }
+  .config-menu__title{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--main-color);
+    margin-bottom: 10px;
+  }
+  .config-menu__description{
+    font-size: 0.875rem;
+    color: #9ca3af;
+  }
+  .config-menu__icon{
+    background-color: var(--secondary-back);
+    border-radius: 14px;
+    padding: 10px;
+    height: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  }
+  .config-menu__icon svg {
+    width: 90%;
+    color: var(--prime-color);
+  }
+}

@@ -1,5 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { Meta, StoryObj, ComponentPropsAndSlots } from '@storybook/vue3-vite'
+import type {
+  Meta,
+  StoryObj,
+  ComponentPropsAndSlots,
+} from '@storybook/vue3-vite'
 import { fn } from 'storybook/test'
 import type { SwitchEmits } from 'craftvue'
 import { CButton, CFormItem, CIcon, CSwitch } from 'craftvue'
@@ -58,84 +62,88 @@ const meta = {
     modelValue: {
       control: 'boolean',
       description:
-        'Значение переключателя (true/false или кастомное значение через trueValue/falseValue)',
+        'Switch value (true/false or custom value via trueValue/falseValue)',
     },
     disabled: {
       control: 'boolean',
-      description: 'Отключает переключатель, делая его недоступным для взаимодействия',
+      description: 'Disables switch, making it unavailable for interaction',
     },
     invalid: {
       control: 'boolean',
-      description: 'Помечает переключатель как невалидный',
+      description: 'Marks switch as invalid',
     },
     loading: {
       control: 'boolean',
-      description: 'Показывает индикатор загрузки и блокирует взаимодействие',
+      description: 'Shows loading indicator and blocks interaction',
     },
     size: {
       control: {
         type: 'select',
-        labels: { 0: 'Маленький', 1: 'Нормальный', 2: 'Большой' },
+        labels: { 0: 'Small', 1: 'Normal', 2: 'Large' },
       },
       options: [0, 1, 2],
       mapping: { 0: 'sm', 1: undefined, 2: 'lg' },
-      description: 'Размер переключателя: sm (маленький), нормальный (по умолчанию), lg (большой)',
+      description: 'Switch size: sm (small), normal (default), lg (large)',
     },
     label: {
       control: 'text',
-      description: 'Текстовая метка, отображаемая рядом с переключателем',
+      description: 'Text label displayed next to switch',
     },
     variant: {
       control: 'select',
-      description: 'Вариант стиля переключателя: outlined (с обводкой) или filled (заполненный)',
+      description:
+        'Switch style variant: outlined (with border) or filled (filled)',
     },
     trueValue: {
       control: false,
-      description: 'Кастомное значение, которое будет использоваться когда переключатель включен',
+      description: 'Custom value to be used when switch is on',
     },
     falseValue: {
       control: false,
-      description: 'Кастомное значение, которое будет использоваться когда переключатель выключен',
+      description: 'Custom value to be used when switch is off',
     },
     name: {
       control: false,
-      description: 'Атрибут name для элемента input (используется для группировки в формах)',
+      description:
+        'Name attribute for input element (used for grouping in forms)',
     },
     id: {
       control: false,
-      description: 'Уникальный идентификатор элемента (генерируется автоматически, если не указан)',
+      description:
+        'Unique element identifier (generated automatically if not specified)',
     },
     ariaLabel: {
       control: false,
-      description: 'ARIA-метка для доступности (альтернатива label для скринридеров)',
+      description:
+        'ARIA label for accessibility (alternative to label for screen readers)',
     },
     ariaLabelledby: {
       control: false,
-      description: 'ID элемента, который служит меткой для переключателя (ARIA)',
+      description: 'ID of element that serves as label for switch (ARIA)',
     },
     'update:modelValue': {
       control: false,
-      description: 'Событие для обновления значения переключателя',
+      description: 'Event for updating switch value',
     },
     change: {
       control: false,
-      description: 'Событие, возникающее при изменении состояния переключателя',
+      description: 'Event fired when switch state changes',
     },
     focus: {
       control: false,
-      description: 'Событие, возникающее при получении фокуса переключателем',
+      description: 'Event fired when switch receives focus',
     },
     blur: {
       control: false,
-      description: 'Событие, возникающее при потере фокуса переключателем',
+      description: 'Event fired when switch loses focus',
     },
     default: {
       control: 'boolean',
-      description: 'Слот для кастомного содержимого метки',
+      description: 'Slot for custom label content',
     },
     thumb: {
       control: 'boolean',
-      description: 'Слот для кастомного содержимого внутри переключателя (thumb)',
+      description: 'Slot for custom content inside switch (thumb)',
     },
   },
   render: (args) => ({

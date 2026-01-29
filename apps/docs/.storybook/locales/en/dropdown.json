@@ -1,0 +1,67 @@
+{
+  "dropdown": {
+    "title": "Dropdown",
+    "subtitle": "Dropdown menu positioned relative to trigger element with support for various placement options, animations and content customization",
+    "import": {
+      "title": "Import"
+    },
+    "basic": {
+      "title": "Basic Example",
+      "description": "Minimal component configuration with simple options list"
+    },
+    "placement": {
+      "title": "Placement",
+      "description": "Dropdown menu placement relative to trigger element: top or bottom, aligned to left, center or right"
+    },
+    "sameWidth": {
+      "title": "Same Width",
+      "description": "Dropdown menu automatically matches trigger element width"
+    },
+    "arrow": {
+      "title": "Arrow",
+      "description": "Display pointer arrow directed at trigger element for better visual connection"
+    },
+    "animation": {
+      "title": "Animations",
+      "description": "Appearance and disappearance animation variants: smooth opacity change or scaling (zoom)"
+    },
+    "maxSize": {
+      "title": "Size Constraints",
+      "description": "Limit maximum height or width of dropdown menu with automatic scrolling when size is exceeded"
+    },
+    "boundaryPadding": {
+      "title": "Edge Padding",
+      "description": "Minimum padding from screen edges when positioning, preventing menu from going outside visible area"
+    },
+    "offset": {
+      "title": "Trigger Offset",
+      "description": "Configure distance between trigger element and dropdown menu for better visual separation"
+    },
+    "template": {
+      "title": "Custom Templates",
+      "description": "Using slots to customize content: header, main content (default) and footer"
+    },
+    "tableOfContents": "Components",
+    "argTypes": {
+      "show": "Controls dropdown menu visibility. In external control mode used to control open/close state",
+      "rootEl": "Reference to DOM element relative to which dropdown menu is positioned. Required for component to work",
+      "placement": "Dropdown menu position relative to trigger element: top | bottom (default)",
+      "align": "Dropdown menu alignment relative to trigger element: start | center | end. Default: start",
+      "sameWidth": "Automatically sets dropdown menu width equal to trigger element width",
+      "offset": "Distance in pixels between trigger element and dropdown menu. Default: 5. Automatically increases by arrow size if arrow is present",
+      "boundaryPadding": "Minimum padding in pixels from screen edges when positioning. Prevents menu from going outside visible area. Default: 5",
+      "zIndex": "z-index value for dropdown menu. Default: 1000",
+      "maxHeight": "Maximum height of dropdown menu in pixels or CSS units. Scroll appears when exceeded",
+      "maxWidth": "Maximum width of dropdown menu in pixels or CSS units. Content wraps to new line when exceeded",
+      "teleportTo": "CSS selector or DOM element to which dropdown menu is teleported (uses Vue Teleport). Default: \"body\". Set false to disable teleport",
+      "restoreFocus": "Restore focus on trigger element after closing dropdown menu",
+      "animation": "Type of appearance and disappearance animation: zoom (scaling) | opacity (opacity change, default)",
+      "arrow": "Show pointer arrow directed at trigger element. Automatically increases offset by arrow size",
+      "hide": "Event fired when dropdown menu closes",
+      "show ": "Event fired when dropdown menu opens",
+      "header": "Header slot in dropdown menu",
+      "footer": "Footer slot in dropdown menu",
+      "default": "Main content of dropdown menu. Displayed between header and footer if they are set"
+    }
+  }
+}

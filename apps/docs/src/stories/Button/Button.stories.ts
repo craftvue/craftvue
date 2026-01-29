@@ -5,7 +5,14 @@ import { fn } from 'storybook/test'
 import IconLogo from 'docs/components/IconLogo.vue'
 import { CButton, CTab, CTabList, CTabs } from 'craftvue'
 import type { BaseButtonProps, ButtonEmits, ButtonSlots } from 'craftvue'
-import { AddIcon, DeleteIcon, EditIcon, SaveIcon, CheckIcon, HomeIcon } from '@craftvue/icons'
+import {
+  AddIcon,
+  DeleteIcon,
+  EditIcon,
+  SaveIcon,
+  CheckIcon,
+  HomeIcon,
+} from '@craftvue/icons'
 
 const icons = {
   null: undefined,
@@ -66,58 +73,58 @@ const meta = {
     severity: {
       control: 'select',
       description:
-        'Цветовая схема кнопки, определяющая ее семантическое назначение. Влияет на цвет фона и текста.',
+        'Button color scheme that determines its semantic purpose. Affects background and text color.',
     },
     variant: {
       control: 'select',
       description:
-        'Визуальный вариант отображения кнопки. Определяет стиль оформления (заливка, контур, текст).',
+        'Visual display variant of the button. Defines the style (filled, outlined, text).',
     },
     label: {
       control: 'text',
       description:
-        'Текстовое содержимое кнопки. Отображается как доступное для скринридеров описание действия.',
+        'Button text content. Displayed as an accessible description of the action for screen readers.',
     },
     loading: {
       control: 'boolean',
       description:
-        'Состояние загрузки. При активации отображает индикатор прогресса и блокирует взаимодействие.',
+        'Loading state. When activated, displays a progress indicator and blocks interaction.',
     },
     disabled: {
       control: 'boolean',
       description:
-        'Неактивное состояние. Отключает интерактивность и визуально указывает на недоступность действия.',
+        'Inactive state. Disables interactivity and visually indicates that the action is unavailable.',
     },
     raised: {
       control: 'boolean',
       description:
-        'Эффект поднятия. Добавляет тень для создания визуального объема и отделения от фона.',
+        'Elevation effect. Adds a shadow to create visual volume and separation from the background.',
     },
     rounded: {
       control: 'boolean',
       description:
-        'Скругление углов. При активации применяет максимальное скругление для создания pill-формы.',
+        'Corner rounding. When activated, applies maximum rounding to create a pill shape.',
     },
     badge: {
       control: 'text',
       type: 'boolean',
       description:
-        'Бейдж-индикатор. Отображает дополнительную метку для уведомлений или счетчиков.',
+        'Badge indicator. Displays an additional label for notifications or counters.',
     },
     badgeSeverity: {
       control: 'select',
       description:
-        'Цветовая схема бейджа. Согласуется с семантической значимостью отображаемой информации.',
+        'Badge color scheme. Aligns with the semantic significance of the displayed information.',
     },
     icon: {
       control: {
         type: 'select',
         labels: {
-          null: 'Без иконки',
-          AddIcon: 'Добавить',
-          DeleteIcon: 'Удалить',
-          EditIcon: 'Редактировать',
-          SaveIcon: 'Сохранить',
+          null: 'No icon',
+          AddIcon: 'Add',
+          DeleteIcon: 'Delete',
+          EditIcon: 'Edit',
+          SaveIcon: 'Save',
         },
       },
       options: Object.keys(icons),
@@ -126,43 +133,43 @@ const meta = {
         category: 'props',
       },
       description:
-        'Иконка кнопки. Графический элемент, дополняющий текстовое содержание или заменяющий его.',
+        'Button icon. A graphic element that complements or replaces the text content.',
     },
     iconPos: {
       control: 'select',
       description:
-        'Позиция иконки. Определяет расположение графического элемента относительно текста.',
+        'Icon position. Determines the placement of the graphic element relative to the text.',
     },
     size: {
       control: {
         type: 'select',
-        labels: { 0: 'Маленький', 1: 'Нормальный', 2: 'Большой' },
+        labels: { 0: 'Small', 1: 'Normal', 2: 'Large' },
       },
       options: [0, 1, 2],
       mapping: { 0: 'sm', 1: undefined, 2: 'lg' },
       description:
-        'Размер кнопки. Контролирует масштаб элемента через предопределенные размерные варианты.',
+        'Button size. Controls the element scale through predefined size variants.',
     },
     default: {
       control: {
         type: 'select',
-        labels: { 0: 'Пустой слот', 1: 'template #default' },
+        labels: { 0: 'Empty slot', 1: 'template #default' },
       },
       options: [0, 1],
-      mapping: { 0: undefined, 1: 'Содержимое template' },
+      mapping: { 0: undefined, 1: 'Template content' },
       type: 'boolean',
       description:
-        'Контент слота по умолчанию. Заменяет стандартное текстовое содержимое произвольным HTML.',
+        'Default slot content. Replaces standard text content with arbitrary HTML.',
     },
     iconSlot: {
       control: {
         type: 'select',
-        labels: { 0: 'Пустой слот', 1: 'template #iconSlot' },
+        labels: { 0: 'Empty slot', 1: 'template #iconSlot' },
       },
       options: [0, 1],
       mapping: { 0: undefined, 1: markRaw(HomeIcon) },
       description:
-        'Контент слота иконки. Заменяет стандартную иконку произвольным графическим содержимым.',
+        'Icon slot content. Replaces the standard icon with arbitrary graphic content.',
     },
   },
   render: (args) => ({
@@ -270,13 +277,13 @@ export const Loading: Story = {
     template: `
       <div style="display: flex; gap: 10px;">
         <CButton v-bind="args" />
-        <CButton v-bind="args" :label="args.label || 'Кнопка'" />
+        <CButton v-bind="args" :label="args.label || 'Button'" />
         <CButton
           v-bind="args"
           :icon="args.icon || CheckIcon"
           :loading="loading"
           @click="load"
-          :label="args.label || 'Нажми на меня'"
+          :label="args.label || 'Click me'"
         />
       </div>
     `,
@@ -315,7 +322,7 @@ export const Severity: Story = {
 
 export const Disabled: Story = {
   args: {
-    label: 'Отправить',
+    label: 'Submit',
     disabled: true,
   },
   argTypes: {
@@ -559,21 +566,21 @@ export const Badge: Story = {
       <div style="display: flex; gap: 10px;">
         <CButton
           v-bind="args"
-          :label="args.label || 'Отмена'"
+          :label="args.label || 'Cancel'"
           :badge="args.badge || '5'"
           badgeSeverity="secondary"
         />
         <CButton
           v-bind="args"
           :severity="args.severity || 'secondary'"
-          :label="args.label || 'Отмена'"
+          :label="args.label || 'Cancel'"
           :badge="args.badge || '99+'"
           badgeSeverity="contrast"
         />
         <CButton
           v-bind="args"
           :variant="args.variant || 'outlined'"
-          :label="args.label || 'Домой'"
+          :label="args.label || 'Home'"
           :icon="args.icon || HomeIcon"
           :badge="args.badge || 'NEW'"
         />

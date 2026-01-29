@@ -1,6 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import type { ComponentPropsAndSlots, Meta, StoryObj } from '@storybook/vue3-vite'
+import type {
+  ComponentPropsAndSlots,
+  Meta,
+  StoryObj,
+} from '@storybook/vue3-vite'
 import { fn } from 'storybook/test'
 import { CButton, CConfirmPopup, CIcon, CSwitch } from 'craftvue'
 import type { ConfirmPopupEmits } from 'craftvue'
@@ -68,7 +72,7 @@ const meta = {
   argTypes: {
     message: {
       control: 'text',
-      description: 'Текст сообщения подтверждения, отображаемый в поповере',
+      description: 'Confirmation message text displayed in popup',
     },
     icon: {
       control: {
@@ -82,134 +86,135 @@ const meta = {
         2: markRaw(ErrorIcon),
         3: markRaw(InfoIcon),
       },
-      description: 'Иконка компонента Vue, отображаемая рядом с сообщением',
+      description: 'Vue component icon displayed next to message',
     },
     iconColor: {
       control: 'color',
-      description: 'Цвет иконки (CSS-цвет в любом формате)',
+      description: 'Icon color (CSS color in any format)',
     },
     confirmText: {
       control: 'text',
-      description: 'Текст на кнопке подтверждения',
+      description: 'Text on confirm button',
     },
     cancelText: {
       control: 'text',
-      description: 'Текст на кнопке отмены',
+      description: 'Text on cancel button',
     },
     show: {
       control: false,
-      description: 'Управляет видимостью поповера',
+      description: 'Controls popup visibility',
     },
     rootEl: {
       control: false,
       description:
-        'Элемент, относительно которого позиционируется поповер (HTMLElement или Vue компонент)',
+        'Element relative to which popup is positioned (HTMLElement or Vue component)',
     },
     placement: {
       control: 'select',
       description:
-        'Позиция поповера относительно элемента: bottom (снизу), top (сверху), left (слева), right (справа)',
+        'Popup position relative to element: bottom, top, left, right',
     },
     align: {
       control: 'select',
-      description: 'Выравнивание поповера: start (начало), center (центр), end (конец)',
+      description: 'Popup alignment: start, center, end',
     },
     trigger: {
       control: 'select',
-      description: 'Способ открытия поповера: click (по клику) или hover (при наведении)',
+      description: 'Popup opening method: click or hover',
     },
     offset: {
       control: 'number',
-      description: 'Отступ в пикселях между элементом и поповером',
+      description: 'Spacing in pixels between trigger element and popup',
     },
     sameWidth: {
       control: 'boolean',
-      description: 'Устанавливает одинаковую ширину поповера с элементом-триггером',
+      description: 'Set popup width equal to trigger element width',
     },
     boundaryPadding: {
       control: 'number',
-      description:
-        'Отступ в пикселях от границ viewport для предотвращения выхода поповера за пределы экрана',
+      description: 'Padding in pixels from viewport bounds to prevent overflow',
     },
     zIndex: {
       control: 'number',
-      description: 'Z-index для поповера (используется для управления порядком наложения)',
+      description: 'Z-index for popup (used to control stacking order)',
     },
     maxHeight: {
       control: 'number',
       description:
-        'Максимальная высота поповера в пикселях (число) или строка с единицами измерения',
+        'Maximum popup height in pixels (number) or string with units',
     },
     maxWidth: {
       control: 'number',
       description:
-        'Максимальная ширина поповера в пикселях (число) или строка с единицами измерения',
+        'Maximum popup width in pixels (number) or string with units',
     },
     teleportTo: {
       control: 'text',
       description:
-        'Селектор или элемент, в который телепортируется поповер (по умолчанию "body", false - без телепорта)',
+        'Selector or element to which popup is teleported (default "body", false - no teleport)',
     },
     restoreFocus: {
       control: 'boolean',
-      description: 'Восстанавливает фокус на элементе-триггере после закрытия поповера',
+      description: 'Restore focus to trigger element after popup closes',
     },
     animation: {
       control: 'select',
       description:
-        'Тип анимации появления/исчезновения: zoom (масштабирование) или opacity (прозрачность)',
+        'Type of appearance/disappearance animation: zoom or opacity',
     },
     arrow: {
       control: 'boolean',
-      description: 'Показывать стрелку, указывающую на элемент-триггер',
+      description: 'Show arrow pointing to trigger element',
     },
     showDelay: {
       control: 'number',
-      description: 'Задержка в миллисекундах перед показом поповера (для trigger="hover")',
+      description:
+        'Delay in milliseconds before showing popup (for trigger="hover")',
     },
     hideDelay: {
       control: 'number',
-      description: 'Задержка в миллисекундах перед скрытием поповера (для trigger="hover")',
+      description:
+        'Delay in milliseconds before hiding popup (for trigger="hover")',
     },
     durationEnter: {
       control: 'number',
-      description: 'Длительность анимации появления в миллисекундах',
+      description: 'Duration of appearance animation in milliseconds',
     },
     durationLeave: {
       control: 'number',
-      description: 'Длительность анимации исчезновения в миллисекундах',
+      description: 'Duration of disappearance animation in milliseconds',
     },
     confirmSeverity: {
       control: 'select',
-      description: 'Цветовая палитра кнопки подтверждения: primary, secondary, contrast',
+      description: 'Confirm button color palette: primary, secondary, contrast',
     },
     cancelSeverity: {
       control: 'select',
-      description: 'Цветовая палитра кнопки отмены: primary, secondary, contrast',
+      description: 'Cancel button color palette: primary, secondary, contrast',
     },
     confirmVariant: {
       control: 'select',
-      description: 'Вариант стиля кнопки подтверждения: filled, outlined, text',
+      description: 'Confirm button style variant: filled, outlined, text',
     },
     cancelVariant: {
       control: 'select',
-      description: 'Вариант стиля кнопки отмены: filled, outlined, text',
+      description: 'Cancel button style variant: filled, outlined, text',
     },
     confirm: {
       control: false,
-      description: 'Событие, возникающее при нажатии на кнопку подтверждения',
+      description: 'Event fired when confirm button is clicked',
     },
     cancel: {
       control: false,
-      description: 'Событие, возникающее при нажатии на кнопку отмены',
+      description: 'Event fired when cancel button is clicked',
     },
     hide: {
       control: false,
-      description: 'Событие, возникающее при скрытии поповера',
+      description: 'Event fired when popup is hidden',
     },
     'show ': {
       control: false,
-      description: 'Событие, возникающее при показе поповера',
+      description: 'Event fired when popup is shown',
       table: {
         category: 'events',
         type: {
@@ -219,17 +224,17 @@ const meta = {
     },
     default: {
       control: false,
-      description: 'Слот для кастомного содержимого поповера (вместо message)',
+      description: 'Slot for custom popup content (instead of message)',
     },
     actions: {
       control: false,
       description:
-        'Слот для кастомных кнопок действий. Получает параметры: confirm (функция подтверждения), cancel (функция отмены)',
+        'Slot for custom action buttons. Receives parameters: confirm (confirm function), cancel (cancel function)',
     },
     'trigger ': {
       control: false,
       description:
-        'Слот для кастомного элемента-триггера. Получает параметры: isOpen (состояние), open (открыть), close (закрыть)',
+        'Slot for custom trigger element. Receives parameters: isOpen (state), open (open), close (close)',
       table: {
         category: 'slots',
         type: {
@@ -244,7 +249,13 @@ const meta = {
       const keyForRerender = ref(0)
 
       watch(
-        () => [args.placement, args.align, args.trigger, args.offset, args.arrow],
+        () => [
+          args.placement,
+          args.align,
+          args.trigger,
+          args.offset,
+          args.arrow,
+        ],
         () => {
           keyForRerender.value++
         },
@@ -385,7 +396,13 @@ export const Controlled: Story = {
       const keyForRerender = ref(0)
 
       watch(
-        () => [args.placement, args.align, args.trigger, args.offset, args.arrow],
+        () => [
+          args.placement,
+          args.align,
+          args.trigger,
+          args.offset,
+          args.arrow,
+        ],
         () => {
           keyForRerender.value++
         },
@@ -452,13 +469,26 @@ export const Customization: Story = {
       const keyForRerender = ref(0)
 
       watch(
-        () => [args.placement, args.align, args.trigger, args.offset, args.arrow],
+        () => [
+          args.placement,
+          args.align,
+          args.trigger,
+          args.offset,
+          args.arrow,
+        ],
         () => {
           keyForRerender.value++
         },
       )
 
-      return { args, CheckIcon, InfoIcon, ErrorIcon, WarningIcon, keyForRerender }
+      return {
+        args,
+        CheckIcon,
+        InfoIcon,
+        ErrorIcon,
+        WarningIcon,
+        keyForRerender,
+      }
     },
     template: `
       <div style="display: flex; gap: 10px;">
@@ -537,7 +567,13 @@ export const Template: Story = {
       const keyForRerender = ref(0)
 
       watch(
-        () => [args.placement, args.align, args.trigger, args.offset, args.arrow],
+        () => [
+          args.placement,
+          args.align,
+          args.trigger,
+          args.offset,
+          args.arrow,
+        ],
         () => {
           keyForRerender.value++
         },

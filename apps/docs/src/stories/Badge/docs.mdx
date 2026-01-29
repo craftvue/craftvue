@@ -1,122 +1,24 @@
-import {
-  Meta,
-  Title,
-  Canvas,
-  ArgTypes,
-  Subtitle,
-  TableOfContents,
-} from '@storybook/addon-docs/blocks'
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
 import * as BadgeStories from './Badge.stories.ts'
-import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+import { BadgeContent } from './BadgeContent.tsx'
 
 <Meta title="Data/Badge" />
 
-<div className='sb-docs-wrapper' >
-  <div className='sb-docs-content'>
-    <Title>Бейдж</Title>
-
-    <Subtitle>
-      Компонент для отображения уведомлений, счетчиков и индикаторов состояния
-    </Subtitle>
-
-    <h3>Импорт</h3>
-
-    <CustomSource
-      code="import CBadge from 'craftvue/badge'"
-      actions={['copy']}
-      parser="babel"
-      language="javascript"
-    />
-
-    <ArgTypes of={BadgeStories.Basic} />
-
-    ## Базовый пример
-
-    <p>Стандартный бейдж с числовым значением. Отображается как простой индикатор</p>
-
-    <Canvas of={BadgeStories.Basic} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="badge" />
-
-    &nbsp;
-
-    ## Цветовые схемы
-
-    <p>Цветовая схема бейджа определяется свойством `severity`. Доступны варианты: primary, secondary, contrast</p>
-
-    <Canvas of={BadgeStories.Severity} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="badge" name="severity" />
-
-    &nbsp;
-
-    ## Размеры
-
-    <p>Размер бейджа контролируется свойством `size`. Доступные значения: sm (маленький), lg (большой)</p>
-
-    <Canvas of={BadgeStories.Size} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="badge" name="size" />
-
-    &nbsp;
-
-    ## Максимальное значение
-
-    <p>Для числовых бейджей можно установить максимальное значение через свойство `max`. Если значение превышает максимум, отображается как "max+"</p>
-
-    <Canvas of={BadgeStories.MaxValue} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="badge" name="maxValue" />
-
-    &nbsp;
-
-    ## Кастомизация
-
-    <p>Бейдж поддерживает текстовые значения и кастомное содержимое через слот `content`</p>
-
-    <Canvas of={BadgeStories.Customizations} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="badge" name="customizations" parser='html' />
-
-    &nbsp;
-
-    ## Наложение на элементы
-
-    <p>Бейдж может накладываться на другие элементы через слот `default`. Свойство `bordered` добавляет рамку для лучшей видимости</p>
-
-    <Canvas of={BadgeStories.Overlay} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="badge" name="overlay" parser="html" />
-
-    &nbsp;
-
-    ## Позиционирование
-
-    <p>Позиция бейджа относительно родительского элемента настраивается через свойство `location`. Доступны все 4 угла</p>
-
-    <Canvas of={BadgeStories.PositionOverlay} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="badge" name="positionOverlay" parser='html' />
-
-    &nbsp;
-
-    ## Интеграция с кнопками
-
-    <p>Бейдж может использоваться как свойство кнопки для отображения счетчиков уведомлений</p>
-
-    <Canvas of={BadgeStories.Button} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="badge" name="button" />
-
-  </div>
-
-  <div>
-    <TableOfContents
-      className='sb-docs-toc sb-unstyled'
-      title='Компоненты'
-      contentsSelector='.sb-docs-content'
-      headingSelector="h2"
-      ignoreSelector='.sbdocs-subtitle'
-    />
-  </div>
-</div>
+<BadgeContent>
+  <Canvas of={BadgeStories.Basic} sourceState="none" className="sb-canvas" />
+  <Canvas of={BadgeStories.Severity} sourceState="none" className="sb-canvas" />
+  <Canvas of={BadgeStories.Size} sourceState="none" className="sb-canvas" />
+  <Canvas of={BadgeStories.MaxValue} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={BadgeStories.Customizations}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas of={BadgeStories.Overlay} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={BadgeStories.PositionOverlay}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas of={BadgeStories.Button} sourceState="none" className="sb-canvas" />
+</BadgeContent>

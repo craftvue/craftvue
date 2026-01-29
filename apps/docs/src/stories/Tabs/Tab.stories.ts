@@ -17,7 +17,7 @@ const meta = {
   },
   argTypes: {
     value: {
-      description: 'Уникальное значение вкладки',
+      description: 'Unique tab value',
       table: {
         type: {
           summary: 'string | number',
@@ -25,16 +25,16 @@ const meta = {
       },
     },
     disabled: {
-      description: 'Отключить вкладку',
+      description: 'Disable tab',
     },
     as: {
-      description: 'HTML элемент для рендеринга',
+      description: 'HTML element for rendering',
     },
     asChild: {
-      description: 'Использовать дочерний элемент как корневой',
+      description: 'Use child element as root',
     },
     default: {
-      description: 'Слот для содержимого вкладки',
+      description: 'Slot for tab content',
       table: {
         type: {
           summary: `

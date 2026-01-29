@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.1](https://www.npmjs.com/package/@craftvue/icons/v/1.3.1) (2025-12-27)
+
+#### Refactors
+
+- Updated repository URLs to craftvue organization
+
 ## [1.3.0](https://www.npmjs.com/package/@craftvue/icons/v/1.3.0) (2025-12-06)
 
 #### Features

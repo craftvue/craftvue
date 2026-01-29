@@ -1,0 +1,67 @@
+{
+  "confirmpopup": {
+    "title": "ConfirmPopup",
+    "subtitle": "Confirmation popup component for requesting user action confirmation with customization and positioning support",
+    "import": {
+      "title": "Import"
+    },
+    "basic": {
+      "title": "Basic Example",
+      "description": "Standard confirmation popup with message and \"Yes\" and \"No\" buttons. Opens by clicking the trigger element via `trigger` slot"
+    },
+    "placement": {
+      "title": "Positioning",
+      "description": "Popup can be positioned relative to trigger element in four directions: `top`, `bottom`, `left`, `right`. Alignment is controlled by `align` property (`start`, `center`, `end`)"
+    },
+    "controlled": {
+      "title": "Controlled State",
+      "description": "Control popup visibility via `show` property (v-model:show). Allows programmatically opening/closing and using `rootEl` to specify trigger element"
+    },
+    "customization": {
+      "title": "Customization",
+      "description": "Customize appearance: icon via `icon`, icon color via `iconColor`, button texts via `confirmText`/`cancelText`, button styles via `confirmVariant`/`cancelVariant` and palettes via `confirmSeverity`/`cancelSeverity`"
+    },
+    "template": {
+      "title": "Custom Template",
+      "description": "Using `default` slot for custom content and `actions` slot for custom action buttons. `actions` slot receives `confirm` (confirm function) and `cancel` (cancel function) for full control"
+    },
+    "tableOfContents": "Components",
+    "argTypes": {
+      "message": "Confirmation message text displayed in popup",
+      "icon": "Vue component icon displayed next to message",
+      "iconColor": "Icon color (CSS color in any format)",
+      "confirmText": "Text on confirm button",
+      "cancelText": "Text on cancel button",
+      "show": "Controls popup visibility",
+      "rootEl": "Element relative to which popup is positioned (HTMLElement or Vue component)",
+      "placement": "Popup position relative to element: bottom, top, left, right",
+      "align": "Popup alignment: start, center, end",
+      "trigger": "Popup opening method: click or hover",
+      "offset": "Spacing in pixels between trigger element and popup",
+      "sameWidth": "Set popup width equal to trigger element width",
+      "boundaryPadding": "Padding in pixels from viewport bounds to prevent overflow",
+      "zIndex": "Z-index for popup (used to control stacking order)",
+      "maxHeight": "Maximum popup height in pixels (number) or string with units",
+      "maxWidth": "Maximum popup width in pixels (number) or string with units",
+      "teleportTo": "Selector or element to which popup is teleported (default \"body\", false - no teleport)",
+      "restoreFocus": "Restore focus to trigger element after popup closes",
+      "animation": "Type of appearance/disappearance animation: zoom or opacity",
+      "arrow": "Show arrow pointing to trigger element",
+      "showDelay": "Delay in milliseconds before showing popup (for trigger=\"hover\")",
+      "hideDelay": "Delay in milliseconds before hiding popup (for trigger=\"hover\")",
+      "durationEnter": "Duration of appearance animation in milliseconds",
+      "durationLeave": "Duration of disappearance animation in milliseconds",
+      "confirmSeverity": "Confirm button color palette: primary, secondary, contrast",
+      "cancelSeverity": "Cancel button color palette: primary, secondary, contrast",
+      "confirmVariant": "Confirm button style variant: filled, outlined, text",
+      "cancelVariant": "Cancel button style variant: filled, outlined, text",
+      "confirm": "Event fired when confirm button is clicked",
+      "cancel": "Event fired when cancel button is clicked",
+      "hide": "Event fired when popup is hidden",
+      "show ": "Event fired when popup is shown",
+      "default": "Slot for custom popup content (instead of message)",
+      "actions": "Slot for custom action buttons. Receives parameters: confirm (confirm function), cancel (cancel function)",
+      "trigger ": "Slot for custom trigger element. Receives parameters: isOpen (state), open (open), close (close)"
+    }
+  }
+}

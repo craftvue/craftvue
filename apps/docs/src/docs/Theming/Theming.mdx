@@ -1,0 +1,11 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks'
+import { ThemingContent } from './ThemingContent.tsx'
+import * as PaletteStories from './Palette.stories.ts'
+
+<Meta title="Theming" />
+
+<ThemingContent>
+  <Story of={PaletteStories.Basic} className="sb-docs-palette" />
+  <Story of={PaletteStories.Palette} />
+</ThemingContent>
+

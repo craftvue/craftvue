@@ -20,15 +20,16 @@ const meta = {
   argTypes: {
     name: {
       control: 'select',
-      description: 'Название встроенной иконки (home, delete, envelope, save, search и др.)',
+      description:
+        'Name of the built-in icon (home, delete, envelope, save, search, etc.)',
     },
     size: {
       control: 'text',
-      description: 'Размер иконки в пикселях (число) или с единицами измерения (строка)',
+      description: 'Icon size in pixels (number) or with units (string)',
     },
     color: {
       control: 'color',
-      description: 'Цвет иконки в любом CSS формате (hex, rgb, hsl, названия цветов)',
+      description: 'Icon color in any CSS format (hex, rgb, hsl, color names)',
     },
     default: {
       control: {
@@ -40,12 +41,14 @@ const meta = {
         0: undefined,
         1: IconLogo,
       },
-      description: 'Слот для кастомной иконки. Позволяет вставлять собственные SVG компоненты',
+      description:
+        'Slot for custom icon. Allows inserting your own SVG components',
     },
   },
   decorators: [
     () => ({
-      template: '<div style="display: flex; align-items: center; gap: 10px;"><story/></div>',
+      template:
+        '<div style="display: flex; align-items: center; gap: 10px;"><story/></div>',
     }),
   ],
   render: (args) => ({

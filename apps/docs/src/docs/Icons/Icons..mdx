@@ -1,0 +1,15 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+import * as IconsStories from './Icons.stories.ts'
+import * as IconStories from '../../stories/Icon/Icon.stories.ts'
+import { IconsContent } from './IconsContent.tsx'
+
+<Meta title="Icons" />
+
+<IconsContent>
+  <Canvas of={IconStories.Color} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={IconsStories.AllIcons}
+    className="config-canvas"
+    sourceState="none"
+  />
+</IconsContent>

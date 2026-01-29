@@ -11,6 +11,8 @@ const meta = {
     required: false,
     for: '',
     errorMessage: 0 as any,
+    durationEnter: 300,
+    durationLeave: 300,
   },
   parameters: {
     controls: {
@@ -21,16 +23,21 @@ const meta = {
   argTypes: {
     label: {
       control: 'text',
-      description: 'Текст лейбла для поля формы',
+      description: 'Label text for form field',
     },
     required: {
       control: 'boolean',
-      description: 'Обязательное поле. Добавляет звездочку (*) к лейблу',
+      description: 'Required field. Adds asterisk (*) to label',
     },
     errorMessage: {
       control: {
         type: 'select',
-        labels: { 0: 'Без сообщения', 1: 'Сообщение 1', 2: 'Сообщение 2', 3: 'Сообщение 3' },
+        labels: {
+          0: 'No message',
+          1: 'Message 1',
+          2: 'Message 2',
+          3: 'Message 3',
+        },
       },
       options: [0, 1, 2, 3],
       mapping: {
@@ -39,23 +46,35 @@ const meta = {
         2: 'This field is required',
         3: 'Password is too short',
       },
-      description: 'Сообщение об ошибке валидации',
+      description: 'Validation error message',
     },
     for: {
       control: 'text',
-      description: 'ID элемента, с которым связан лейбл (для доступности)',
+      description:
+        'ID of element that label is associated with (for accessibility)',
     },
     default: {
       control: false,
-      description: 'Основной слот для содержимого поля формы (например, CInput, CSelect и т.д.)',
+      description:
+        'Main slot for form field content (e.g., CInput, CSelect, etc.)',
     },
     error: {
       control: false,
-      description: 'Слот для кастомного отображения ошибки. Получает объект с полем error',
+      description:
+        'Slot for custom error display. Receives object with error field',
     },
     labelSlot: {
       control: false,
-      description: 'Слот для кастомного содержимого лейбла. Получает объект с полем label',
+      description:
+        'Slot for custom label content. Receives object with label field',
+    },
+    durationEnter: {
+      control: 'number',
+      description: 'Appearance animation duration',
+    },
+    durationLeave: {
+      control: 'number',
+      description: 'Disappearance animation duration',
     },
   },
 } satisfies Meta<typeof CFormItem>
@@ -227,6 +246,8 @@ export const Form: Story = {
     required: { control: false },
     errorMessage: { control: false },
     for: { control: false },
+    durationEnter: { control: false },
+    durationLeave: { control: false },
   },
   render: () => ({
     components: { CFormItem, CInput, CButton, CRadio, CRadioGroup },
@@ -246,8 +267,12 @@ export const Form: Story = {
 
       const submit = () => {
         errors.value.name = form.value.name ? '' : 'Please enter name'
-        errors.value.email = form.value.email ? '' : 'Please enter email Please enter email Please enter email'
-        errors.value.resources = form.value.resources ? '' : 'Please select resource'
+        errors.value.email = form.value.email
+          ? ''
+          : 'Please enter email Please enter email Please enter email'
+        errors.value.resources = form.value.resources
+          ? ''
+          : 'Please select resource'
       }
 
       const reset = () => {

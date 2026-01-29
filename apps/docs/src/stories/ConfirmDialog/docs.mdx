@@ -1,82 +1,28 @@
-import {
-  Meta,
-  Title,
-  Canvas,
-  ArgTypes,
-  Subtitle,
-  TableOfContents,
-} from '@storybook/addon-docs/blocks'
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
 import * as ConfirmDialogStories from './ConfirmDialog.stories'
-import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+import { ConfirmDialogContent } from './ConfirmDialogContent.tsx'
 
 <Meta title="Feedback/ConfirmDialog" />
 
-<div className='sb-docs-wrapper' >
-  <div className='sb-docs-content'>
-    <Title>ConfirmDialog</Title>
-
-    <Subtitle>
-      Компонент модального диалога подтверждения для запроса подтверждения действий пользователя с предустановленными типами и кастомизацией
-    </Subtitle>
-
-    <h3>Импорт</h3>
-
-    <CustomSource
-      code="import CConfirmDialog from 'craftvue/confirmdialog'"
-      actions={['copy']}
-      parser="babel"
-      language="javascript"
-    />
-
-    <ArgTypes of={ConfirmDialogStories.Basic}  />
-
-    ## Базовый пример
-
-    <p>Стандартный диалог подтверждения с сообщением, заголовком и кнопками "Yes" и "No". Управляется через свойство <code>show</code>.</p>
-
-    <Canvas of={ConfirmDialogStories.Basic} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="confirmDialog" parser='html' />
-
-    &nbsp;
-
-    ## Типы диалога
-
-    <p>Диалог поддерживает четыре предустановленных типа через свойство <code>type</code>: <code>warning</code> (предупреждение), <code>success</code> (успех), <code>error</code> (ошибка), <code>info</code> (информация). Каждый тип имеет свою иконку и стиль.</p>
-
-    <Canvas of={ConfirmDialogStories.Type} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="confirmDialog" name="type" parser='html' />
-
-    &nbsp;
-
-    ## Кастомный шаблон
-
-    <p>Использование слотов <code>header</code> для кастомного заголовка, <code>default</code> для кастомного содержимого и <code>actions</code> для кастомных кнопок действий. Слот <code>header</code> получает параметр <code>close</code> (закрыть), слот <code>actions</code> получает параметры <code>confirm</code> (подтвердить) и <code>cancel</code> (отменить).</p>
-
-    <Canvas of={ConfirmDialogStories.Template} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="confirmDialog" name="template" parser='html' />
-
-    &nbsp;
-
-    ## Диалог с одной кнопкой
-
-    <p>Диалог может отображаться только с одной кнопкой действия. Используйте <code>showCancel: false</code> для отображения только кнопки подтверждения или <code>showConfirm: false</code> для отображения только кнопки отмены. Полезно для информационных сообщений или обязательных подтверждений.</p>
-
-    <Canvas of={ConfirmDialogStories.OneAction} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="confirmDialog" name="oneAction" parser='html' />
-
-  </div>
-
-  <div>
-    <TableOfContents
-      className='sb-docs-toc sb-unstyled'
-      title='Компоненты'
-      contentsSelector='.sb-docs-content'
-      headingSelector="h2"
-      ignoreSelector='.sbdocs-subtitle'
-    />
-  </div>
-</div>
+<ConfirmDialogContent>
+  <Canvas
+    of={ConfirmDialogStories.Basic}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={ConfirmDialogStories.Type}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={ConfirmDialogStories.Template}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={ConfirmDialogStories.OneAction}
+    sourceState="none"
+    className="sb-canvas"
+  />
+</ConfirmDialogContent>

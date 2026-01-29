@@ -1,4 +1,8 @@
-import type { ComponentPropsAndSlots, Meta, StoryObj } from '@storybook/vue3-vite'
+import type {
+  ComponentPropsAndSlots,
+  Meta,
+  StoryObj,
+} from '@storybook/vue3-vite'
 import { fn } from 'storybook/test'
 import {
   CBadge,
@@ -66,98 +70,100 @@ const meta = {
   argTypes: {
     title: {
       control: 'text',
-      description: 'Заголовок поповера, отображаемый в верхней части',
+      description: 'Popover title displayed at the top',
     },
     show: {
       control: 'boolean',
-      description: 'Управляет видимостью поповера',
+      description: 'Controls popover visibility',
     },
     rootEl: {
       control: false,
       description:
-        'Элемент, относительно которого позиционируется поповер (HTMLElement или Vue компонент)',
+        'Element relative to which popover is positioned (HTMLElement or Vue component)',
     },
     placement: {
       control: 'select',
       description:
-        'Позиция поповера относительно элемента: bottom (снизу), top (сверху), left (слева), right (справа)',
+        'Popover position relative to element: bottom, top, left, right',
     },
     align: {
       control: 'select',
-      description: 'Выравнивание поповера: start (начало), center (центр), end (конец)',
+      description: 'Popover alignment: start, center, end',
     },
     trigger: {
       control: 'select',
-      description: 'Способ открытия поповера: click (по клику) или hover (при наведении)',
+      description: 'Popover opening method: click or hover',
     },
     offset: {
       control: 'number',
-      description: 'Отступ в пикселях между элементом и поповером',
+      description: 'Spacing in pixels between element and popover',
     },
     sameWidth: {
       control: 'boolean',
-      description: 'Устанавливает одинаковую ширину поповера с элементом-триггером',
+      description: 'Set popover width equal to trigger element width',
     },
     boundaryPadding: {
       control: 'number',
       description:
-        'Отступ в пикселях от границ viewport для предотвращения выхода поповера за пределы экрана',
+        'Padding in pixels from viewport bounds to prevent popover from going off screen',
     },
     zIndex: {
       control: 'number',
-      description: 'Z-index для поповера (используется для управления порядком наложения)',
+      description: 'Z-index for popover (used to control stacking order)',
     },
     maxHeight: {
       control: 'number',
       description:
-        'Максимальная высота поповера в пикселях (число) или строка с единицами измерения',
+        'Maximum popover height in pixels (number) or string with units',
     },
     maxWidth: {
       control: 'number',
       description:
-        'Максимальная ширина поповера в пикселях (число) или строка с единицами измерения',
+        'Maximum popover width in pixels (number) or string with units',
     },
     teleportTo: {
       control: 'text',
       description:
-        'Селектор или элемент, в который телепортируется поповер (по умолчанию "body", false - без телепорта)',
+        'Selector or element to which popover is teleported (default "body", false - no teleport)',
     },
     restoreFocus: {
       control: 'boolean',
-      description: 'Восстанавливает фокус на элементе-триггере после закрытия поповера',
+      description: 'Restore focus to trigger element after popover closes',
     },
     animation: {
       control: 'select',
       description:
-        'Тип анимации появления/исчезновения: zoom (масштабирование) или opacity (прозрачность)',
+        'Type of appearance/disappearance animation: zoom or opacity',
     },
     arrow: {
       control: 'boolean',
-      description: 'Показывать стрелку, указывающую на элемент-триггер',
+      description: 'Show arrow pointing to trigger element',
     },
     showDelay: {
       control: 'number',
-      description: 'Задержка в миллисекундах перед показом поповера (для trigger="hover")',
+      description:
+        'Delay in milliseconds before showing popover (for trigger="hover")',
     },
     hideDelay: {
       control: 'number',
-      description: 'Задержка в миллисекундах перед скрытием поповера (для trigger="hover")',
+      description:
+        'Delay in milliseconds before hiding popover (for trigger="hover")',
     },
     durationEnter: {
       control: 'number',
-      description: 'Длительность анимации появления в миллисекундах',
+      description: 'Duration of appearance animation in milliseconds',
     },
     durationLeave: {
       control: 'number',
-      description: 'Длительность анимации исчезновения в миллисекундах',
+      description: 'Duration of disappearance animation in milliseconds',
     },
     hide: {
       control: false,
-      description: 'Событие, возникающее при скрытии поповера',
+      description: 'Event fired when popover is hidden',
     },
     'show ': {
       control: false,
-      description: 'Событие, возникающее при показе поповера',
+      description: 'Event fired when popover is shown',
       table: {
         category: 'events',
         type: {
@@ -167,20 +173,20 @@ const meta = {
     },
     default: {
       control: false,
-      description: 'Слот для основного содержимого поповера',
+      description: 'Slot for main popover content',
     },
     header: {
       control: 'boolean',
-      description: 'Слот для заголовка поповера (отображается в верхней части)',
+      description: 'Slot for popover header (displayed at the top)',
     },
     footer: {
       control: 'boolean',
-      description: 'Слот для футера поповера (отображается в нижней части)',
+      description: 'Slot for popover footer (displayed at the bottom)',
     },
     'trigger ': {
       control: false,
       description:
-        'Слот для кастомного элемента-триггера. Получает параметры: isOpen (состояние), open (открыть), close (закрыть)',
+        'Slot for custom trigger element. Receives: isOpen (state), open (open), close (close)',
       table: {
         category: 'slots',
         type: {
@@ -216,7 +222,13 @@ const meta = {
       )
 
       watch(
-        () => [args.placement, args.align, args.trigger, args.offset, args.arrow],
+        () => [
+          args.placement,
+          args.align,
+          args.trigger,
+          args.offset,
+          args.arrow,
+        ],
         () => {
           keyForRerender.value++
         },
@@ -318,7 +330,13 @@ export const Placement: Story = {
       const keyForRerender = ref(0)
 
       watch(
-        () => [args.align, args.trigger, args.offset, args.boundaryPadding, args.arrow],
+        () => [
+          args.align,
+          args.trigger,
+          args.offset,
+          args.boundaryPadding,
+          args.arrow,
+        ],
         () => {
           keyForRerender.value++
         },
@@ -547,7 +565,13 @@ export const TriggerSlot: Story = {
       const keyForRerender = ref(0)
 
       watch(
-        () => [args.placement, args.align, args.trigger, args.offset, args.arrow],
+        () => [
+          args.placement,
+          args.align,
+          args.trigger,
+          args.offset,
+          args.arrow,
+        ],
         () => {
           keyForRerender.value++
         },

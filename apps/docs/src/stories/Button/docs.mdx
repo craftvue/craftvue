@@ -1,182 +1,46 @@
-import {
-  Meta,
-  Title,
-  Canvas,
-  ArgTypes,
-  Subtitle,
-  TableOfContents,
-} from '@storybook/addon-docs/blocks'
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
 import * as ButtonStories from './Button.stories.ts'
-import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+import { ButtonContent } from './ButtonContent.tsx'
 
 <Meta title="Basic/Button" />
 
-<div className='sb-docs-wrapper' >
-  <div className='sb-docs-content'>
-    <Title>Кнопка</Title>
-
-    <Subtitle>
-      Универсальный компонент кнопки с поддержкой различных стилей, размеров и состояний
-    </Subtitle>
-
-    <h3>Импорт</h3>
-
-    <CustomSource
-      code="import CButton from 'craftvue/button'"
-      actions={['copy']}
-      parser="babel"
-      language="javascript"
-    />
-
-    <ArgTypes of={ButtonStories.Basic} />
-
-    ## Базовый пример
-
-    <p>Базовое состояние кнопки, отображаемый текст определяется свойством `label`</p>
-
-    <Canvas of={ButtonStories.Basic} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="button" />
-
-    &nbsp;
-
-    ## Иконки
-
-    <p>Значок кнопки задается свойством `icon`, положение - `iconPos`</p>
-
-    <Canvas of={ButtonStories.Icons} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="button" name="icons" />
-
-    &nbsp;
-
-    ## Загрузка
-
-    <p>Состояние загрузки устанавливается с помощью свойства `loading`</p>
-
-    <Canvas of={ButtonStories.Loading} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="button" name="loading" />
-
-    &nbsp;
-
-    ## Варианты цвета
-
-    <p>Цветовая палитра кнопки устанавливается с помощью свойства `severity`</p>
-
-    <Canvas of={ButtonStories.Severity} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="button" name="severity" />
-
-    &nbsp;
-
-    ## Отключенный
-
-    <p>Для ограничения доступа к кнопке используется атрибут `disabled`</p>
-
-    <Canvas of={ButtonStories.Disabled} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="button" name="disabled" />
-
-    &nbsp;
-
-    ## Выпуклый
-
-    <p>Выпуклые кнопки имеют тень, указывающую на высоту: `raised`</p>
-
-    <Canvas of={ButtonStories.Raised} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="button" name="raised" />
-
-    &nbsp;
-
-    ## Закругленный
-
-    <p>Свойство `rounded` делает боковые стороны кнопки округлыми</p>
-
-    <Canvas of={ButtonStories.Rounded} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="button" name="rounded" />
-
-    &nbsp;
-
-    ## Текст
-
-    <p>Кнопки со свойством `text` отображаются как текстовые элементы</p>
-
-    <Canvas of={ButtonStories.Text} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="button" name="text" />
-
-    &nbsp;
-
-    ## Рельефный текст
-
-    <p>Текстовые кгопки можно сделать приподнятыми с помощью свойства `raised`</p>
-
-    <Canvas of={ButtonStories.RaisedText} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="button" name="raisedText" />
-
-    &nbsp;
-
-    ## Контурный
-
-    <p>Кнопки со свойством `variant="outlined"` имеют рамку и прозрачный фон</p>
-
-    <Canvas of={ButtonStories.Outlined} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="button" name="outlined" />
-
-    &nbsp;
-
-    ## Только иконка
-
-    <p>Кнопки могут иметь значок без текста</p>
-
-    <Canvas of={ButtonStories.IconOnly} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="button" name="iconOnly" />
-
-    &nbsp;
-
-    ## Размер
-
-    <p>Размер кнопки можно изменить с помощью свойства `size`</p>
-
-    <Canvas of={ButtonStories.Size} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="button" name="size" />
-
-    &nbsp;
-
-    ## Индикатор
-
-    <p>Кнопка поддерживает отображение индикатора с помощью свойств `badge` и `badgeSeverity`</p>
-
-    <Canvas of={ButtonStories.Badge} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="button" name="badge" />
-
-    &nbsp;
-
-    ## Шаблон
-
-    <p>Кнопка поддерживает вывод пользовательского контента, переданного внутрь кнопки</p>
-
-    <Canvas of={ButtonStories.Template} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="button" name='template' parser='html' />
-
-  </div>
-
-  <div>
-    <TableOfContents
-      className='sb-docs-toc sb-unstyled'
-      title='Компоненты'
-      contentsSelector='.sb-docs-content'
-      headingSelector="h2"
-      ignoreSelector='.sbdocs-subtitle'
-    />
-  </div>
-</div>
+<ButtonContent>
+  <Canvas of={ButtonStories.Basic} sourceState="none" className="sb-canvas" />
+  <Canvas of={ButtonStories.Icons} sourceState="none" className="sb-canvas" />
+  <Canvas of={ButtonStories.Loading} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={ButtonStories.Severity}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={ButtonStories.Disabled}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas of={ButtonStories.Raised} sourceState="none" className="sb-canvas" />
+  <Canvas of={ButtonStories.Rounded} sourceState="none" className="sb-canvas" />
+  <Canvas of={ButtonStories.Text} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={ButtonStories.RaisedText}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={ButtonStories.Outlined}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={ButtonStories.IconOnly}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas of={ButtonStories.Size} sourceState="none" className="sb-canvas" />
+  <Canvas of={ButtonStories.Badge} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={ButtonStories.Template}
+    sourceState="none"
+    className="sb-canvas"
+  />
+</ButtonContent>

@@ -1,162 +1,40 @@
-import {
-  Meta,
-  Title,
-  Canvas,
-  ArgTypes,
-  Subtitle,
-  TableOfContents,
-} from '@storybook/addon-docs/blocks'
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
 import * as InputStories from './Input.stories.ts'
-import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+import { InputContent } from './InputContent.tsx'
 
 <Meta title="Form/Input" />
 
-<div className='sb-docs-wrapper' >
-  <div className='sb-docs-content'>
-    <Title>Input</Title>
-
-    <Subtitle>
-      Компонент поля ввода с поддержкой валидации, форматирования, иконок и различных состояний
-    </Subtitle>
-
-    <h3>Импорт</h3>
-
-    <CustomSource
-      code="import CInput from 'craftvue/input'"
-      actions={['copy']}
-      parser='babel'
-      language="javascript"
-    />
-
-    <ArgTypes of={InputStories.Basic} />
-
-    ## Базовый пример
-
-    <p>Стандартное поле ввода с базовой функциональностью.</p>
-
-    <Canvas of={InputStories.Basic} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="input" />
-
-    &nbsp;
-
-    ## Заполненный стиль
-
-    <p>Поле ввода с заполненным фоном. Устанавливается свойством `variant="filled"`</p>
-
-    <Canvas of={InputStories.Filled} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="input" name="filled" />
-
-    &nbsp;
-
-    ## Размер
-
-    <p>Размер поля ввода контролируется свойством `size`. Доступные значения: `sm` (маленький), `lg` (большой). По умолчанию используется средний размер</p>
-
-    <Canvas of={InputStories.Size} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="input" name="size" />
-
-    &nbsp;
-
-    ## Состояние ошибки
-
-    <p>Поле ввода в состоянии ошибки с красной рамкой. Активируется свойством `invalid`</p>
-
-    <Canvas of={InputStories.Invalid} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="input" name="invalid" />
-
-    &nbsp;
-
-    ## Отключенное состояние
-
-    <p>Неактивное поле ввода, недоступное для взаимодействия. Устанавливается свойством `disabled`</p>
-
-    <Canvas of={InputStories.Disabled} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="input" name="disabled" />
-
-    &nbsp;
-
-    ## Очищаемый ввод
-
-    <p>Поле ввода с автоматической кнопкой очистки. Активируется свойством `clearable`. Кнопка появляется при фокусе или наведении, если поле не пустое</p>
-
-    <Canvas of={InputStories.Clearable} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="input" name="clearable" />
-
-    &nbsp;
-
-    ## Пользовательская иконка очистки
-
-    <p>Поле ввода с кастомной иконкой очистки. Настраивается через свойство `clearIcon` (по умолчанию CloseIcon)</p>
-
-    <Canvas of={InputStories.CustomClearIcon} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="input" name="customClearIcon" />
-
-    &nbsp;
-
-    ## Форматирование ввода
-
-    <p>Поле ввода с автоматическим форматированием. Настраивается через свойства `formatter` (функция форматирования) и `parser` (функция парсинга)</p>
-
-    <Canvas of={InputStories.Formatter} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="input" name="formatter" />
-
-    &nbsp;
-
-    ## Поле пароля
-
-    <p>Поле ввода для пароля с переключателем видимости. Активируется свойством `showPassword`. Автоматически переключает тип между 'password' и 'text'</p>
-
-    <Canvas of={InputStories.Password} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="input" name="password" />
-
-    &nbsp;
-
-    ## Ограничение длины
-
-    <p>Поле ввода с отображением счетчика символов. Активируется свойством `showWordLimit` и требует установки `maxlength`. Показывает текущее количество символов и лимит</p>
-
-    <Canvas of={InputStories.LimitLength} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="input" name="limitLength" />
-
-    &nbsp;
-
-    ## Поле с иконкой
-
-    <p>Поле ввода с иконкой. Иконка задается слева и справа от поля ввода через слоты `prefix` и `suffix` или через свойства `prefixIcon` и `suffixIcon` (Component).</p>
-
-    <Canvas of={InputStories.WithIcon} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="input" name="withIcon" parser='html' />
-
-    &nbsp;
-
-    ## Группа полей ввода
-
-    <p>Композиция из нескольких элементов, объединенных в логическую группу. Использует слоты `prepend` (слева) и `append` (справа) для добавления кнопок или других элементов</p>
-
-    <Canvas of={InputStories.InputGroup} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="input" name="inputGroup" parser='html' />
-
-  </div>
-
-  <div>
-    <TableOfContents
-      className='sb-docs-toc sb-unstyled'
-      title='Компоненты'
-      contentsSelector='.sb-docs-content'
-      headingSelector="h2"
-      ignoreSelector='.sbdocs-subtitle'
-    />
-  </div>
-</div>
+<InputContent>
+  <Canvas of={InputStories.Basic} sourceState="none" className="sb-canvas" />
+  <Canvas of={InputStories.Filled} sourceState="none" className="sb-canvas" />
+  <Canvas of={InputStories.Size} sourceState="none" className="sb-canvas" />
+  <Canvas of={InputStories.Invalid} sourceState="none" className="sb-canvas" />
+  <Canvas of={InputStories.Disabled} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={InputStories.Clearable}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={InputStories.CustomClearIcon}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={InputStories.Formatter}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas of={InputStories.Password} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={InputStories.LimitLength}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas of={InputStories.WithIcon} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={InputStories.InputGroup}
+    sourceState="none"
+    className="sb-canvas"
+  />
+</InputContent>

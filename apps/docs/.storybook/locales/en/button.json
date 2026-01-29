@@ -1,0 +1,82 @@
+{
+  "button": {
+    "title": "Button",
+    "subtitle": "Universal button component with support for various styles, sizes and states",
+    "import": {
+      "title": "Import"
+    },
+    "basic": {
+      "title": "Basic Example",
+      "description": "Basic button state, displayed text is determined by the `label` property"
+    },
+    "icons": {
+      "title": "Icons",
+      "description": "Button icon is set by the `icon` property, position - `iconPos`"
+    },
+    "loading": {
+      "title": "Loading",
+      "description": "Loading state is set using the `loading` property"
+    },
+    "severity": {
+      "title": "Color Variants",
+      "description": "Button color palette is set using the `severity` property"
+    },
+    "disabled": {
+      "title": "Disabled",
+      "description": "The `disabled` attribute is used to restrict access to the button"
+    },
+    "raised": {
+      "title": "Raised",
+      "description": "Raised buttons have a shadow indicating height: `raised`"
+    },
+    "rounded": {
+      "title": "Rounded",
+      "description": "The `rounded` property makes the button sides rounded"
+    },
+    "text": {
+      "title": "Text",
+      "description": "Buttons with the `text` property are displayed as text elements"
+    },
+    "raisedText": {
+      "title": "Raised Text",
+      "description": "Text buttons can be raised using the `raised` property"
+    },
+    "outlined": {
+      "title": "Outlined",
+      "description": "Buttons with `variant=\"outlined\"` property have a border and transparent background"
+    },
+    "iconOnly": {
+      "title": "Icon Only",
+      "description": "Buttons can have an icon without text"
+    },
+    "size": {
+      "title": "Size",
+      "description": "Button size can be changed using the `size` property"
+    },
+    "badge": {
+      "title": "Badge",
+      "description": "Button supports displaying a badge using the `badge` and `badgeSeverity` properties"
+    },
+    "template": {
+      "title": "Template",
+      "description": "Button supports displaying custom content passed inside the button"
+    },
+    "tableOfContents": "Components",
+    "argTypes": {
+      "severity": "Button color scheme that determines its semantic purpose. Affects background and text color.",
+      "variant": "Visual display variant of the button. Defines the style (filled, outlined, text).",
+      "label": "Button text content. Displayed as an accessible description of the action for screen readers.",
+      "loading": "Loading state. When activated, displays a progress indicator and blocks interaction.",
+      "disabled": "Inactive state. Disables interactivity and visually indicates that the action is unavailable.",
+      "raised": "Elevation effect. Adds a shadow to create visual volume and separation from the background.",
+      "rounded": "Corner rounding. When activated, applies maximum rounding to create a pill shape.",
+      "badge": "Badge indicator. Displays an additional label for notifications or counters.",
+      "badgeSeverity": "Badge color scheme. Aligns with the semantic significance of the displayed information.",
+      "icon": "Button icon. A graphic element that complements or replaces the text content.",
+      "iconPos": "Icon position. Determines the placement of the graphic element relative to the text.",
+      "size": "Button size. Controls the element scale through predefined size variants.",
+      "default": "Default slot content. Replaces standard text content with arbitrary HTML.",
+      "iconSlot": "Icon slot content. Replaces the standard icon with arbitrary graphic content."
+    }
+  }
+}

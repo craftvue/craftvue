@@ -1,152 +1,39 @@
-import {
-  Meta,
-  Title,
-  Canvas,
-  ArgTypes,
-  Subtitle,
-  TableOfContents,
-} from '@storybook/addon-docs/blocks'
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
 import * as SwitchStories from './Switch.stories'
-import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+import { SwitchContent } from './SwitchContent.tsx'
 
 <Meta title="Form/Switch" />
 
-<div className='sb-docs-wrapper' >
-  <div className='sb-docs-content'>
-    <Title>Switch</Title>
-
-    <Subtitle>
-      Компонент переключателя для включения/выключения опций с поддержкой состояний загрузки, валидации и кастомизации
-    </Subtitle>
-
-    <h3>Импорт</h3>
-
-    <CustomSource
-      code="import CSwitch from 'craftvue/switch'"
-      actions={['copy']}
-      parser="babel"
-      language="javascript"
-    />
-
-    <ArgTypes of={SwitchStories.Basic}  />
-
-    ## Базовый пример
-
-    <p>Стандартный переключатель в базовом состоянии без метки.</p>
-
+<SwitchContent>
     <Canvas of={SwitchStories.Basic} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="switch" />
-
-    &nbsp;
-
-    ## С меткой
-
-    <p>Переключатель с текстовой меткой, отображаемой рядом с элементом. Метка задается свойством <code>label</code>.</p>
-
-    <Canvas of={SwitchStories.WithLabel} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="switch" name="withLabel" />
-
-    &nbsp;
-
-    ## Заполненный стиль
-
-    <p>Переключатель с заполненным фоном вместо стандартной обводки. Устанавливается свойством <code>variant="filled"</code>.</p>
-
+  <Canvas
+    of={SwitchStories.WithLabel}
+    sourceState="none"
+    className="sb-canvas"
+  />
     <Canvas of={SwitchStories.Filled} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="switch" name="filled" />
-
-    &nbsp;
-
-    ## Размер
-
-    <p>Размер переключателя контролируется свойством <code>size</code>. Доступные значения: <code>sm</code> (маленький), <code>lg</code> (большой). По умолчанию используется средний размер.</p>
-
     <Canvas of={SwitchStories.Size} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="switch" name="size" />
-
-    &nbsp;
-
-    ## Отключенное состояние
-
-    <p>Переключатель в неактивном состоянии, недоступный для взаимодействия. Устанавливается свойством <code>disabled</code>. Может быть как включенным, так и выключенным.</p>
-
-    <Canvas of={SwitchStories.Disabled} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="switch" name="disabled" />
-
-    &nbsp;
-
-    ## Состояние ошибки
-
-    <p>Переключатель в состоянии ошибки с красной рамкой. Активируется свойством <code>invalid</code>. Используется для отображения ошибок валидации в формах.</p>
-
+  <Canvas
+    of={SwitchStories.Disabled}
+    sourceState="none"
+    className="sb-canvas"
+  />
     <Canvas of={SwitchStories.Invalid} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="switch" name="invalid" />
-
-    &nbsp;
-
-    ## Состояние загрузки
-
-    <p>Переключатель в состоянии загрузки с индикатором. Активируется свойством <code>loading</code>. Блокирует взаимодействие на время загрузки.</p>
-
     <Canvas of={SwitchStories.Loading} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="switch" name="loading" />
-
-    &nbsp;
-
-    ## Кастомная метка
-
-    <p>Переключатель с пользовательским содержимым метки через слот <code>default</code>. Позволяет использовать HTML-разметку, иконки или другие компоненты вместо простого текста. Слот получает параметр <code>checked</code> для условного отображения.</p>
-
-    <Canvas of={SwitchStories.CustomLabel} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="switch" name="customLabel" parser='html' />
-
-    &nbsp;
-
-    ## Кастомный thumb
-
-    <p>Переключатель с пользовательским содержимым внутри переключателя (thumb) через слот <code>thumb</code>. Позволяет кастомизировать иконку или содержимое внутри переключателя. Слот получает параметр <code>checked</code> для условного отображения.</p>
-
-    <Canvas of={SwitchStories.Template} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="switch" name="template" parser='html' />
-
-    &nbsp;
-
-    ## Кастомные значения
-
-    <p>Переключатель с пользовательскими значениями вместо стандартных <code>true</code>/<code>false</code>. Настраивается через свойства <code>trueValue</code> и <code>falseValue</code>. Полезно для работы с API, которые используют другие типы данных.</p>
-
-    <Canvas of={SwitchStories.CustomValues} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="switch" name="customValues" parser='html' />
-
-    &nbsp;
-
-    ## В составе формы
-
-    <p>Интеграция с <code>CFormItem</code>: валидация переключателя, отображение сообщения об ошибке.</p>
-
+  <Canvas
+    of={SwitchStories.CustomLabel}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={SwitchStories.Template}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={SwitchStories.CustomValues}
+    sourceState="none"
+    className="sb-canvas"
+  />
     <Canvas of={SwitchStories.Form} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="switch" name="form" parser='html' />
-
-  </div>
-
-  <div>
-    <TableOfContents
-      className='sb-docs-toc sb-unstyled'
-      title='Компоненты'
-      contentsSelector='.sb-docs-content'
-      headingSelector="h2"
-      ignoreSelector='.sbdocs-subtitle'
-    />
-  </div>
-</div>
+</SwitchContent>

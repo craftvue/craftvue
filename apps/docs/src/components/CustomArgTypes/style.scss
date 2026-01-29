@@ -1,0 +1,147 @@
+.args {
+  margin: 25px 0 40px;
+  width: 100%;
+
+  &__table {
+    width: 100%;
+    border: none;
+    border-radius: 14px;
+    border-spacing: 0;
+
+    &-head {
+      th {
+        padding: 10px 20px;
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 14px;
+        text-align: start;
+
+        &:last-of-type {
+          width: 25%;
+        }
+      }
+    }
+
+    &-body {
+      background-color: #171717;
+
+      tr:first-of-type {
+        td {
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          border-block-start: 1px solid #3f3f46;
+          border-inline-start: 1px solid #3f3f46;
+          border-inline-end: 1px solid #3f3f46;
+        }
+      }
+
+      tr:last-of-type {
+        td:first-of-type {
+          border-bottom-left-radius: 10px;
+          border-inline-start: 1px solid #3f3f46;
+        }
+        td:last-of-type {
+          border-bottom-right-radius: 10px;
+          border-inline-end: 1px solid #3f3f46;
+        }
+        td {
+          border-block-end: 1px solid #3f3f46;
+        }
+      }
+
+      tr:not(:first-of-type, :last-of-type) {
+        td:first-of-type {
+          border-inline-start: 1px solid #3f3f46;
+        }
+        td:last-of-type {
+          border-inline-end: 1px solid #3f3f46;
+        }
+      }
+
+      tr {
+        td {
+          border-top: 1px solid #262626;
+        }
+      }
+    }
+  }
+
+  &__title {
+    padding: 10px 20px;
+    background-color: #262626;
+
+    &-text {
+      color: #7d7d7d;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+  }
+
+  &__name {
+    padding: 10px 10px 10px 20px;
+    vertical-align: top;
+    width: 25%;
+
+    &-text {
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+
+      &.is--required {
+        &::after {
+          content: '*';
+          color: rgb(221, 67, 67);
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &__description {
+    padding: 10px 15px;
+    line-height: 1.2;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    &-text {
+      font-size: 13px;
+      line-height: 1.5;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  &__tag {
+    background-color: #1a2125;
+    font-size: 12px;
+    border: 1px solid #454e54;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    font-family: monospace;
+    color: #c4c4c4;
+    word-break: break-word;
+    white-space: normal;
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
+
+  &__default {
+    padding: 10px 20px 10px 15px;
+    vertical-align: top;
+
+    &-text {
+      font-size: 13px;
+    }
+  }
+}

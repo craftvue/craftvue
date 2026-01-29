@@ -1,0 +1,83 @@
+{
+  "checkbox": {
+    "title": "Checkbox",
+    "subtitle": "Checkbox component for selecting one or multiple values with support for indeterminate state, grouping and customization",
+    "import": {
+      "title": "Import"
+    },
+    "argTypes": {
+      "checkbox": "Checkbox",
+      "checkboxGroup": "CheckboxGroup",
+      "modelValue": "Checkbox value (true/false or custom value via trueValue/falseValue)",
+      "indeterminate": "Indeterminate state of checkbox (partially selected)",
+      "disabled": "Disables checkbox, making it unavailable for interaction",
+      "invalid": "Marks checkbox as invalid",
+      "size": "Checkbox size: sm (small), normal (default), lg (large)",
+      "label": "Text label displayed next to checkbox",
+      "value": "Checkbox value when used in group (CheckboxGroup)",
+      "trueValue": "Custom value that will be used when checkbox is selected",
+      "falseValue": "Custom value that will be used when checkbox is not selected",
+      "variant": "Checkbox style variant: outlined (with border) or filled (filled)",
+      "name": "Name attribute for input element (used for grouping in forms)",
+      "id": "Unique element identifier (generated automatically if not specified)",
+      "ariaLabel": "ARIA label for accessibility (alternative to label for screen readers)",
+      "ariaLabelledby": "ID of element that serves as label for checkbox (ARIA)",
+      "focus": "Event fired when checkbox receives focus",
+      "blur": "Event fired when checkbox loses focus",
+      "change": "Event fired when checkbox state changes",
+      "updateindeterminate": "Event for updating indeterminate state",
+      "updatemodelValue": "Event for updating checkbox value",
+      "default": "Slot for custom label content",
+      "icon": "Slot for custom checkbox icon"
+    },
+    "basic": {
+      "title": "Basic Example",
+      "description": "Standard checkbox in basic state without label"
+    },
+    "withLabel": {
+      "title": "With Label",
+      "description": "Checkbox with text label displayed to the right of the element. Label is set by the `label` property"
+    },
+    "filled": {
+      "title": "Filled Style",
+      "description": "Checkbox with filled background instead of standard outline. Set by `variant=\"filled\"` property"
+    },
+    "size": {
+      "title": "Size",
+      "description": "Checkbox size is controlled by the `size` property. Available values: `sm` (small), `lg` (large). Medium size is used by default"
+    },
+    "indeterminate": {
+      "title": "Indeterminate State",
+      "description": "Checkbox in indeterminate state (partially selected), used for group operations. Activated by `indeterminate` property. Useful for implementing \"select all\" in checkbox groups"
+    },
+    "disabled": {
+      "title": "Disabled State",
+      "description": "Checkbox in inactive state, unavailable for interaction. Set by `disabled` property. Can be either selected or unselected"
+    },
+    "invalid": {
+      "title": "Error State",
+      "description": "Checkbox in error state with red border. Activated by `invalid` property. Used to display validation errors in forms"
+    },
+    "group": {
+      "title": "Checkbox Group",
+      "description": "`CCheckboxGroup` component for managing multiple checkboxes. Supports horizontal and vertical orientation via `orientation` property. Value is an array of selected values"
+    },
+    "customIcon": {
+      "title": "Custom Icon",
+      "description": "Checkbox with custom icon instead of standard checkmark. Icon is configured through `icon` slot, which receives `checked`, `indeterminate` and `iconClass` parameters"
+    },
+    "customLabel": {
+      "title": "Custom Label",
+      "description": "Checkbox with custom label content via `default` slot. Allows using HTML markup, icons or other components instead of plain text"
+    },
+    "customValues": {
+      "title": "Custom Values",
+      "description": "Checkbox with custom values instead of standard `true`/`false`. Configured via `trueValue` and `falseValue` properties. Useful for working with APIs that use other data types"
+    },
+    "form": {
+      "title": "In Form",
+      "description": "Integration with `CFormItem`: validation of checkbox group, displaying error message"
+    },
+    "tableOfContents": "Components"
+  }
+}

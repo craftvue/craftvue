@@ -218,17 +218,19 @@ export type AllStoryNames =
 // CustomSource props
 export interface CustomSourceProps {
   /** Название истории  */
-  name: AllStoryNames
+  name?: AllStoryNames
   /** Тип UI компонента */
-  type: UIComponentType
+  type?: UIComponentType
   /** Доступные кнопки */
-  actions: ['copy'?, 'full'?, 'download'?]
+  actions?: ['copy'?, 'full'?, 'download'?]
   /** Передача кода напрямую */
   code?: string
   /** Язык кода (для подсветки) */
   language?: 'javascript' | 'typescript' | 'xml' | 'markdown' | 'tsx' | 'bash' | 'apache'
   /** Парсер кода для Prettier */
   parser?: 'babel' | 'vue' | 'markdown' | 'html' | 'bash'
+  /** Длина строки */
+  printWidth?: number
 }
 
 // Тип для кода историй

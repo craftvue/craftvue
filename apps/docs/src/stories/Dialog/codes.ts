@@ -10,7 +10,6 @@ const dialogCodeTexts: CodeTexts<DialogStoryName> = {
         v-model:show="isOpen"
         title="Dialog Title"
       >
-        <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -18,7 +17,6 @@ const dialogCodeTexts: CodeTexts<DialogStoryName> = {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
           deserunt mollit anim id est laborum.
-        </p>
       </CDialog>
     `,
     full: `
@@ -64,7 +62,6 @@ const dialogCodeTexts: CodeTexts<DialogStoryName> = {
         title="Dialog Title"
         fullscreen
       >
-        <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -72,7 +69,6 @@ const dialogCodeTexts: CodeTexts<DialogStoryName> = {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
           deserunt mollit anim id est laborum.
-        </p>
       </CDialog>
     `,
     full: `
@@ -120,7 +116,6 @@ const dialogCodeTexts: CodeTexts<DialogStoryName> = {
         title="Dialog Title"
         :animation="animation"
       >
-        <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -128,7 +123,6 @@ const dialogCodeTexts: CodeTexts<DialogStoryName> = {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
           deserunt mollit anim id est laborum.
-        </p>
       </CDialog>
     `,
     full: `
@@ -178,7 +172,6 @@ const dialogCodeTexts: CodeTexts<DialogStoryName> = {
         title="Dialog Title"
         :modal="false"
       >
-        <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -186,7 +179,6 @@ const dialogCodeTexts: CodeTexts<DialogStoryName> = {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
           deserunt mollit anim id est laborum.
-        </p>
       </CDialog>
     `,
     full: `
@@ -299,7 +291,6 @@ const dialogCodeTexts: CodeTexts<DialogStoryName> = {
         :width="300"
         maxHeight="400px"
       >
-        <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -310,7 +301,6 @@ const dialogCodeTexts: CodeTexts<DialogStoryName> = {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum officiis,
           quae impedit numquam distinctio nulla quos minus ducimus similique inventore sint,
           odit aperiam quibusdam praesentium eligendi laborum ea fugiat? Voluptatem.
-        </p>
       </CDialog>
     `,
     full: `
@@ -357,7 +347,6 @@ const dialogCodeTexts: CodeTexts<DialogStoryName> = {
         v-model:show="isOpen"
         :show-close="false"
       >
-        <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -365,7 +354,6 @@ const dialogCodeTexts: CodeTexts<DialogStoryName> = {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
           deserunt mollit anim id est laborum.
-        </p>
       </CDialog>
     `,
     full: `
@@ -417,7 +405,6 @@ const dialogCodeTexts: CodeTexts<DialogStoryName> = {
         :maximize-icon="AddIcon"
         :minimize-icon="MinusIcon"
       >
-        <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -425,7 +412,6 @@ const dialogCodeTexts: CodeTexts<DialogStoryName> = {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
           deserunt mollit anim id est laborum.
-        </p>
       </CDialog>
     `,
     full: `

@@ -1,107 +1,110 @@
-import type { SelectStoryName, CodeTexts } from 'docs/components/CustomSource/CustomSource.types'
+import type {
+  SelectStoryName,
+  CodeTexts,
+} from 'docs/components/CustomSource/CustomSource.types'
 
 const TEMPLATE_LINK = '`https://flagcdn.com/w20/${code}.png`'
 
 const selectCodeTexts: CodeTexts<SelectStoryName> = {
   basic: {
     simple: `
-      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" />
+      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" />
     `,
     full: `
       <template>
-        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" />
+        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" />
       </template>
       <script setup>
         import { ref } from "vue"
 
         const value = ref(null)
         const countries = ref([
-          { label: 'Россия', value: 'ru' },
-          { label: 'США', value: 'us' },
-          { label: 'Япония', value: 'jp' },
-          { label: 'Китай', value: 'cn' },
-          { label: 'Бразилия', value: 'br' },
+          { label: 'Russia', value: 'ru' },
+          { label: 'USA', value: 'us' },
+          { label: 'Japan', value: 'jp' },
+          { label: 'China', value: 'cn' },
+          { label: 'Brazil', value: 'br' },
         ])
       </script>
     `,
   },
   disabled: {
     simple: `
-      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" disabled />
+      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" disabled />
     `,
     full: `
       <template>
-        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" disabled />
+        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" disabled />
       </template>
       <script setup>
         import { ref } from "vue"
 
         const value = ref(null)
         const countries = ref([
-          { label: 'Россия', value: 'ru' },
-          { label: 'США', value: 'us' },
-          { label: 'Япония', value: 'jp' },
-          { label: 'Китай', value: 'cn' },
-          { label: 'Бразилия', value: 'br' },
+          { label: 'Russia', value: 'ru' },
+          { label: 'USA', value: 'us' },
+          { label: 'Japan', value: 'jp' },
+          { label: 'China', value: 'cn' },
+          { label: 'Brazil', value: 'br' },
         ])
       </script>
     `,
   },
   disabledOption: {
     simple: `
-      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" />
+      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" />
     `,
     full: `
       <template>
-        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" />
+        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" />
       </template>
       <script setup>
         import { ref } from "vue"
 
         const value = ref(null)
         const countries = ref([
-          { label: 'Россия', value: 'ru' },
-          { label: 'США', value: 'us' },
-          { label: 'Япония', value: 'jp' },
-          { label: 'Китай', value: 'cn' },
-          { label: 'Бразилия', value: 'br' },
-          { label: 'Казахстан', value: 'kz', disabled: true }
+          { label: 'Russia', value: 'ru' },
+          { label: 'USA', value: 'us' },
+          { label: 'Japan', value: 'jp' },
+          { label: 'China', value: 'cn' },
+          { label: 'Brazil', value: 'br' },
+          { label: 'Kazakhstan', value: 'kz', disabled: true }
         ])
       </script>
     `,
   },
   clearable: {
     simple: `
-      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" clearable />
+      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" clearable />
     `,
     full: `
       <template>
-        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" clearable />
+        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" clearable />
       </template>
       <script setup>
         import { ref } from "vue"
 
         const value = ref('ru')
         const countries = ref([
-          { label: 'Россия', value: 'ru' },
-          { label: 'США', value: 'us' },
-          { label: 'Япония', value: 'jp' },
-          { label: 'Китай', value: 'cn' },
-          { label: 'Бразилия', value: 'br' },
+          { label: 'Russia', value: 'ru' },
+          { label: 'USA', value: 'us' },
+          { label: 'Japan', value: 'jp' },
+          { label: 'China', value: 'cn' },
+          { label: 'Brazil', value: 'br' },
         ])
       </script>
     `,
   },
   invalid: {
     simple: `
-      <CSelect v-model="value1" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" invalid />
-      <CSelect v-model="value2" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" invalid variant="filled" />
+      <CSelect v-model="value1" :options="countries" option-value="value" option-label="label" placeholder="Select country" invalid />
+      <CSelect v-model="value2" :options="countries" option-value="value" option-label="label" placeholder="Select country" invalid variant="filled" />
     `,
     full: `
       <template>
         <div style="display: flex; justify-content: center; gap: 10px; width: 100%;">
-          <CSelect v-model="value1" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" invalid />
-          <CSelect v-model="value2" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" invalid variant="filled" />
+          <CSelect v-model="value1" :options="countries" option-value="value" option-label="label" placeholder="Select country" invalid />
+          <CSelect v-model="value2" :options="countries" option-value="value" option-label="label" placeholder="Select country" invalid variant="filled" />
         </div>
       </template>
       <script setup>
@@ -110,121 +113,121 @@ const selectCodeTexts: CodeTexts<SelectStoryName> = {
         const value1 = ref(null)
         const value2 = ref(null)
         const countries = ref([
-          { label: 'Россия', value: 'ru' },
-          { label: 'США', value: 'us' },
-          { label: 'Япония', value: 'jp' },
-          { label: 'Китай', value: 'cn' },
-          { label: 'Бразилия', value: 'br' },
+          { label: 'Russia', value: 'ru' },
+          { label: 'USA', value: 'us' },
+          { label: 'Japan', value: 'jp' },
+          { label: 'China', value: 'cn' },
+          { label: 'Brazil', value: 'br' },
         ])
       </script>
     `,
   },
   multiple: {
     simple: `
-      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" multiple />
+      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" multiple />
     `,
     full: `
       <template>
-        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" multiple />
+        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" multiple />
       </template>
       <script setup>
         import { ref } from "vue"
 
         const value = ref(['ru', 'cn'])
         const countries = ref([
-          { label: 'Россия', value: 'ru' },
-          { label: 'США', value: 'us' },
-          { label: 'Япония', value: 'jp' },
-          { label: 'Китай', value: 'cn' },
-          { label: 'Бразилия', value: 'br' },
+          { label: 'Russia', value: 'ru' },
+          { label: 'USA', value: 'us' },
+          { label: 'Japan', value: 'jp' },
+          { label: 'China', value: 'cn' },
+          { label: 'Brazil', value: 'br' },
         ])
       </script>
     `,
   },
   filled: {
     simple: `
-      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" variant="filled" />
+      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" variant="filled" />
     `,
     full: `
       <template>
-        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" variant="filled" />
+        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" variant="filled" />
       </template>
       <script setup>
         import { ref } from "vue"
 
         const value = ref(null)
         const countries = ref([
-          { label: 'Россия', value: 'ru' },
-          { label: 'США', value: 'us' },
-          { label: 'Япония', value: 'jp' },
-          { label: 'Китай', value: 'cn' },
-          { label: 'Бразилия', value: 'br' },
+          { label: 'Russia', value: 'ru' },
+          { label: 'USA', value: 'us' },
+          { label: 'Japan', value: 'jp' },
+          { label: 'China', value: 'cn' },
+          { label: 'Brazil', value: 'br' },
         ])
       </script>
     `,
   },
   fullWidth: {
     simple: `
-      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" full />
+      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" full />
     `,
     full: `
       <template>
-        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" full />
+        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" full />
       </template>
       <script setup>
         import { ref } from "vue"
 
         const value = ref(null)
         const countries = ref([
-          { label: 'Россия', value: 'ru' },
-          { label: 'США', value: 'us' },
-          { label: 'Япония', value: 'jp' },
-          { label: 'Китай', value: 'cn' },
-          { label: 'Бразилия', value: 'br' },
+          { label: 'Russia', value: 'ru' },
+          { label: 'USA', value: 'us' },
+          { label: 'Japan', value: 'jp' },
+          { label: 'China', value: 'cn' },
+          { label: 'Brazil', value: 'br' },
         ])
       </script>
     `,
   },
   loading: {
     simple: `
-      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" loading />
+      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" loading />
     `,
     full: `
       <template>
-        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" loading />
+        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" loading />
       </template>
       <script setup>
         import { ref } from "vue"
 
         const value = ref(null)
         const countries = ref([
-          { label: 'Россия', value: 'ru' },
-          { label: 'США', value: 'us' },
-          { label: 'Япония', value: 'jp' },
-          { label: 'Китай', value: 'cn' },
-          { label: 'Бразилия', value: 'br' },
+          { label: 'Russia', value: 'ru' },
+          { label: 'USA', value: 'us' },
+          { label: 'Japan', value: 'jp' },
+          { label: 'China', value: 'cn' },
+          { label: 'Brazil', value: 'br' },
         ])
       </script>
     `,
   },
   filter: {
     simple: `
-      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" searchable />
+      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" searchable />
     `,
     full: `
       <template>
-        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" searchable />
+        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" searchable />
       </template>
       <script setup>
         import { ref } from "vue"
 
         const value = ref(null)
         const countries = ref([
-          { label: 'Россия', value: 'ru' },
-          { label: 'США', value: 'us' },
-          { label: 'Япония', value: 'jp' },
-          { label: 'Китай', value: 'cn' },
-          { label: 'Бразилия', value: 'br' },
+          { label: 'Russia', value: 'ru' },
+          { label: 'USA', value: 'us' },
+          { label: 'Japan', value: 'jp' },
+          { label: 'China', value: 'cn' },
+          { label: 'Brazil', value: 'br' },
         ])
       </script>
     `,
@@ -250,40 +253,40 @@ const selectCodeTexts: CodeTexts<SelectStoryName> = {
         const value2 = ref(null)
         const value3 = ref(null)
         const countries = ref([
-          { label: 'Россия', value: 'ru' },
-          { label: 'США', value: 'us' },
-          { label: 'Япония', value: 'jp' },
-          { label: 'Китай', value: 'cn' },
-          { label: 'Бразилия', value: 'br' },
+          { label: 'Russia', value: 'ru' },
+          { label: 'USA', value: 'us' },
+          { label: 'Japan', value: 'jp' },
+          { label: 'China', value: 'cn' },
+          { label: 'Brazil', value: 'br' },
         ])
       </script>
     `,
   },
   checkmark: {
     simple: `
-      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" checkmark />
+      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" checkmark />
     `,
     full: `
       <template>
-        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" checkmark />
+        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" checkmark />
       </template>
       <script setup>
         import { ref } from "vue"
 
         const value = ref('ru')
         const countries = ref([
-          { label: 'Россия', value: 'ru' },
-          { label: 'США', value: 'us' },
-          { label: 'Япония', value: 'jp' },
-          { label: 'Китай', value: 'cn' },
-          { label: 'Бразилия', value: 'br' },
+          { label: 'Russia', value: 'ru' },
+          { label: 'USA', value: 'us' },
+          { label: 'Japan', value: 'jp' },
+          { label: 'China', value: 'cn' },
+          { label: 'Brazil', value: 'br' },
         ])
       </script>
     `,
   },
   template: {
     simple: `
-      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" >
+      <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" >
         <template #value="{option, placeholder}">
           <div v-if="option">
             <img :src="getLink(option.value)" :alt="option.value" />
@@ -294,27 +297,23 @@ const selectCodeTexts: CodeTexts<SelectStoryName> = {
           </span>
         </template>
         <template #option="{option}">
-          <div>
-            <img :src="getLink(option.value)" :alt="option.value" />
-            <div>{{option.label}}</div>
-          </div>
+          <img :src="getLink(option.value)" :alt="option.value" />
+          <div>{{option.label}}</div>
         </template>
         <template #dropdown>
           <CIcon name="home" size="20" />
         </template>
         <template #header>
-          <div>Список доступных стран</div>
+          <div>List of available countries</div>
         </template>
         <template #footer>
-          <div>
-            <CButton label="Добавить" :icon="AddIcon" size="sm" />
-          </div>
+          <CButton label="Add" :icon="AddIcon" size="sm" />
         </template>
       </CSelect>
     `,
     full: `
       <template>
-        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" >
+        <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" >
           <template #value="{option, placeholder}">
             <div v-if="option" style="display: flex; gap: 10px; align-items: center;">
               <img :src="getLink(option.value)" :alt="option.value" />
@@ -334,11 +333,11 @@ const selectCodeTexts: CodeTexts<SelectStoryName> = {
             <CIcon name="home" size="20" />
           </template>
           <template #header>
-            <div style="padding: 10px 10px 5px;">Список доступных стран</div>
+            <div style="padding: 10px 10px 5px;">List of available countries</div>
           </template>
           <template #footer>
             <div style="padding: 8px;">
-              <CButton label="Добавить" :icon="AddIcon" size="sm" style="width: 100%;" />
+              <CButton label="Add" :icon="AddIcon" size="sm" style="width: 100%;" />
             </div>
           </template>
         </CSelect>
@@ -351,11 +350,11 @@ const selectCodeTexts: CodeTexts<SelectStoryName> = {
 
         const value = ref(null)
         const countries = ref([
-          { label: 'Россия', value: 'ru' },
-          { label: 'США', value: 'us' },
-          { label: 'Япония', value: 'jp' },
-          { label: 'Китай', value: 'cn' },
-          { label: 'Бразилия', value: 'br' },
+          { label: 'Russia', value: 'ru' },
+          { label: 'USA', value: 'us' },
+          { label: 'Japan', value: 'jp' },
+          { label: 'China', value: 'cn' },
+          { label: 'Brazil', value: 'br' },
         ])
 
         const getLink = (code: string) => {
@@ -367,19 +366,19 @@ const selectCodeTexts: CodeTexts<SelectStoryName> = {
   form: {
     simple: `
       <form @submit.prevent="submit" style="width: 15rem;">
-        <CFormItem required label="Выберите страну" :error-message="error" >
-          <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" :invalid="!!error" clearable full />
+        <CFormItem required label="Select country" :error-message="error" >
+          <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" :invalid="!!error" clearable full />
         </CFormItem>
-        <CButton label="Отправить" type="submit" style="width: 100%; margin-top: 10px;" />
+        <CButton label="Submit" type="submit" style="width: 100%; margin-top: 10px;" />
       </form>
     `,
     full: `
       <template>
         <form @submit.prevent="submit" style="width: 15rem;">
-          <CFormItem required label="Выберите страну" :error-message="error" >
-            <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Выберите страну" :invalid="!!error" clearable full />
+          <CFormItem required label="Select country" :error-message="error" >
+            <CSelect v-model="value" :options="countries" option-value="value" option-label="label" placeholder="Select country" :invalid="!!error" clearable full />
           </CFormItem>
-          <CButton label="Отправить" type="submit" style="width: 100%; margin-top: 20px;" />
+          <CButton label="Submit" type="submit" style="width: 100%; margin-top: 20px;" />
         </form>
       <template>
       <script setup>
@@ -390,15 +389,15 @@ const selectCodeTexts: CodeTexts<SelectStoryName> = {
         const value = ref(null)
         const error = ref('')
         const countries = ref([
-          { label: 'Россия', value: 'ru' },
-          { label: 'США', value: 'us' },
-          { label: 'Япония', value: 'jp' },
-          { label: 'Китай', value: 'cn' },
-          { label: 'Бразилия', value: 'br' },
+          { label: 'Russia', value: 'ru' },
+          { label: 'USA', value: 'us' },
+          { label: 'Japan', value: 'jp' },
+          { label: 'China', value: 'cn' },
+          { label: 'Brazil', value: 'br' },
         ])
 
         const submit = () => {
-          error.value = value.value ? '' : 'Необходимо выбрать город'
+          error.value = value.value ? '' : 'Please select a city'
         }
       </script>
     `,

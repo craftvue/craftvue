@@ -1,11 +1,14 @@
-import type { ButtonStoryName, CodeTexts } from 'docs/components/CustomSource/CustomSource.types'
+import type {
+  ButtonStoryName,
+  CodeTexts,
+} from 'docs/components/CustomSource/CustomSource.types'
 
 const buttonCodeTexts: CodeTexts<ButtonStoryName> = {
   basic: {
-    simple: '<CButton label="Кнопка" />',
+    simple: '<CButton label="Button" />',
     full: `
       <template>
-        <CButton label='Кнопка' />
+        <CButton label='Button' />
       </template>
       <script setup></script>
     `,
@@ -40,23 +43,23 @@ const buttonCodeTexts: CodeTexts<ButtonStoryName> = {
   loading: {
     simple: `
       <CButton loading />
-      <CButton loading label="Кнопка" />
+      <CButton loading label="Button" />
       <CButton
         :icon="CheckIcon"
         :loading="loading"
         @click="load"
-        label="Нажми на меня"
+        label="Click me"
       />`,
     full: `
       <template>
         <div style="display: flex; gap: 10px;">
           <CButton loading />
-          <CButton loading label="Кнопка" />
+          <CButton loading label="Button" />
           <CButton
             :icon="CheckIcon"
             :loading="loading"
             @click="load"
-            label="Нажми на меня"
+            label="Click me"
           />
         </div>
       </template>
@@ -93,10 +96,10 @@ const buttonCodeTexts: CodeTexts<ButtonStoryName> = {
     `,
   },
   disabled: {
-    simple: '<CButton disabled label="Отправить" />',
+    simple: '<CButton disabled label="Submit" />',
     full: `
       <template>
-        <CButton disabled label="Отправить" />
+        <CButton disabled label="Submit" />
       </template>
       <script setup></script>
     `,
@@ -286,19 +289,19 @@ const buttonCodeTexts: CodeTexts<ButtonStoryName> = {
   badge: {
     simple: `
       <CButton
-        label="Отмена"
+        label="Cancel"
         badge="5"
         badgeSeverity="secondary"
       />
       <CButton
         severity="secondary"
-        label="Отмена"
+        label="Cancel"
         badge="99+"
         badgeSeverity="contrast"
       />
       <CButton
         variant="outlined"
-        label="Домой"
+        label="Home"
         :icon="HomeIcon"
         badge="NEW"
       />
@@ -307,19 +310,19 @@ const buttonCodeTexts: CodeTexts<ButtonStoryName> = {
       <template>
         <div style="display: flex; gap: 10px;">
           <CButton
-            label="Отмена"
+            label="Cancel"
             badge="5"
             badgeSeverity="secondary"
           />
           <CButton
             severity="secondary"
-            label="Отмена"
+            label="Cancel"
             badge="99+"
             badgeSeverity="contrast"
           />
           <CButton
             variant="outlined"
-            label="Домой"
+            label="Home"
             :icon="HomeIcon"
             badge="NEW"
           />

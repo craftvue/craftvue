@@ -1,0 +1,53 @@
+{
+  "formitem": {
+    "title": "Form Item",
+    "subtitle": "Universal component for creating form fields with labels, validation and accessibility support",
+    "import": {
+      "title": "Import"
+    },
+    "basic": {
+      "title": "Basic Example",
+      "description": "Basic form item state with label and input field. Label is set by the `label` property"
+    },
+    "withLabel": {
+      "title": "With Label",
+      "description": "Form item with label"
+    },
+    "required": {
+      "title": "Required Field",
+      "description": "Required fields are marked with an asterisk (*) using the `required` property"
+    },
+    "withError": {
+      "title": "With Error",
+      "description": "Validation error messages are displayed using the `errorMessage` property"
+    },
+    "customLabel": {
+      "title": "Custom Label",
+      "description": "Custom label content can be set via the `labelSlot` slot"
+    },
+    "customError": {
+      "title": "Custom Error",
+      "description": "Custom error display can be configured via the `error` slot"
+    },
+    "withFor": {
+      "title": "Field Association",
+      "description": "The `for` property allows linking the label to a specific form element for improved accessibility"
+    },
+    "form": {
+      "title": "Form Example",
+      "description": "Complete example of using FormItem in a contact form with validation and various field types"
+    },
+    "tableOfContents": "Components",
+    "argTypes": {
+      "label": "Label text for form field",
+      "required": "Required field. Adds asterisk (*) to label",
+      "errorMessage": "Validation error message",
+      "for": "ID of element that label is associated with (for accessibility)",
+      "default": "Main slot for form field content (e.g., CInput, CSelect, etc.)",
+      "error": "Slot for custom error display. Receives object with error field",
+      "labelSlot": "Slot for custom label content. Receives object with label field",
+      "durationEnter": "Appearance animation duration",
+      "durationLeave": "Disappearance animation duration"
+    }
+  }
+}

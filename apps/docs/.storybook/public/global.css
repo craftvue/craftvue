@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Montserrat';
-  src: url('./fonts/Montserrat-VariableFont_wght\ .woff2') format('woff2-variations');
+  src: url('./fonts/Montserrat-VariableFont_wght\ .woff2')
+    format('woff2-variations');
   font-weight: 100 900;
   font-display: swap;
 }
@@ -164,6 +165,14 @@ div.sidebar-subheading {
   gap: 5px;
 }
 
+.sidebar-container .item-label svg {
+  flex-shrink: 0;
+}
+
+.sidebar-container .sidebar-item > button {
+  align-items: center;
+}
+
 .sidebar-container .sidebar-item a {
   gap: 0;
 }
@@ -187,7 +196,8 @@ div.sidebar-subheading {
   background: var(--secondary-back) !important;
 }
 
-.sidebar-container .sidebar-item[data-selected='true']:not([data-nodetype='group']) {
+.sidebar-container
+  .sidebar-item[data-selected='true']:not([data-nodetype='group']) {
   font-weight: 500;
   background: #bea87b2e !important;
 }
@@ -299,7 +309,9 @@ div.sidebar-subheading {
 
 /* Preview */
 .docblock-argstable-body input[role='switch']:checked ~ span:last-of-type,
-.docblock-argstable-body input[role='switch']:not(:checked) ~ span:first-of-type {
+.docblock-argstable-body
+  input[role='switch']:not(:checked)
+  ~ span:first-of-type {
   /* box-shadow: rgb(63, 63, 70) 0px 0px 0px 1px; */
   color: var(--ground-back);
 }
@@ -317,6 +329,40 @@ section.sb-bar {
   box-shadow: var(--secondary-back) 0px -1px 0px 0px inset;
 }
 
+/* Скрыть все элементы в toolbar кроме переключателя языков (только в режиме документации) */
+section.sb-bar.sb-toolbar-docs
+  *:not(:has(#language-switcher), #language-switcher, #language-switcher *) {
+  display: none !important;
+}
+
 table.docblock-argstable tbody.docblock-argstable-body > tr > * {
   border-top: 1px solid var(--secondary-back);
+}
+
+/* Toolbar */
+.language-switcher {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.language-switcher:hover {
+  background: var(--secondary-back);
+  border-color: var(--prime-color);
+  color: var(--prime-color);
+}
+
+.language-switcher svg {
+  color: var(--prime-color);
+  transition: color 0.2s ease;
 }

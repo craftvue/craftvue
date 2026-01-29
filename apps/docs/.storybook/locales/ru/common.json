@@ -1,0 +1,407 @@
+{
+  "sidebar": {
+    "docs": {
+      "introduction--docs": "Введение",
+      "getting-started--docs": "Начало работы",
+      "overview--docs": "Обзор",
+      "theming--docs": "Темизация",
+      "changelog--docs": "История изменений",
+      "icons--docs": "Иконки",
+      "basic-button--docs": "Документация",
+      "basic-icon--docs": "Документация",
+      "form-checkbox--docs": "Документация",
+      "form-formitem--docs": "Документация",
+      "form-input--docs": "Документация",
+      "form-radio--docs": "Документация",
+      "form-select--docs": "Документация",
+      "form-switch--docs": "Документация",
+      "navigation-dropdown--docs": "Документация",
+      "navigation-tabs--docs": "Документация",
+      "data-badge--docs": "Документация",
+      "data-tag--docs": "Документация",
+      "feedback-confirmdialog--docs": "Документация",
+      "feedback-confirmpopup--docs": "Документация",
+      "feedback-dialog--docs": "Документация",
+      "feedback-popover--docs": "Документация",
+      "feedback-tooltip--docs": "Документация"
+    },
+    "root": {
+      "basic": "Базовые",
+      "form": "Формы",
+      "navigation": "Навигация",
+      "data": "Данные",
+      "feedback": "Обратная связь"
+    },
+    "group": {
+      "basic-button": "Button",
+      "basic-icon": "Icon",
+      "form-checkbox": "Checkbox",
+      "form-formitem": "FormItem",
+      "form-input": "Input",
+      "form-radio": "Radio",
+      "form-select": "Select",
+      "form-switch": "Switch",
+      "navigation-dropdown": "Dropdown",
+      "navigation-tabs": "Tabs",
+      "data-badge": "Badge",
+      "data-tag": "Tag",
+      "feedback-confirmdialog": "ConfirmDialog",
+      "feedback-confirmpopup": "ConfirmPopup",
+      "feedback-dialog": "Dialog",
+      "feedback-popover": "Popover",
+      "feedback-tooltip": "Tooltip"
+    },
+    "component": {
+      "basic-button-button": "Button",
+      "basic-icon-icon": "Icon",
+      "form-checkbox-checkbox": "Checkbox",
+      "form-formitem-formitem": "FormItem",
+      "form-input-input": "Input",
+      "form-radio-radio": "Radio",
+      "form-select-select": "Select",
+      "form-switch-switch": "Switch",
+      "navigation-dropdown-dropdown": "Dropdown",
+      "navigation-tabs-tabs": "Tabs",
+      "data-badge-badge": "Badge",
+      "data-tag-tag": "Tag",
+      "feedback-confirmdialog-confirmdialog": "ConfirmDialog",
+      "feedback-confirmpopup-confirmpopup": "ConfirmPopup",
+      "feedback-dialog-dialog": "Dialog",
+      "feedback-popover-popover": "Popover",
+      "feedback-tooltip-tooltip": "Tooltip"
+    },
+    "story": {
+      "basic-button-button--basic": "Базовый",
+      "basic-button-button--icons": "Иконки",
+      "basic-button-button--loading": "Загрузка",
+      "basic-button-button--severity": "Цветовые схемы",
+      "basic-button-button--disabled": "Отключен",
+      "basic-button-button--raised": "С тенью",
+      "basic-button-button--rounded": "Скругленный",
+      "basic-button-button--text": "Текстовый",
+      "basic-button-button--raised-text": "Текстовый с тенью",
+      "basic-button-button--outlined": "Контурный",
+      "basic-button-button--icon-only": "Только иконка",
+      "basic-button-button--size": "Размер",
+      "basic-button-button--badge": "Индикатор",
+      "basic-button-button--template": "Шаблон",
+      "basic-icon-icon--basic": "Базовый",
+      "basic-icon-icon--name": "Название",
+      "basic-icon-icon--color": "Цвет",
+      "basic-icon-icon--size": "Размер",
+      "basic-icon-icon--template": "Шаблон",
+      "form-input-input--basic": "Базовый",
+      "form-input-input--filled": "Заполненный",
+      "form-input-input--size": "Размер",
+      "form-input-input--invalid": "Ошибка",
+      "form-input-input--disabled": "Отключен",
+      "form-input-input--clearable": "Очистка",
+      "form-input-input--custom-clear-icon": "Кастомная иконка очистки",
+      "form-input-input--formatter": "Форматирование",
+      "form-input-input--password": "Пароль",
+      "form-input-input--limit-length": "Ограничение длины",
+      "form-input-input--with-icon": "С иконкой",
+      "form-input-input--input-group": "Группа полей",
+      "form-formitem-formitem--basic": "Базовый",
+      "form-formitem-formitem--with-label": "С меткой",
+      "form-formitem-formitem--required": "Обязательное",
+      "form-formitem-formitem--with-error": "С ошибкой",
+      "form-formitem-formitem--custom-label": "Кастомная метка",
+      "form-formitem-formitem--custom-error": "Кастомная ошибка",
+      "form-formitem-formitem--with-for": "С привязкой",
+      "form-formitem-formitem--form": "Форма",
+      "form-select-select--basic": "Базовый",
+      "form-select-select--disabled": "Отключен",
+      "form-select-select--disabled-option": "Отключенная опция",
+      "form-select-select--clearable": "Очистка",
+      "form-select-select--invalid": "Ошибка",
+      "form-select-select--multiple": "Множественный",
+      "form-select-select--filled": "Заполненный",
+      "form-select-select--full-width": "На всю ширину",
+      "form-select-select--loading": "Загрузка",
+      "form-select-select--filter": "Фильтр",
+      "form-select-select--size": "Размер",
+      "form-select-select--checkmark": "Галочка",
+      "form-select-select--template": "Шаблон",
+      "form-select-select--form": "Форма",
+      "form-checkbox-checkbox--basic": "Базовый",
+      "form-checkbox-checkbox--with-label": "С меткой",
+      "form-checkbox-checkbox--filled": "Заполненный",
+      "form-checkbox-checkbox--size": "Размер",
+      "form-checkbox-checkbox--indeterminate": "Неопределенный",
+      "form-checkbox-checkbox--disabled": "Отключен",
+      "form-checkbox-checkbox--invalid": "Ошибка",
+      "form-checkbox-checkbox--group": "Группа",
+      "form-checkbox-checkbox--custom-icon": "Кастомная иконка",
+      "form-checkbox-checkbox--custom-label": "Кастомная метка",
+      "form-checkbox-checkbox--custom-values": "Кастомные значения",
+      "form-checkbox-checkbox--form": "Форма",
+      "form-checkboxgroup-checkboxgroup--basic": "Базовый",
+      "form-radio-radio--basic": "Базовый",
+      "form-radio-radio--filled": "Заполненный",
+      "form-radio-radio--size": "Размер",
+      "form-radio-radio--disabled": "Отключен",
+      "form-radio-radio--invalid": "Ошибка",
+      "form-radio-radio--group": "Группа",
+      "form-radio-radio--custom-icon": "Кастомная иконка",
+      "form-radio-radio--custom-label": "Кастомная метка",
+      "form-radio-radio--form": "Форма",
+      "form-radiogroup-radiogroup--basic": "Базовый",
+      "form-switch-switch--basic": "Базовый",
+      "form-switch-switch--with-label": "С меткой",
+      "form-switch-switch--filled": "Заполненный",
+      "form-switch-switch--size": "Размер",
+      "form-switch-switch--disabled": "Отключен",
+      "form-switch-switch--invalid": "Ошибка",
+      "form-switch-switch--loading": "Загрузка",
+      "form-switch-switch--custom-label": "Кастомная метка",
+      "form-switch-switch--template": "Шаблон",
+      "form-switch-switch--custom-values": "Кастомные значения",
+      "form-switch-switch--form": "Форма",
+      "navigation-tab-tab--basic": "Базовый",
+      "navigation-tablist-tablist--basic": "Базовый",
+      "navigation-tabpanel-tabpanel--basic": "Базовый",
+      "navigation-tabpanels-tabpanels--basic": "Базовый",
+      "navigation-tabs-tabs--arg-types": "Типы аргументов",
+      "navigation-tabs-tabs--basic": "Базовый",
+      "navigation-tabs-tabs--vertical": "Вертикальный",
+      "navigation-tabs-tabs--dynamic": "Динамический",
+      "navigation-tabs-tabs--template": "Шаблон",
+      "navigation-tabs-tabs--controlled": "Управляемый",
+      "navigation-tabs-tabs--scrollable": "С прокруткой",
+      "navigation-tabs-tabs--disabled": "Отключен",
+      "navigation-tabs-tabs--navigation": "Навигация",
+      "navigation-dropdown-dropdown--basic": "Базовый",
+      "navigation-dropdown-dropdown--placement": "Позиция",
+      "navigation-dropdown-dropdown--same-width": "Одинаковая ширина",
+      "navigation-dropdown-dropdown--arrow": "Стрелка",
+      "navigation-dropdown-dropdown--animation": "Анимация",
+      "navigation-dropdown-dropdown--template": "Шаблон",
+      "navigation-dropdown-dropdown--max-size": "Максимальный размер",
+      "navigation-dropdown-dropdown--boundary-padding": "Отступ от границ",
+      "navigation-dropdown-dropdown--offset": "Смещение",
+      "data-badge-badge--basic": "Базовый",
+      "data-badge-badge--severity": "Цветовые схемы",
+      "data-badge-badge--size": "Размер",
+      "data-badge-badge--max-value": "Максимальное значение",
+      "data-badge-badge--customizations": "Кастомизация",
+      "data-badge-badge--overlay": "Наложение",
+      "data-badge-badge--position-overlay": "Позиция наложения",
+      "data-badge-badge--button": "На кнопке",
+      "data-tag-tag--basic": "Базовый",
+      "data-tag-tag--severity": "Цветовые схемы",
+      "data-tag-tag--outlined": "Контурный",
+      "data-tag-tag--soft": "Мягкий",
+      "data-tag-tag--size": "Размер",
+      "data-tag-tag--closable": "Закрываемый",
+      "data-tag-tag--rounded": "Скругленный",
+      "data-tag-tag--with-icon": "С иконкой",
+      "data-tag-tag--template": "Шаблон",
+      "feedback-tooltip-tooltip--basic": "Базовый",
+      "feedback-tooltip-tooltip--placement": "Позиция",
+      "feedback-tooltip-tooltip--trigger": "Триггер",
+      "feedback-tooltip-tooltip--auto-hide": "Автоскрытие",
+      "feedback-tooltip-tooltip--delay": "Задержка",
+      "feedback-tooltip-tooltip--template": "Шаблон",
+      "feedback-tooltip-tooltip--trigger-slot": "Слот триггера",
+      "feedback-tooltip-tooltip--controlled": "Управляемый",
+      "feedback-tooltip-tooltip--root-el": "Корневой элемент",
+      "feedback-dialog-dialog--basic": "Базовый",
+      "feedback-dialog-dialog--fullscreen": "На весь экран",
+      "feedback-dialog-dialog--animation": "Анимация",
+      "feedback-dialog-dialog--non-modal": "Немодальный",
+      "feedback-dialog-dialog--template": "Шаблон",
+      "feedback-dialog-dialog--size": "Размер",
+      "feedback-dialog-dialog--without-header": "Без заголовка",
+      "feedback-dialog-dialog--custom-icons": "Кастомные иконки",
+      "feedback-confirmdialog-confirmdialog--basic": "Базовый",
+      "feedback-confirmdialog-confirmdialog--type": "Тип",
+      "feedback-confirmdialog-confirmdialog--template": "Шаблон",
+      "feedback-confirmdialog-confirmdialog--one-action": "Одно действие",
+      "feedback-confirmpopup-confirmpopup--basic": "Базовый",
+      "feedback-confirmpopup-confirmpopup--placement": "Позиция",
+      "feedback-confirmpopup-confirmpopup--controlled": "Управляемый",
+      "feedback-confirmpopup-confirmpopup--customization": "Кастомизация",
+      "feedback-confirmpopup-confirmpopup--template": "Шаблон",
+      "feedback-popover-popover--basic": "Базовый",
+      "feedback-popover-popover--placement": "Позиция",
+      "feedback-popover-popover--trigger": "Триггер",
+      "feedback-popover-popover--arrow": "Стрелка",
+      "feedback-popover-popover--trigger-slot": "Слот триггера",
+      "feedback-popover-popover--template": "Шаблон"
+    }
+  },
+  "codeComments": {
+    "singleImport": "или импорт по отдельности",
+    "usage": "использование",
+    "usingNpm": "Используя npm",
+    "usingYarn": "Используя yarn",
+    "usingPnpm": "Используя pnpm"
+  },
+  "tableOfContents": "Содержание",
+  "intro": {
+    "title": "UI библиотека для Vue.js",
+    "description": "CraftVue - простая и удобная библиотека готовых компонентов для проектов на Vue.js. Использование готовых UI компонентов позволяет ускорить процесс создания интерфейсов.",
+    "getStarted": "Get Started",
+    "viewOnGitHub": "View on GitHub",
+    "whereToStart": "С чего начать?",
+    "documentation": {
+      "title": "Документация",
+      "description": "Изучите компонент с помощью подробной документации."
+    },
+    "components": {
+      "title": "Компоненты",
+      "description": "Смотрите полный список доступных компонентов."
+    },
+    "testing": {
+      "title": "Тестирование",
+      "description": "Тестируйте различные состояния компонентов с помощью Storybook."
+    },
+    "icons": {
+      "title": "Иконки",
+      "description": "Используйте иконки из пакета, собранного для библиотеки CraftVue"
+    }
+  },
+  "gettingStarted": {
+    "title": "Установка CraftVue",
+    "subtitle": "Настройка CraftVue в проектах на Vite: установка, подключение и базовая стилизация.",
+    "download": {
+      "title": "Скачивание",
+      "description": "Библиотеку можно скачать через любой пакетный менеджер"
+    },
+    "connection": {
+      "title": "Подключение",
+      "basicUsage": {
+        "title": "Базовое использование",
+        "description": "Для использования компонентов в проекте необходимо их импортировать из подключенной библиотеки `craftvue`.",
+        "singleImport": "Также компоненты можно импортировать отдельно по мере необходимости, для контроля размера подключаемых пакетов."
+      },
+      "globalRegistration": {
+        "title": "Глобальная регистрация",
+        "description": "Компоненты можно также регистрировать глобально в `main.ts(js)` и использовать в проекте без дополнительного импорта."
+      },
+      "autoImport": {
+        "title": "Автоимпорт (рекомендуется)",
+        "description": "Для максимального удобства разработки рекомендуется настроить автоимпорт компонентов. Это позволит использовать компоненты без явного импорта в каждом файле.",
+        "install": "Установите необходимые плагины и настройте Vite:"
+      }
+    },
+    "styling": {
+      "title": "Стилизация",
+      "description": "По умолчанию компоненты импортируются без стилизации. Стили подключаются отдельно в `main.ts(js)`."
+    }
+  },
+  "overview": {
+    "title": "Витрина компонентов",
+    "subtitle": "Обзор всех компонентов.",
+    "searchPlaceholder": "Поиск по компонентам",
+    "componentAlt": "компонент",
+    "categories": {
+      "basic": "Базовые",
+      "form": "Форма",
+      "data": "Данные",
+      "navigation": "Навигация",
+      "feedback": "Обратная связь"
+    }
+  },
+  "theming": {
+    "title": "Темизация",
+    "subtitle": "Краткое руководство по настройке темы: подключение стилей, типографика, цвета и CSS‑переменные для брендирования компонентов CraftVue.",
+    "connection": {
+      "title": "Подключение",
+      "description": "По умолчанию компоненты импортируются без стилизации. Стили подключаются отдельно в `main.ts(js)`."
+    },
+    "typography": {
+      "title": "Типографика",
+      "description": "Изначально для всех компонентов задан следующий набор шрифтов:",
+      "montserratSetup": "Если необходимо использовать в проекте стандартный шрифт `Montserrat`, его нужно подключить в файле со стилями:",
+      "fontDownload": "Перед подключением шрифт необходимо скачать и поместить в соответствующую директорию. Рекомендуется использовать формат `woff2`.",
+      "typesetSample": "Использование шрифта Montserrat"
+    },
+    "colors": {
+      "title": "Цвета",
+      "basic": {
+        "title": "Основные",
+        "description": "Все цвета в библиотеке заданы в css переменных. Базовые цвета библиотеки определяют переменные ниже. Основной цвет записан в переменной `--c-prime-color`."
+      },
+      "components": {
+        "title": "Компоненты",
+        "description": "Для каждого компонента задан отдельный набор переменных, определяющих его палитру. Ниже приведен набор переменных для компонента `CBadge`."
+      },
+      "palette": {
+        "title": "Палитра",
+        "description": "Основные переменные и переменные комопнентов формируются на основе цветов из базовой палитры."
+      }
+    },
+    "cssVars": {
+      "title": "CSS-переменные",
+      "description": "Для задания некоторых стилей используются CSS-переменные. Кроме цветов переменные используются также и для других свойств: `border-radius` и `z-index`.",
+      "varsFile": "Полный набор переменных хранится в файле `_vars.scss`. При подключении стилей все переменные проекта становятся также доступными в проекте."
+    },
+    "palette": {
+      "basic": {
+        "primeColor": "Основный цвет",
+        "secondaryColor": "Второстепенный цвет",
+        "errorColor": "Цвет ошибки",
+        "baseColors": "Базовые цвета"
+      },
+      "colors": {
+        "slate": "Slate",
+        "gray": "Gray",
+        "neutral": "Neutral",
+        "zink": "Zink",
+        "stone": "Stone",
+        "red": "Red",
+        "orange": "Orange",
+        "amber": "Amber",
+        "yellow": "Yellow",
+        "lime": "Lime",
+        "green": "Green",
+        "emerald": "Emerald",
+        "teal": "Teal",
+        "cyan": "Cyan",
+        "sky": "Sky",
+        "blue": "Blue",
+        "indigo": "Indigo",
+        "violet": "Violet",
+        "purple": "Purple",
+        "fuchsia": "Fuchsia",
+        "pink": "Pink",
+        "rose": "Rose"
+      }
+    }
+  },
+  "changelog": {
+    "title": "История изменений",
+    "versions": "Версии"
+  },
+  "icons": {
+    "title": "Иконки",
+    "subtitle": "Для CraftVue была разработана библиотека векторных иконок. Компоненты CraftVue по умолчанию используют иконки из этой библиотеки, но могут использоваться любые другие иконки и передаваться в компоненты с помощью шаблонов.",
+    "download": {
+      "title": "Скачивание",
+      "description": "Для загрузки библиотеки иконок в проект, используете следующую команду."
+    },
+    "import": {
+      "title": "Импорт",
+      "description": "Для использования необходимо имортировать необходимые иконки из библиотеки. Чтобы не подключать всю библиотеку, можно использовать импорт иконок по отдельности."
+    },
+    "component": {
+      "title": "Компонент",
+      "descriptionPrefix": "Для более удобного и гибкого использования библиотека интегрирована в компонент",
+      "descriptionSuffix": "из CraftVue. В атрибут `name` необходимо передать название нужной иконки, например `home`. Для задания нужного цвета и размера компонент предоставляет соответствующие атрибуты."
+    },
+    "list": {
+      "title": "Список иконок",
+      "description": "Ниже приведен список всех доступных на данный момент иконок. Новые иконки будут переодически добавляться."
+    },
+    "gallery": {
+      "searchPlaceholder": "Поиск иконки"
+    }
+  },
+  "customArgTypes": {
+    "name": "Название",
+    "description": "Описание",
+    "default": "По умолчанию"
+  }
+}

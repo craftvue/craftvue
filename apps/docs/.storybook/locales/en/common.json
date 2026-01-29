@@ -1,0 +1,407 @@
+{
+  "sidebar": {
+    "docs": {
+      "introduction--docs": "Introduction",
+      "getting-started--docs": "Getting Started",
+      "overview--docs": "Overview",
+      "theming--docs": "Theming",
+      "changelog--docs": "Changelog",
+      "icons--docs": "Icons",
+      "basic-button--docs": "Docs",
+      "basic-icon--docs": "Docs",
+      "form-checkbox--docs": "Docs",
+      "form-formitem--docs": "Docs",
+      "form-input--docs": "Docs",
+      "form-radio--docs": "Docs",
+      "form-select--docs": "Docs",
+      "form-switch--docs": "Docs",
+      "navigation-dropdown--docs": "Docs",
+      "navigation-tabs--docs": "Docs",
+      "data-badge--docs": "Docs",
+      "data-tag--docs": "Docs",
+      "feedback-confirmdialog--docs": "Docs",
+      "feedback-confirmpopup--docs": "Docs",
+      "feedback-dialog--docs": "Docs",
+      "feedback-popover--docs": "Docs",
+      "feedback-tooltip--docs": "Docs"
+    },
+    "root": {
+      "basic": "Basic",
+      "form": "Form",
+      "navigation": "Navigation",
+      "data": "Data",
+      "feedback": "Feedback"
+    },
+    "group": {
+      "basic-button": "Button",
+      "basic-icon": "Icon",
+      "form-checkbox": "Checkbox",
+      "form-formitem": "FormItem",
+      "form-input": "Input",
+      "form-radio": "Radio",
+      "form-select": "Select",
+      "form-switch": "Switch",
+      "navigation-dropdown": "Dropdown",
+      "navigation-tabs": "Tabs",
+      "data-badge": "Badge",
+      "data-tag": "Tag",
+      "feedback-confirmdialog": "ConfirmDialog",
+      "feedback-confirmpopup": "ConfirmPopup",
+      "feedback-dialog": "Dialog",
+      "feedback-popover": "Popover",
+      "feedback-tooltip": "Tooltip"
+    },
+    "component": {
+      "basic-button-button": "Button",
+      "basic-icon-icon": "Icon",
+      "form-checkbox-checkbox": "Checkbox",
+      "form-formitem-formitem": "FormItem",
+      "form-input-input": "Input",
+      "form-radio-radio": "Radio",
+      "form-select-select": "Select",
+      "form-switch-switch": "Switch",
+      "navigation-dropdown-dropdown": "Dropdown",
+      "navigation-tabs-tabs": "Tabs",
+      "data-badge-badge": "Badge",
+      "data-tag-tag": "Tag",
+      "feedback-confirmdialog-confirmdialog": "ConfirmDialog",
+      "feedback-confirmpopup-confirmpopup": "ConfirmPopup",
+      "feedback-dialog-dialog": "Dialog",
+      "feedback-popover-popover": "Popover",
+      "feedback-tooltip-tooltip": "Tooltip"
+    },
+    "story": {
+      "basic-button-button--basic": "Basic",
+      "basic-button-button--icons": "Icons",
+      "basic-button-button--loading": "Loading",
+      "basic-button-button--severity": "Severity",
+      "basic-button-button--disabled": "Disabled",
+      "basic-button-button--raised": "Raised",
+      "basic-button-button--rounded": "Rounded",
+      "basic-button-button--text": "Text",
+      "basic-button-button--raised-text": "Raised Text",
+      "basic-button-button--outlined": "Outlined",
+      "basic-button-button--icon-only": "Icon Only",
+      "basic-button-button--size": "Size",
+      "basic-button-button--badge": "Badge",
+      "basic-button-button--template": "Template",
+      "basic-icon-icon--basic": "Basic",
+      "basic-icon-icon--name": "Name",
+      "basic-icon-icon--color": "Color",
+      "basic-icon-icon--size": "Size",
+      "basic-icon-icon--template": "Template",
+      "form-input-input--basic": "Basic",
+      "form-input-input--filled": "Filled",
+      "form-input-input--size": "Size",
+      "form-input-input--invalid": "Invalid",
+      "form-input-input--disabled": "Disabled",
+      "form-input-input--clearable": "Clearable",
+      "form-input-input--custom-clear-icon": "Custom Clear Icon",
+      "form-input-input--formatter": "Formatter",
+      "form-input-input--password": "Password",
+      "form-input-input--limit-length": "Limit Length",
+      "form-input-input--with-icon": "With Icon",
+      "form-input-input--input-group": "Input Group",
+      "form-formitem-formitem--basic": "Basic",
+      "form-formitem-formitem--with-label": "With Label",
+      "form-formitem-formitem--required": "Required",
+      "form-formitem-formitem--with-error": "With Error",
+      "form-formitem-formitem--custom-label": "Custom Label",
+      "form-formitem-formitem--custom-error": "Custom Error",
+      "form-formitem-formitem--with-for": "With For",
+      "form-formitem-formitem--form": "Form",
+      "form-select-select--basic": "Basic",
+      "form-select-select--disabled": "Disabled",
+      "form-select-select--disabled-option": "Disabled Option",
+      "form-select-select--clearable": "Clearable",
+      "form-select-select--invalid": "Invalid",
+      "form-select-select--multiple": "Multiple",
+      "form-select-select--filled": "Filled",
+      "form-select-select--full-width": "Full Width",
+      "form-select-select--loading": "Loading",
+      "form-select-select--filter": "Filter",
+      "form-select-select--size": "Size",
+      "form-select-select--checkmark": "Checkmark",
+      "form-select-select--template": "Template",
+      "form-select-select--form": "Form",
+      "form-checkbox-checkbox--basic": "Basic",
+      "form-checkbox-checkbox--with-label": "With Label",
+      "form-checkbox-checkbox--filled": "Filled",
+      "form-checkbox-checkbox--size": "Size",
+      "form-checkbox-checkbox--indeterminate": "Indeterminate",
+      "form-checkbox-checkbox--disabled": "Disabled",
+      "form-checkbox-checkbox--invalid": "Invalid",
+      "form-checkbox-checkbox--group": "Group",
+      "form-checkbox-checkbox--custom-icon": "Custom Icon",
+      "form-checkbox-checkbox--custom-label": "Custom Label",
+      "form-checkbox-checkbox--custom-values": "Custom Values",
+      "form-checkbox-checkbox--form": "Form",
+      "form-checkboxgroup-checkboxgroup--basic": "Basic",
+      "form-radio-radio--basic": "Basic",
+      "form-radio-radio--filled": "Filled",
+      "form-radio-radio--size": "Size",
+      "form-radio-radio--disabled": "Disabled",
+      "form-radio-radio--invalid": "Invalid",
+      "form-radio-radio--group": "Group",
+      "form-radio-radio--custom-icon": "Custom Icon",
+      "form-radio-radio--custom-label": "Custom Label",
+      "form-radio-radio--form": "Form",
+      "form-radiogroup-radiogroup--basic": "Basic",
+      "form-switch-switch--basic": "Basic",
+      "form-switch-switch--with-label": "With Label",
+      "form-switch-switch--filled": "Filled",
+      "form-switch-switch--size": "Size",
+      "form-switch-switch--disabled": "Disabled",
+      "form-switch-switch--invalid": "Invalid",
+      "form-switch-switch--loading": "Loading",
+      "form-switch-switch--custom-label": "Custom Label",
+      "form-switch-switch--template": "Template",
+      "form-switch-switch--custom-values": "Custom Values",
+      "form-switch-switch--form": "Form",
+      "navigation-tab-tab--basic": "Basic",
+      "navigation-tablist-tablist--basic": "Basic",
+      "navigation-tabpanel-tabpanel--basic": "Basic",
+      "navigation-tabpanels-tabpanels--basic": "Basic",
+      "navigation-tabs-tabs--arg-types": "Arg Types",
+      "navigation-tabs-tabs--basic": "Basic",
+      "navigation-tabs-tabs--vertical": "Vertical",
+      "navigation-tabs-tabs--dynamic": "Dynamic",
+      "navigation-tabs-tabs--template": "Template",
+      "navigation-tabs-tabs--controlled": "Controlled",
+      "navigation-tabs-tabs--scrollable": "Scrollable",
+      "navigation-tabs-tabs--disabled": "Disabled",
+      "navigation-tabs-tabs--navigation": "Navigation",
+      "navigation-dropdown-dropdown--basic": "Basic",
+      "navigation-dropdown-dropdown--placement": "Placement",
+      "navigation-dropdown-dropdown--same-width": "Same Width",
+      "navigation-dropdown-dropdown--arrow": "Arrow",
+      "navigation-dropdown-dropdown--animation": "Animation",
+      "navigation-dropdown-dropdown--template": "Template",
+      "navigation-dropdown-dropdown--max-size": "Max Size",
+      "navigation-dropdown-dropdown--boundary-padding": "Boundary Padding",
+      "navigation-dropdown-dropdown--offset": "Offset",
+      "data-badge-badge--basic": "Basic",
+      "data-badge-badge--severity": "Severity",
+      "data-badge-badge--size": "Size",
+      "data-badge-badge--max-value": "Max Value",
+      "data-badge-badge--customizations": "Customizations",
+      "data-badge-badge--overlay": "Overlay",
+      "data-badge-badge--position-overlay": "Position Overlay",
+      "data-badge-badge--button": "Button",
+      "data-tag-tag--basic": "Basic",
+      "data-tag-tag--severity": "Severity",
+      "data-tag-tag--outlined": "Outlined",
+      "data-tag-tag--soft": "Soft",
+      "data-tag-tag--size": "Size",
+      "data-tag-tag--closable": "Closable",
+      "data-tag-tag--rounded": "Rounded",
+      "data-tag-tag--with-icon": "With Icon",
+      "data-tag-tag--template": "Template",
+      "feedback-tooltip-tooltip--basic": "Basic",
+      "feedback-tooltip-tooltip--placement": "Placement",
+      "feedback-tooltip-tooltip--trigger": "Trigger",
+      "feedback-tooltip-tooltip--auto-hide": "Auto Hide",
+      "feedback-tooltip-tooltip--delay": "Delay",
+      "feedback-tooltip-tooltip--template": "Template",
+      "feedback-tooltip-tooltip--trigger-slot": "Trigger Slot",
+      "feedback-tooltip-tooltip--controlled": "Controlled",
+      "feedback-tooltip-tooltip--root-el": "Root El",
+      "feedback-dialog-dialog--basic": "Basic",
+      "feedback-dialog-dialog--fullscreen": "Fullscreen",
+      "feedback-dialog-dialog--animation": "Animation",
+      "feedback-dialog-dialog--non-modal": "Non Modal",
+      "feedback-dialog-dialog--template": "Template",
+      "feedback-dialog-dialog--size": "Size",
+      "feedback-dialog-dialog--without-header": "Without Header",
+      "feedback-dialog-dialog--custom-icons": "Custom Icons",
+      "feedback-confirmdialog-confirmdialog--basic": "Basic",
+      "feedback-confirmdialog-confirmdialog--type": "Type",
+      "feedback-confirmdialog-confirmdialog--template": "Template",
+      "feedback-confirmdialog-confirmdialog--one-action": "One Action",
+      "feedback-confirmpopup-confirmpopup--basic": "Basic",
+      "feedback-confirmpopup-confirmpopup--placement": "Placement",
+      "feedback-confirmpopup-confirmpopup--controlled": "Controlled",
+      "feedback-confirmpopup-confirmpopup--customization": "Customization",
+      "feedback-confirmpopup-confirmpopup--template": "Template",
+      "feedback-popover-popover--basic": "Basic",
+      "feedback-popover-popover--placement": "Placement",
+      "feedback-popover-popover--trigger": "Trigger",
+      "feedback-popover-popover--arrow": "Arrow",
+      "feedback-popover-popover--trigger-slot": "Trigger Slot",
+      "feedback-popover-popover--template": "Template"
+    }
+  },
+  "codeComments": {
+    "singleImport": "or import separately",
+    "usage": "usage",
+    "usingNpm": "Using npm",
+    "usingYarn": "Using yarn",
+    "usingPnpm": "Using pnpm"
+  },
+  "tableOfContents": "Table of Contents",
+  "intro": {
+    "title": "UI Library for Vue.js",
+    "description": "CraftVue - a simple and convenient library of ready-made components for Vue.js projects. Using ready-made UI components allows you to speed up the process of creating interfaces.",
+    "getStarted": "Get Started",
+    "viewOnGitHub": "View on GitHub",
+    "whereToStart": "Where to start?",
+    "documentation": {
+      "title": "Documentation",
+      "description": "Learn about the component with detailed documentation."
+    },
+    "components": {
+      "title": "Components",
+      "description": "View the full list of available components."
+    },
+    "testing": {
+      "title": "Testing",
+      "description": "Test various component states using Storybook."
+    },
+    "icons": {
+      "title": "Icons",
+      "description": "Use icons from the package assembled for the CraftVue library"
+    }
+  },
+  "gettingStarted": {
+    "title": "Installing CraftVue",
+    "subtitle": "Setting up CraftVue in Vite projects: installation, connection and basic styling.",
+    "download": {
+      "title": "Download",
+      "description": "The library can be downloaded through any package manager"
+    },
+    "connection": {
+      "title": "Connection",
+      "basicUsage": {
+        "title": "Basic usage",
+        "description": "To use components in a project, you need to import them from the connected `craftvue` library.",
+        "singleImport": "Components can also be imported separately as needed to control the size of connected packages."
+      },
+      "globalRegistration": {
+        "title": "Global registration",
+        "description": "Components can also be registered globally in `main.ts(js)` and used in the project without additional import."
+      },
+      "autoImport": {
+        "title": "Auto-import (recommended)",
+        "description": "For maximum development convenience, it is recommended to set up auto-import of components. This will allow you to use components without explicit import in each file.",
+        "install": "Install the necessary plugins and configure Vite:"
+      }
+    },
+    "styling": {
+      "title": "Styling",
+      "description": "By default, components are imported without styling. Styles are connected separately in `main.ts(js)`."
+    }
+  },
+  "overview": {
+    "title": "Component Showcase",
+    "subtitle": "Overview of all components.",
+    "searchPlaceholder": "Search components",
+    "componentAlt": "component",
+    "categories": {
+      "basic": "Basic",
+      "form": "Form",
+      "data": "Data",
+      "navigation": "Navigation",
+      "feedback": "Feedback"
+    }
+  },
+  "theming": {
+    "title": "Theming",
+    "subtitle": "A brief guide to theme setup: connecting styles, typography, colors and CSS variables for branding CraftVue components.",
+    "connection": {
+      "title": "Connection",
+      "description": "By default, components are imported without styling. Styles are connected separately in `main.ts(js)`."
+    },
+    "typography": {
+      "title": "Typography",
+      "description": "Initially, the following set of fonts is set for all components:",
+      "montserratSetup": "If you need to use the standard `Montserrat` font in the project, you need to connect it in the styles file:",
+      "fontDownload": "Before connecting, the font must be downloaded and placed in the appropriate directory. It is recommended to use the `woff2` format.",
+      "typesetSample": "Using Montserrat font"
+    },
+    "colors": {
+      "title": "Colors",
+      "basic": {
+        "title": "Basic",
+        "description": "All colors in the library are set in css variables. The basic colors of the library are determined by the variables below. The main color is written in the `--c-prime-color` variable."
+      },
+      "components": {
+        "title": "Components",
+        "description": "For each component, a separate set of variables is set that determines its palette. Below is a set of variables for the `CBadge` component."
+      },
+      "palette": {
+        "title": "Palette",
+        "description": "Basic variables and component variables are formed based on colors from the base palette."
+      }
+    },
+    "cssVars": {
+      "title": "CSS Variables",
+      "description": "CSS variables are used to set some styles. In addition to colors, variables are also used for other properties: `border-radius` and `z-index`.",
+      "varsFile": "The full set of variables is stored in the `_vars.scss` file. When connecting styles, all project variables also become available in the project."
+    },
+    "palette": {
+      "basic": {
+        "primeColor": "Prime Color",
+        "secondaryColor": "Secondary Color",
+        "errorColor": "Error Color",
+        "baseColors": "Base Colors"
+      },
+      "colors": {
+        "slate": "Slate",
+        "gray": "Gray",
+        "neutral": "Neutral",
+        "zink": "Zink",
+        "stone": "Stone",
+        "red": "Red",
+        "orange": "Orange",
+        "amber": "Amber",
+        "yellow": "Yellow",
+        "lime": "Lime",
+        "green": "Green",
+        "emerald": "Emerald",
+        "teal": "Teal",
+        "cyan": "Cyan",
+        "sky": "Sky",
+        "blue": "Blue",
+        "indigo": "Indigo",
+        "violet": "Violet",
+        "purple": "Purple",
+        "fuchsia": "Fuchsia",
+        "pink": "Pink",
+        "rose": "Rose"
+      }
+    }
+  },
+  "changelog": {
+    "title": "Changelog",
+    "versions": "Versions"
+  },
+  "icons": {
+    "title": "Icons",
+    "subtitle": "A vector icon library has been developed for CraftVue. CraftVue components use icons from this library by default, but any other icons can be used and passed to components using templates.",
+    "download": {
+      "title": "Download",
+      "description": "To load the icon library into the project, use the following command."
+    },
+    "import": {
+      "title": "Import",
+      "description": "To use, you need to import the necessary icons from the library. To avoid loading the entire library, you can import icons individually."
+    },
+    "component": {
+      "title": "Component",
+      "descriptionPrefix": "For more convenient and flexible use, the library is integrated into the",
+      "descriptionSuffix": "component from CraftVue. The `name` attribute must be passed the name of the desired icon, for example `home`. To set the desired color and size, the component provides the corresponding attributes."
+    },
+    "list": {
+      "title": "Icon List",
+      "description": "Below is a list of all currently available icons. New icons will be added periodically."
+    },
+    "gallery": {
+      "searchPlaceholder": "Search icon"
+    }
+  },
+  "customArgTypes": {
+    "name": "Name",
+    "description": "Description",
+    "default": "Default"
+  }
+}

@@ -1,122 +1,40 @@
-import {
-  Meta,
-  Title,
-  Canvas,
-  ArgTypes,
-  Subtitle,
-  TableOfContents,
-} from '@storybook/addon-docs/blocks'
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
 import * as FormItemStories from './FormItem.stories.ts'
-import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+import { FormItemContent } from './FormItemContent.tsx'
 
 <Meta title="Form/FormItem" />
 
-<div className='sb-docs-wrapper' >
-  <div className='sb-docs-content'>
-    <Title>Элемент формы</Title>
-
-    <Subtitle>
-      Универсальный компонент для создания полей формы с лейблами, валидацией и поддержкой доступности
-    </Subtitle>
-
-    <h3>Импорт</h3>
-
-    <CustomSource
-      code="import CFormItem from 'craftvue/formitem'"
-      actions={['copy']}
-      parser="babel"
-      language="javascript"
-    />
-
-    <ArgTypes of={FormItemStories.Basic} />
-
-    ## Базовый пример
-
-    <p>Базовое состояние элемента формы с лейблом и полем ввода. Лейбл задается свойством `label`</p>
-
+<FormItemContent>
     <Canvas of={FormItemStories.Basic} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="formItem" parser='html' />
-
-    &nbsp;
-
-    ## С лейблом
-
-    <p>Элемент формы с лейблом</p>
-
-    <Canvas of={FormItemStories.WithLabel} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="formItem" name="withLabel" parser='html' />
-
-    &nbsp;
-
-    ## Обязательное поле
-
-    <p>Обязательные поля помечаются звездочкой (*) с помощью свойства `required`</p>
-
-    <Canvas of={FormItemStories.Required} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="formItem" name="required" parser='html' />
-
-    &nbsp;
-
-    ## С ошибкой
-
-    <p>Сообщения об ошибках валидации отображаются с помощью свойства `errorMessage`</p>
-
-    <Canvas of={FormItemStories.WithError} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="formItem" name="withError" parser='html' />
-
-    &nbsp;
-
-    ## Кастомный лейбл
-
-    <p>Пользовательский контент лейбла можно задать через слот `labelSlot`</p>
-
-    <Canvas of={FormItemStories.CustomLabel} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="formItem" name="customLabel" parser='html' />
-
-    &nbsp;
-
-    ## Кастомная ошибка
-
-    <p>Пользовательское отображение ошибки можно настроить через слот `error`</p>
-
-    <Canvas of={FormItemStories.CustomError} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="formItem" name="customError" parser='html' />
-
-    &nbsp;
-
-    ## Связь с полем
-
-    <p>Свойство `for` позволяет связать лейбл с конкретным элементом формы для улучшения доступности</p>
-
-    <Canvas of={FormItemStories.WithFor} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="formItem" name="withFor" parser='html' />
-
-    &nbsp;
-
-    ## Пример формы
-
-    <p>Полный пример использования FormItem в контактной форме с валидацией и различными типами полей</p>
-
+  <Canvas
+    of={FormItemStories.WithLabel}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={FormItemStories.Required}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={FormItemStories.WithError}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={FormItemStories.CustomLabel}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={FormItemStories.CustomError}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={FormItemStories.WithFor}
+    sourceState="none"
+    className="sb-canvas"
+  />
     <Canvas of={FormItemStories.Form} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="formItem" name="form" parser='html' />
-
-  </div>
-
-  <div>
-    <TableOfContents
-      className='sb-docs-toc sb-unstyled'
-      title='Компоненты'
-      contentsSelector='.sb-docs-content'
-      headingSelector="h2"
-      ignoreSelector='.sbdocs-subtitle'
-    />
-  </div>
-</div>
+</FormItemContent>

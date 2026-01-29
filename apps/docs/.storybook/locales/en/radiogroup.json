@@ -1,0 +1,16 @@
+{
+  "radiogroup": {
+    "argTypes": {
+      "modelValue": "Selected value in radio button group",
+      "disabled": "Disables all radio buttons in group, making them unavailable for interaction",
+      "invalid": "Marks radio button group as invalid",
+      "size": "Size of all radio buttons in group: sm (small), normal (default), lg (large)",
+      "variant": "Style variant of all radio buttons in group: outlined (with border) or filled (filled)",
+      "name": "Name attribute for all radio buttons in group",
+      "orientation": "Orientation of radio button arrangement",
+      "default": "Slot for placing child CRadio components",
+      "updatemodelValue": "Event for updating selected value",
+      "change": "Event fired when selected option in group changes"
+    }
+  }
+}

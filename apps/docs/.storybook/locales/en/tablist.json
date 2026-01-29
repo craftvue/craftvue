@@ -1,0 +1,7 @@
+{
+  "tablist": {
+    "argTypes": {
+      "default": "Slot for tab list container"
+    }
+  }
+}

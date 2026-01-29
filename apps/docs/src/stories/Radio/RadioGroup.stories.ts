@@ -1,8 +1,13 @@
-import type { ComponentPropsAndSlots, Meta, StoryObj } from '@storybook/vue3-vite'
+import type {
+  ComponentPropsAndSlots,
+  Meta,
+  StoryObj,
+} from '@storybook/vue3-vite'
 import { CRadioGroup } from 'craftvue'
 import type { RadioGroupEmits } from 'craftvue'
 
-type AllRadioGroupArgs = ComponentPropsAndSlots<typeof CRadioGroup> & RadioGroupEmits
+type AllRadioGroupArgs = ComponentPropsAndSlots<typeof CRadioGroup> &
+  RadioGroupEmits
 
 const meta = {
   title: 'Form/Radio/RadioGroup',
@@ -14,36 +19,37 @@ const meta = {
   },
   argTypes: {
     modelValue: {
-      description: 'Выбранное значение в группе радиокнопок',
+      description: 'Selected value in radio button group',
     },
     disabled: {
-      description: 'Отключает все радиокнопки в группе, делая их недоступными для взаимодействия',
+      description:
+        'Disables all radio buttons in group, making them unavailable for interaction',
     },
     invalid: {
-      description: 'Помечает группу радиокнопок как невалидную',
+      description: 'Marks radio button group as invalid',
     },
     size: {
       description:
-        'Размер всех радиокнопок в группе: sm (маленький), нормальный (по умолчанию), lg (большой)',
+        'Size of all radio buttons in group: sm (small), normal (default), lg (large)',
     },
     variant: {
       description:
-        'Вариант стиля всех радиокнопок в группе: outlined (с обводкой) или filled (заполненный)',
+        'Style variant of all radio buttons in group: outlined (with border) or filled (filled)',
     },
     name: {
-      description: 'Атрибут name для всех радиокнопок в группе',
+      description: 'Name attribute for all radio buttons in group',
     },
     orientation: {
-      description: 'Ориентация расположения радиокнопок',
+      description: 'Orientation of radio button arrangement',
     },
     default: {
-      description: 'Слот для размещения дочерних компонентов CRadio',
+      description: 'Slot for placing child CRadio components',
     },
     'update:modelValue': {
-      description: 'Событие для обновления выбранного значения',
+      description: 'Event for updating selected value',
     },
     change: {
-      description: 'Событие, возникающее при изменении выбранной опции в группе',
+      description: 'Event fired when selected option in group changes',
     },
   },
   tags: ['!dev'],

@@ -1,157 +1,36 @@
-import {
-  Meta,
-  Title,
-  Canvas,
-  ArgTypes,
-  Subtitle,
-  TableOfContents,
-} from '@storybook/addon-docs/blocks'
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
 import * as TabsStories from './Tabs.stories'
-import * as TabListStories from './TabList.stories.ts'
-import * as TabStories from './Tab.stories.ts'
-import * as TabPanelsStories from './TabPanels.stories.ts'
-import * as TabPanelStories from './TabPanel.stories.ts'
-import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+import { TabsContent } from './TabsContent.tsx'
 
 <Meta title="Navigation/Tabs" />
 
-<div className='sb-docs-wrapper' >
-  <div className='sb-docs-content'>
-    <Title>Вкладки</Title>
-
-    <Subtitle>
-      Компонент вкладок для организации контента в отдельные панели. Поддерживает горизонтальную и вертикальную ориентацию, прокрутку, ленивую загрузку и кастомизацию.
-    </Subtitle>
-
-    <h3>Импорт</h3>
-
-    <CustomSource
-      code={`
-        import CTabs from 'craftvue/tabs'
-        import CTabList from 'craftvue/tablist'
-        import CTab from 'craftvue/tab'
-        import CTabPanels from 'craftvue/tabpanels'
-        import CTabPanel from 'craftvue/tabpanel'
-      `}
-      actions={['copy']}
-      parser="babel"
-      language="javascript"
-    />
-
-    &nbsp;
-
-    ### Tabs
-    <ArgTypes of={TabsStories.ArgTypes} />
-
-    ### TabList
-    <ArgTypes of={TabListStories.Basic} />
-
-    ### Tab
-    <ArgTypes of={TabStories.Basic} />
-
-    ### TabPanels
-    <ArgTypes of={TabPanelsStories.Basic} />
-
-    ### TabPanel
-    <ArgTypes of={TabPanelStories.Basic} />
-
-    &nbsp;
-
-    ## Базовый пример
-
-    <p>Базовое использование компонента вкладок с тремя панелями контента</p>
-
-    <Canvas of={TabsStories.Basic} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="tabs" parser='html' />
-
-    &nbsp;
-
-    ## Вертикальная ориентация
-
-    <p>Вкладки можно отображать вертикально, используя свойство `orientation="vertical"`</p>
-
-    <Canvas of={TabsStories.Vertical} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="tabs" name="vertical" parser='html' />
-
-    &nbsp;
-
-    ## Динамические вкладки
-
-    <p>Создание вкладок динамически с помощью `v-for` и реактивных данных</p>
-
-    <Canvas of={TabsStories.Dynamic} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="tabs" name="dynamic" parser='html' />
-
-    &nbsp;
-
-    ## Кастомные шаблоны
-
-    <p>Использование слотов для создания кастомного содержимого вкладок и панелей</p>
-
-    <Canvas of={TabsStories.Template} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="tabs" name="template" parser='html' />
-
-    &nbsp;
-
-    ## Управляемые вкладки
-
-    <p>Полный контроль над состоянием вкладок с помощью `v-model` и обработчиков событий</p>
-
-    <Canvas of={TabsStories.Controlled} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="tabs" name="controlled" parser='html' />
-
-    &nbsp;
-
-    ## Прокручиваемые вкладки
-
-    <p>Вкладки с навигационными кнопками для прокрутки при большом количестве элементов</p>
-
-    <Canvas of={TabsStories.Scrollable} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="tabs" name="scrollable" parser='html' />
-
-    &nbsp;
-
-    ## Отключенные вкладки
-
-    <p>Отдельные вкладки можно отключить с помощью свойства `disabled`</p>
-
-    <Canvas of={TabsStories.Disabled} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="tabs" name="disabled" parser='html' />
-
-    &nbsp;
-
-    ## Навигационное меню
-
-    <p>Навигационное меню реализуется с использованием вкладок без панелей. В качестве содержимого вкладки может использоваться, например router-view.</p>
-
-    <Canvas of={TabsStories.Navigation} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="tabs" name="navigation" parser='html' />
-
-  </div>
-
-  <div>
-    <TableOfContents
-      className='sb-docs-toc sb-unstyled'
-      title='Компоненты'
-      contentsSelector='.sb-docs-content'
-      headingSelector="h2"
-      ignoreSelector='.sbdocs-subtitle'
-    />
-  </div>
-</div>
+<TabsContent>
+  <Canvas of={TabsStories.Basic} sourceState="none" className="sb-canvas" />
+  <Canvas of={TabsStories.Vertical} sourceState="none" className="sb-canvas" />
+  <Canvas of={TabsStories.Dynamic} sourceState="none" className="sb-canvas" />
+  <Canvas of={TabsStories.Template} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={TabsStories.Controlled}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={TabsStories.Scrollable}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas of={TabsStories.Disabled} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={TabsStories.Navigation}
+    sourceState="none"
+    className="sb-canvas"
+  />
+</TabsContent>
 
 <style>
   {`
-  .sbdocs .docblock-argstable{
-    margin-top: 0;
+  .args{
+    margin-top: -12px;
   }
   .c-tabs{
     --c-tabs-tablist-background: var(--ground-back);

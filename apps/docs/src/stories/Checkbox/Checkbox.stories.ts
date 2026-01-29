@@ -1,5 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { Meta, StoryObj, ComponentPropsAndSlots } from '@storybook/vue3-vite'
+import type {
+  Meta,
+  StoryObj,
+  ComponentPropsAndSlots,
+} from '@storybook/vue3-vite'
 import { fn } from 'storybook/test'
 import { CButton, CCheckbox, CCheckboxGroup, CFormItem, CIcon } from 'craftvue'
 import type { CheckboxEmits, CheckboxGroupEmits } from 'craftvue'
@@ -75,87 +79,92 @@ const meta = {
     modelValue: {
       control: 'boolean',
       description:
-        'Значение чекбокса (true/false или кастомное значение через trueValue/falseValue)',
+        'Checkbox value (true/false or custom value via trueValue/falseValue)',
     },
     indeterminate: {
       control: 'boolean',
-      description: 'Неопределенное состояние чекбокса (частично выбран)',
+      description: 'Indeterminate state of checkbox (partially selected)',
     },
     disabled: {
       control: 'boolean',
-      description: 'Отключает чекбокс, делая его недоступным для взаимодействия',
+      description: 'Disables checkbox, making it unavailable for interaction',
     },
     invalid: {
       control: 'boolean',
-      description: 'Помечает чекбокс как невалидный',
+      description: 'Marks checkbox as invalid',
     },
     size: {
       control: {
         type: 'select',
-        labels: { 0: 'Маленький', 1: 'Нормальный', 2: 'Большой' },
+        labels: { 0: 'Small', 1: 'Normal', 2: 'Large' },
       },
       options: [0, 1, 2],
       mapping: { 0: 'sm', 1: undefined, 2: 'lg' },
-      description: 'Размер чекбокса: sm (маленький), нормальный (по умолчанию), lg (большой)',
+      description: 'Checkbox size: sm (small), normal (default), lg (large)',
     },
     label: {
       control: 'text',
-      description: 'Текстовая метка, отображаемая рядом с чекбоксом',
+      description: 'Text label displayed next to checkbox',
     },
     value: {
       control: false,
-      description: 'Значение чекбокса при использовании в группе (CheckboxGroup)',
+      description: 'Checkbox value when used in group (CheckboxGroup)',
     },
     trueValue: {
       control: false,
-      description: 'Кастомное значение, которое будет использоваться когда чекбокс выбран',
+      description: 'Custom value that will be used when checkbox is selected',
     },
     falseValue: {
       control: false,
-      description: 'Кастомное значение, которое будет использоваться когда чекбокс не выбран',
+      description:
+        'Custom value that will be used when checkbox is not selected',
     },
     variant: {
       control: 'select',
-      description: 'Вариант стиля чекбокса: outlined (с обводкой) или filled (заполненный)',
+      description:
+        'Checkbox style variant: outlined (with border) or filled (filled)',
     },
     name: {
       control: false,
-      description: 'Атрибут name для элемента input (используется для группировки в формах)',
+      description:
+        'Name attribute for input element (used for grouping in forms)',
     },
     id: {
       control: false,
-      description: 'Уникальный идентификатор элемента (генерируется автоматически, если не указан)',
+      description:
+        'Unique element identifier (generated automatically if not specified)',
     },
     ariaLabel: {
       control: false,
-      description: 'ARIA-метка для доступности (альтернатива label для скринридеров)',
+      description:
+        'ARIA label for accessibility (alternative to label for screen readers)',
     },
     ariaLabelledby: {
       control: false,
-      description: 'ID элемента, который служит меткой для чекбокса (ARIA)',
+      description: 'ID of element that serves as label for checkbox (ARIA)',
     },
     focus: {
-      description: 'Событие, возникающее при получении фокуса чекбоксом',
+      description: 'Event fired when checkbox receives focus',
     },
     blur: {
-      description: 'Событие, возникающее при потере фокуса чекбоксом',
+      description: 'Event fired when checkbox loses focus',
     },
     change: {
-      description: 'Событие, возникающее при изменении состояния чекбокса',
+      description: 'Event fired when checkbox state changes',
     },
     'update:indeterminate': {
-      description: 'Событие для обновления состояния indeterminate',
+      description: 'Event for updating indeterminate state',
     },
     'update:modelValue': {
-      description: 'Событие для обновления значения чекбокса',
+      description: 'Event for updating checkbox value',
     },
     default: {
       control: 'boolean',
-      description: 'Слот для кастомного содержимого метки',
+      description: 'Slot for custom label content',
     },
     icon: {
       control: 'boolean',
-      description: 'Слот для кастомной иконки чекбокса',
+      description: 'Slot for custom checkbox icon',
     },
   },
   render: (args) => ({
@@ -266,7 +275,8 @@ export const Indeterminate: Story = {
       const handleCheckedCountriesChange = (value: string[]) => {
         const checkedCount = value.length
         checkAll.value = checkedCount === countries.value.length
-        isIndeterminate.value = checkedCount > 0 && checkedCount < countries.value.length
+        isIndeterminate.value =
+          checkedCount > 0 && checkedCount < countries.value.length
       }
 
       return {
@@ -394,7 +404,7 @@ export const Group: Story = {
     'Group.size': {
       control: {
         type: 'select',
-        labels: { 0: 'Маленький', 1: 'Нормальный', 2: 'Большой' },
+        labels: { 0: 'Small', 1: 'Normal', 2: 'Large' },
       },
       options: [0, 1, 2],
       mapping: { 0: 'sm', 1: undefined, 2: 'lg' },
@@ -452,7 +462,9 @@ export const Group: Story = {
     components: { CCheckbox, CCheckboxGroup },
     setup() {
       const checkboxArgs = computed<Record<string, any>>(() => {
-        return Object.fromEntries(Object.entries(args).filter(([key]) => !key.startsWith('Group.')))
+        return Object.fromEntries(
+          Object.entries(args).filter(([key]) => !key.startsWith('Group.')),
+        )
       })
       const checkboxGroupArgs = computed<Record<string, any>>(() => {
         return Object.fromEntries(
@@ -472,7 +484,14 @@ export const Group: Story = {
         },
       )
 
-      return { args, checkboxArgs, checkboxGroupArgs, checkedCountries, countries, generateId }
+      return {
+        args,
+        checkboxArgs,
+        checkboxGroupArgs,
+        checkedCountries,
+        countries,
+        generateId,
+      }
     },
     template: `
       <CCheckboxGroup v-bind="checkboxGroupArgs" v-model="checkedCountries">
@@ -560,7 +579,9 @@ export const Form: Story = {
       const error = ref('')
 
       const submit = () => {
-        error.value = checkedCountries.value.length ? '' : 'Check at least 1 option'
+        error.value = checkedCountries.value.length
+          ? ''
+          : 'Check at least 1 option'
       }
 
       const handleChange = () => {
@@ -569,7 +590,15 @@ export const Form: Story = {
         }
       }
 
-      return { args, checkedCountries, countries, submit, error, handleChange, generateId }
+      return {
+        args,
+        checkedCountries,
+        countries,
+        submit,
+        error,
+        handleChange,
+        generateId,
+      }
     },
     template: `
       <CFormItem label="Check options" required :errorMessage="error">

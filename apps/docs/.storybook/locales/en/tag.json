@@ -1,0 +1,60 @@
+{
+  "tag": {
+    "title": "Tag",
+    "subtitle": "Tag component for displaying labels, categories and statuses with support for various color palettes, styles and icons",
+    "import": {
+      "title": "Import"
+    },
+    "basic": {
+      "title": "Basic Example",
+      "description": "Standard tag with text. Text is set via `value` property or `default` slot"
+    },
+    "severity": {
+      "title": "Color Palettes",
+      "description": "Tag supports seven color palettes via `severity` property: `primary`, `secondary`, `contrast`, `success`, `error`, `warning`, `info`"
+    },
+    "outlined": {
+      "title": "Outlined Variant",
+      "description": "Tag with outline instead of filled background. Set via `variant=\"outlined\"` property"
+    },
+    "soft": {
+      "title": "Soft Variant",
+      "description": "Tag with soft background (semi-transparent). Set via `variant=\"soft\"` property"
+    },
+    "size": {
+      "title": "Size",
+      "description": "Tag size is controlled by `size` property. Available values: `sm` (small), `lg` (large). Default is medium size"
+    },
+    "closable": {
+      "title": "With Close Button",
+      "description": "Tag with close button. Activated via `closable` property. Clicking button triggers `close` event"
+    },
+    "rounded": {
+      "title": "Rounded Corners",
+      "description": "Tag with rounded corners. Activated via `rounded` property"
+    },
+    "withIcon": {
+      "title": "With Icons",
+      "description": "Tag with icons before and after text. Icons are set via `prefixIcon` (before text) and `suffixIcon` (after text) properties. All icons must be Vue components"
+    },
+    "template": {
+      "title": "Custom Template",
+      "description": "Using `prefix` and `suffix` slots for custom content before and after text. Slots have priority over corresponding icons (`prefixIcon` and `suffixIcon`)"
+    },
+    "tableOfContents": "Components",
+    "argTypes": {
+      "value": "Tag text displayed inside element",
+      "severity": "Tag color palette: primary, secondary, contrast, success, error, warning, info",
+      "variant": "Tag style variant: filled (filled), outlined (with outline), soft (soft)",
+      "size": "Tag size: sm (small), normal (default), lg (large)",
+      "closable": "Show close button in tag (clicking which triggers close event)",
+      "rounded": "Applies rounded corners to tag",
+      "prefixIcon": "Vue component icon displayed before tag text",
+      "suffixIcon": "Vue component icon displayed after tag text",
+      "close": "Event fired when close button is clicked",
+      "default": "Slot for custom tag content",
+      "prefix": "Slot for custom content before tag text (has priority over prefixIcon)",
+      "suffix": "Slot for custom content after tag text (has priority over suffixIcon)"
+    }
+  }
+}

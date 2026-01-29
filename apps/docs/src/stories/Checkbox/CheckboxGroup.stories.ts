@@ -1,8 +1,13 @@
-import type { ComponentPropsAndSlots, Meta, StoryObj } from '@storybook/vue3-vite'
+import type {
+  ComponentPropsAndSlots,
+  Meta,
+  StoryObj,
+} from '@storybook/vue3-vite'
 import { CCheckboxGroup } from 'craftvue'
 import type { CheckboxGroupEmits } from 'craftvue'
 
-type AllCheckboxGroupArgs = ComponentPropsAndSlots<typeof CCheckboxGroup> & CheckboxGroupEmits
+type AllCheckboxGroupArgs = ComponentPropsAndSlots<typeof CCheckboxGroup> &
+  CheckboxGroupEmits
 
 const meta = {
   title: 'Form/Checkbox/CheckboxGroup',
@@ -14,37 +19,38 @@ const meta = {
   },
   argTypes: {
     modelValue: {
-      description: 'Массив выбранных значений чекбоксов в группе',
+      description: 'Array of selected checkbox values in group',
     },
     disabled: {
-      description: 'Отключает все чекбоксы в группе, делая их недоступными для взаимодействия',
+      description:
+        'Disables all checkboxes in group, making them unavailable for interaction',
     },
     invalid: {
-      description: 'Помечает группу чекбоксов как невалидную',
+      description: 'Marks checkbox group as invalid',
     },
     size: {
       description:
-        'Размер всех чекбоксов в группе: sm (маленький), нормальный (по умолчанию), lg (большой)',
+        'Size of all checkboxes in group: sm (small), normal (default), lg (large)',
     },
     variant: {
       description:
-        'Вариант стиля всех чекбоксов в группе: outlined (с обводкой) или filled (заполненный)',
+        'Style variant of all checkboxes in group: outlined (with border) or filled (filled)',
     },
     name: {
       description:
-        'Атрибут name для всех чекбоксов в группе (используется для группировки в формах)',
+        'Name attribute for all checkboxes in group (used for grouping in forms)',
     },
     orientation: {
-      description: 'Ориентация расположения чекбоксов',
+      description: 'Orientation of checkbox arrangement',
     },
     default: {
-      description: 'Слот для размещения дочерних компонентов CCheckbox',
+      description: 'Slot for placing child CCheckbox components',
     },
     'update:modelValue': {
-      description: 'Событие для обновления массива выбранных значений',
+      description: 'Event for updating array of selected values',
     },
     change: {
-      description: 'Событие, возникающее при изменении выбранных значений в группе',
+      description: 'Event fired when selected values in group change',
     },
   },
   tags: ['!dev'],

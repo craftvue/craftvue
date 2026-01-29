@@ -1,0 +1,75 @@
+{
+  "switch": {
+    "title": "Switch",
+    "subtitle": "Toggle component for enabling/disabling options with loading state, validation and customization support",
+    "import": {
+      "title": "Import"
+    },
+    "basic": {
+      "title": "Basic Example",
+      "description": "Standard switch in basic state without label"
+    },
+    "withLabel": {
+      "title": "With Label",
+      "description": "Switch with text label displayed next to the element. Label is set via `label` property"
+    },
+    "filled": {
+      "title": "Filled Style",
+      "description": "Switch with filled background instead of standard outline. Set via `variant=\"filled\"` property"
+    },
+    "size": {
+      "title": "Size",
+      "description": "Switch size is controlled by `size` property. Available values: `sm` (small), `lg` (large). Default is medium size"
+    },
+    "disabled": {
+      "title": "Disabled State",
+      "description": "Switch in inactive state, unavailable for interaction. Set via `disabled` property. Can be either on or off"
+    },
+    "invalid": {
+      "title": "Error State",
+      "description": "Switch in error state with red border. Activated via `invalid` property. Used to display validation errors in forms"
+    },
+    "loading": {
+      "title": "Loading State",
+      "description": "Switch in loading state with indicator. Activated via `loading` property. Blocks interaction during loading"
+    },
+    "customLabel": {
+      "title": "Custom Label",
+      "description": "Switch with custom label content via `default` slot. Allows using HTML markup, icons or other components instead of plain text. Slot receives `checked` parameter for conditional display"
+    },
+    "template": {
+      "title": "Custom Thumb",
+      "description": "Switch with custom content inside the switch (thumb) via `thumb` slot. Allows customizing icon or content inside the switch. Slot receives `checked` parameter for conditional display"
+    },
+    "customValues": {
+      "title": "Custom Values",
+      "description": "Switch with custom values instead of standard `true`/`false`. Configured via `trueValue` and `falseValue` properties. Useful for working with APIs that use other data types"
+    },
+    "form": {
+      "title": "In Form",
+      "description": "Integration with `CFormItem`: switch validation, error message display"
+    },
+    "tableOfContents": "Components",
+    "argTypes": {
+      "modelValue": "Switch value (true/false or custom value via trueValue/falseValue)",
+      "disabled": "Disables switch, making it unavailable for interaction",
+      "invalid": "Marks switch as invalid",
+      "loading": "Shows loading indicator and blocks interaction",
+      "size": "Switch size: sm (small), normal (default), lg (large)",
+      "label": "Text label displayed next to switch",
+      "variant": "Switch style variant: outlined (with border) or filled (filled)",
+      "trueValue": "Custom value to be used when switch is on",
+      "falseValue": "Custom value to be used when switch is off",
+      "name": "Name attribute for input element (used for grouping in forms)",
+      "id": "Unique element identifier (generated automatically if not specified)",
+      "ariaLabel": "ARIA label for accessibility (alternative to label for screen readers)",
+      "ariaLabelledby": "ID of element that serves as label for switch (ARIA)",
+      "updatemodelValue": "Event for updating switch value",
+      "change": "Event fired when switch state changes",
+      "focus": "Event fired when switch receives focus",
+      "blur": "Event fired when switch loses focus",
+      "default": "Slot for custom label content",
+      "thumb": "Slot for custom content inside switch (thumb)"
+    }
+  }
+}

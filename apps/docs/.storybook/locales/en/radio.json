@@ -1,0 +1,67 @@
+{
+  "radio": {
+    "title": "Radio",
+    "subtitle": "Radio button component for selecting one value from a group of options with support for grouping and customization",
+    "import": {
+      "title": "Import"
+    },
+    "argTypes": {
+      "radio": "Radio",
+      "radioGroup": "RadioGroup",
+      "modelValue": "Selected radio button value (must match value of selected option)",
+      "disabled": "Disables radio button, making it unavailable for interaction",
+      "invalid": "Marks radio button as invalid",
+      "size": "Radio button size: sm (small), normal (default), lg (large)",
+      "label": "Text label displayed next to radio button",
+      "value": "Radio button value that is set to modelValue when selected",
+      "variant": "Radio button style variant: outlined (with border) or filled (filled)",
+      "name": "Name attribute for input element (used for grouping in RadioGroup)",
+      "id": "Unique element identifier (generated automatically if not specified)",
+      "ariaLabel": "ARIA label for accessibility (alternative to label for screen readers)",
+      "ariaLabelledby": "ID of element that serves as label for radio button (ARIA)",
+      "focus": "Event fired when radio button receives focus",
+      "blur": "Event fired when radio button loses focus",
+      "updatemodelValue": "Event for updating selected value",
+      "change": "Event fired when selected option changes",
+      "default": "Slot for custom label content",
+      "icon": "Slot for custom radio button icon"
+    },
+    "basic": {
+      "title": "Basic Example",
+      "description": "Standard radio buttons in basic state. For radio buttons to work, they must be linked via a common `v-model` or use the `CRadioGroup` component"
+    },
+    "filled": {
+      "title": "Filled Style",
+      "description": "Radio button with filled background instead of standard outline. Set by `variant=\"filled\"` property"
+    },
+    "size": {
+      "title": "Size",
+      "description": "Radio button size is controlled by the `size` property. Available values: `sm` (small), `lg` (large). Medium size is used by default"
+    },
+    "disabled": {
+      "title": "Disabled State",
+      "description": "Radio button in inactive state, unavailable for interaction. Set by `disabled` property"
+    },
+    "invalid": {
+      "title": "Error State",
+      "description": "Radio button in error state with red border. Activated by `invalid` property. Used to display validation errors in forms"
+    },
+    "group": {
+      "title": "Radio Group",
+      "description": "`CRadioGroup` component for managing multiple radio buttons. Supports horizontal and vertical orientation via `orientation` property. Value is the selected option from the group"
+    },
+    "customIcon": {
+      "title": "Custom Icon",
+      "description": "Radio button with custom icon instead of standard dot. Icon is configured through `icon` slot, which receives `checked` and `iconClass` parameters"
+    },
+    "customLabel": {
+      "title": "Custom Label",
+      "description": "Radio button with custom label content via `default` slot. Allows using HTML markup, icons or other components instead of plain text"
+    },
+    "form": {
+      "title": "In Form",
+      "description": "Integration with `CFormItem`: validation of radio button group, displaying error message"
+    },
+    "tableOfContents": "Components"
+  }
+}

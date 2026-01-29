@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { useTranslation } from 'react-i18next'
 import { BookmarkIcon } from './components/icons/BookmarkIcon'
 import { ComponentsIcon } from './components/icons/ComponentsIcon'
 import { EyeIcon } from './components/icons/EyeIcon'
@@ -44,9 +44,17 @@ const renderIcon = (item) => {
   }
 }
 
-export const renderLabel = (item) => (
-  <span className="item-label">
-    {renderIcon(item)}
-    <span>{item.name}</span>
-  </span>
-)
+const RenderLabelComponent = (item) => {
+  const { t } = useTranslation()
+
+  const translatedName = t(`sidebar.${item.type}.${item.id}`, { defaultValue: item.name })
+
+  return (
+    <span className="item-label">
+      {renderIcon(item)}
+      <span>{translatedName}</span>
+    </span>
+  )
+}
+
+export const renderLabel = (item) => <RenderLabelComponent {...item} />

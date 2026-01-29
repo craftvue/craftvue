@@ -1,0 +1,69 @@
+{
+  "tooltip": {
+    "title": "Tooltip",
+    "subtitle": "Tooltip component displayed on hover or click over an element. Used to provide additional information or context to the user",
+    "import": {
+      "title": "Import"
+    },
+    "basic": {
+      "title": "Basic Example",
+      "description": "Minimal tooltip configuration with text content"
+    },
+    "placement": {
+      "title": "Placement",
+      "description": "Positioning tooltip relative to trigger element: top, bottom, left or right, with alignment to start, center or end"
+    },
+    "trigger": {
+      "title": "Triggers",
+      "description": "Tooltip activation mode: on hover or on click. Default trigger is hover"
+    },
+    "autoHide": {
+      "title": "Auto Hide",
+      "description": "By default tooltip hides when cursor leaves trigger element. When `autoHide` is set to false, tooltip stays visible while cursor is over tooltip content"
+    },
+    "delay": {
+      "title": "Delays",
+      "description": "Configure delays before showing (`showDelay`) and hiding (`hideDelay`) tooltip for smoother interaction"
+    },
+    "template": {
+      "title": "Custom Templates",
+      "description": "Using `content` slot to display custom tooltip content, including icons, formatted text and other elements"
+    },
+    "triggerSlot": {
+      "title": "Trigger Slot",
+      "description": "Using `trigger` slot to customize trigger element with access to tooltip state (`isOpen`, `open`, `close`)"
+    },
+    "controlled": {
+      "title": "Controlled Mode",
+      "description": "Control tooltip visibility externally via `show` prop and `show`/`hide` events for full state control"
+    },
+    "rootEl": {
+      "title": "Using rootEl",
+      "description": "Explicitly specify trigger element via `rootEl` prop for cases when tooltip must be detached from trigger in DOM"
+    },
+    "tableOfContents": "Components",
+    "argTypes": {
+      "content": "Tooltip text displayed inside tooltip. Can be overridden via `content` slot",
+      "show": "Controls tooltip visibility. In controlled mode used to manage open/close state",
+      "rootEl": "DOM element reference relative to which tooltip is positioned. Used to explicitly define trigger element",
+      "placement": "Tooltip position relative to trigger element: top, bottom (default), left, right",
+      "align": "Tooltip alignment relative to trigger element: start, center (default), end",
+      "trigger": "Tooltip activation mode: hover (default) or click",
+      "offset": "Distance in pixels between trigger element and tooltip. Default is 0. When arrow is present, distance is automatically increased by arrow size",
+      "boundaryPadding": "Minimum padding in pixels from screen edges when positioning tooltip to prevent overflow. Default is 5",
+      "zIndex": "Z-index value for tooltip. Default is 2000",
+      "maxWidth": "Maximum tooltip width in pixels or CSS units. If exceeded, content wraps to next line. Default is 200",
+      "teleportTo": "CSS selector or DOM element where tooltip is teleported (Vue Teleport). Default is \"body\". Set to false to disable teleport",
+      "autoHide": "By default tooltip hides when cursor leaves trigger. When false, tooltip stays visible while cursor is over it. Default is true",
+      "showDelay": "Delay in milliseconds before showing tooltip on hover. Default is 0",
+      "hideDelay": "Delay in milliseconds before hiding tooltip when cursor leaves. Default is 0",
+      "durationEnter": "Duration of tooltip appearance animation in milliseconds. Default is 300",
+      "durationLeave": "Duration of tooltip disappearance animation in milliseconds. Default is 0",
+      "default": "Main slot for trigger element. If `trigger` slot is not used, default content becomes trigger",
+      "content ": "Slot for custom tooltip content. Allows displaying formatted text, icons and other elements instead of plain `content` text",
+      "trigger ": "Slot to customize trigger element. Provides: isOpen (open state), open (open function), close (close function)",
+      "hide": "Event fired when tooltip is hidden",
+      "show ": "Event fired when tooltip is shown"
+    }
+  }
+}

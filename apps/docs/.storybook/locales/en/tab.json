@@ -1,0 +1,11 @@
+{
+  "tab": {
+    "argTypes": {
+      "value": "Unique tab value",
+      "disabled": "Disable tab",
+      "as": "HTML element for rendering",
+      "asChild": "Use child element as root",
+      "default": "Slot for tab content"
+    }
+  }
+}

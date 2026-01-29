@@ -1,132 +1,41 @@
-import {
-  Meta,
-  Title,
-  Canvas,
-  ArgTypes,
-  Subtitle,
-  TableOfContents,
-} from '@storybook/addon-docs/blocks'
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
 import * as TooltipStories from './Tooltip.stories.ts'
-import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+import { TooltipContent } from './TooltipContent.tsx'
 
 <Meta title="Feedback/Tooltip" />
 
-<div className='sb-docs-wrapper' >
-  <div className='sb-docs-content'>
-    <Title>Tooltip</Title>
-
-    <Subtitle>
-      Всплывающая подсказка, которая отображается при наведении или клике на элемент. Используется для предоставления дополнительной информации или контекста пользователю.
-    </Subtitle>
-
-    <h3>Импорт</h3>
-
-    <CustomSource
-      code="import CTooltip from 'craftvue/tooltip'"
-      actions={['copy']}
-      parser="babel"
-      language="javascript"
-    />
-
-    <ArgTypes of={TooltipStories.Basic}  />
-
-    ## Базовый пример
-
-    <p>Минимальная конфигурация компонента с текстовой подсказкой.</p>
-
-    <Canvas of={TooltipStories.Basic} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="tooltip" parser='html' />
-
-    &nbsp;
-
-    ## Позиционирование
-
-    <p>Размещение tooltip относительно элемента-триггера: сверху, снизу, слева или справа, с выравниванием по левому краю, центру или правому краю.</p>
-
-    <Canvas of={TooltipStories.Placement} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="tooltip" name="placement" parser='html' />
-
-    &nbsp;
-
-    ## Триггеры
-
-    <p>Способ активации tooltip: при наведении курсора (hover) или при клике (click). По умолчанию используется hover.</p>
-
-    <Canvas of={TooltipStories.Trigger} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="tooltip" name="trigger" parser='html' />
-
-    &nbsp;
-
-    ## Автоматическое скрытие
-
-    <p>По умолчанию tooltip скрывается при уходе курсора с элемента-триггера. При установке параметра autoHide в false подсказка будет оставаться видимой, когда курсор находится непосредственно на tooltip, что позволяет пользователю взаимодействовать с содержимым подсказки.</p>
-
-    <Canvas of={TooltipStories.AutoHide} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="tooltip" name="autoHide" parser='html' />
-
-    &nbsp;
-
-    ## Задержки
-
-    <p>Настройка задержек перед показом (showDelay) и скрытием (hideDelay) tooltip для более плавного взаимодействия.</p>
-
-    <Canvas of={TooltipStories.Delay} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="tooltip" name="delay" parser='html' />
-
-    &nbsp;
-
-    ## Кастомные шаблоны
-
-    <p>Использование слота content для отображения кастомного содержимого tooltip, включая иконки, форматированный текст и другие элементы.</p>
-
-    <Canvas of={TooltipStories.Template} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="tooltip" name="template" parser='html' />
-
-    &nbsp;
-
-    ## Слот триггера
-
-    <p>Использование слота trigger для кастомизации элемента-триггера с доступом к состоянию открытия tooltip через параметры слота (isOpen, open, close).</p>
-
-    <Canvas of={TooltipStories.TriggerSlot} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="tooltip" name="triggerSlot" parser='html' />
-
-    &nbsp;
-
-    ## Управляемый режим
-
-    <p>Управление видимостью tooltip извне через пропс show и обработчики событий show и hide для полного контроля над состоянием.</p>
-
-    <Canvas of={TooltipStories.Controlled} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="tooltip" name="controlled" parser='html' />
-
-    &nbsp;
-
-    ## Использование rootEl
-
-    <p>Явное указание элемента-триггера через пропс rootEl для случаев, когда tooltip должен быть отделён от триггера в DOM.</p>
-
-    <Canvas of={TooltipStories.RootEl} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="tooltip" name="rootEl" parser='html' />
-
-  </div>
-
-  <div>
-    <TableOfContents
-      className='sb-docs-toc sb-unstyled'
-      title='Компоненты'
-      contentsSelector='.sb-docs-content'
-      headingSelector="h2"
-      ignoreSelector='.sbdocs-subtitle'
-    />
-  </div>
-</div>
+<TooltipContent>
+  <Canvas of={TooltipStories.Basic} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={TooltipStories.Placement}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={TooltipStories.Trigger}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={TooltipStories.AutoHide}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas of={TooltipStories.Delay} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={TooltipStories.Template}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={TooltipStories.TriggerSlot}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={TooltipStories.Controlled}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas of={TooltipStories.RootEl} sourceState="none" className="sb-canvas" />
+</TooltipContent>

@@ -1,133 +1,45 @@
-import {
-  Meta,
-  Title,
-  Canvas,
-  ArgTypes,
-  Subtitle,
-  TableOfContents,
-} from '@storybook/addon-docs/blocks'
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
 import * as DropdownStories from './Dropdown.stories.ts'
-import { CustomSource } from 'docs/components/CustomSource/CustomSource'
+import { DropdownContent } from './DropdownContent.tsx'
 
 <Meta title="Navigation/Dropdown" />
 
-<div className='sb-docs-wrapper' >
-  <div className='sb-docs-content'>
-    <Title>Dropdown</Title>
-
-    <Subtitle>
-      Выпадающее меню, которое позиционируется относительно элемента-триггера с поддержкой различных вариантов размещения, анимаций и кастомизации содержимого.
-    </Subtitle>
-
-    <h3>Импорт</h3>
-
-    <CustomSource
-      code="import CDropdown from 'craftvue/dropdown'"
-      actions={['copy']}
-      parser="babel"
-      language="javascript"
-    />
-
-    <ArgTypes of={DropdownStories.Basic}  />
-
-    ## Базовый пример
-
-    <p>Минимальная конфигурация компонента с простым списком опций.</p>
-
-    <Canvas of={DropdownStories.Basic} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="dropdown" parser='html' />
-
-    &nbsp;
-
-    ## Позиционирование
-
-    <p>Размещение выпадающего меню относительно элемента-триггера: сверху или снизу, с выравниванием по левому краю, центру или правому краю.</p>
-
-    <Canvas of={DropdownStories.Placement} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="dropdown" name="placement" parser='html' />
-
-    &nbsp;
-
-    ## Одинаковая ширина
-
-    <p>Выпадающее меню автоматически соответствует ширине элемента-триггера.</p>
-
-    <Canvas of={DropdownStories.SameWidth} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="dropdown" name="sameWidth" parser='html' />
-
-    &nbsp;
-
-    ## Стрелка
-
-    <p>Отображение указательной стрелки, направленной на элемент-триггер для лучшей визуальной связи.</p>
-
-    <Canvas of={DropdownStories.Arrow} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="dropdown" name="arrow" parser='html' />
-
-    &nbsp;
-
-    ## Анимации
-
-    <p>Варианты анимации появления и исчезновения: плавное изменение прозрачности (opacity) или масштабирование (zoom).</p>
-
-    <Canvas of={DropdownStories.Animation} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="dropdown" name="animation" parser='html' />
-
-    &nbsp;
-
-    ## Ограничения размера
-
-    <p>Ограничение максимальной высоты или ширины выпадающего меню с автоматической прокруткой при превышении размера.</p>
-
-    <Canvas of={DropdownStories.MaxSize} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="dropdown" name="maxSize" parser='html' />
-
-    &nbsp;
-
-    ## Отступы от краёв
-
-    <p>Минимальный отступ от краёв экрана при позиционировании, предотвращающий выход меню за пределы видимой области.</p>
-
-    <Canvas of={DropdownStories.BoundaryPadding} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="dropdown" name="boundaryPadding" parser='html' />
-
-    &nbsp;
-
-    ## Отступ от триггера
-
-    <p>Настройка расстояния между элементом-триггером и выпадающим меню для лучшего визуального разделения.</p>
-
-    <Canvas of={DropdownStories.Offset} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="dropdown" name="offset" parser='html' />
-
-    &nbsp;
-
-    ## Кастомные шаблоны
-
-    <p>Использование слотов для кастомизации содержимого: заголовок (header), основной контент (default) и нижняя часть (footer).</p>
-
-    <Canvas of={DropdownStories.Template} sourceState="none" className="sb-canvas" />
-
-    <CustomSource type="dropdown" name="template" parser='html' />
-
-  </div>
-
-  <div>
-    <TableOfContents
-      className='sb-docs-toc sb-unstyled'
-      title='Компоненты'
-      contentsSelector='.sb-docs-content'
-      headingSelector="h2"
-      ignoreSelector='.sbdocs-subtitle'
-    />
-  </div>
-</div>
-
+<DropdownContent>
+  <Canvas of={DropdownStories.Basic} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={DropdownStories.Placement}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={DropdownStories.SameWidth}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas of={DropdownStories.Arrow} sourceState="none" className="sb-canvas" />
+  <Canvas
+    of={DropdownStories.Animation}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={DropdownStories.MaxSize}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={DropdownStories.BoundaryPadding}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={DropdownStories.Offset}
+    sourceState="none"
+    className="sb-canvas"
+  />
+  <Canvas
+    of={DropdownStories.Template}
+    sourceState="none"
+    className="sb-canvas"
+  />
+</DropdownContent>

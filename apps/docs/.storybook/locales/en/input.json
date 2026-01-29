@@ -1,0 +1,83 @@
+{
+  "input": {
+    "title": "Input",
+    "subtitle": "Input field component with support for validation, formatting, icons and various states",
+    "import": {
+      "title": "Import"
+    },
+    "basic": {
+      "title": "Basic Example",
+      "description": "Standard input field with basic functionality"
+    },
+    "filled": {
+      "title": "Filled Style",
+      "description": "Input field with filled background. Set by `variant=\"filled\"` property"
+    },
+    "size": {
+      "title": "Size",
+      "description": "Input field size is controlled by the `size` property. Available values: `sm` (small), `lg` (large). Medium size is used by default"
+    },
+    "invalid": {
+      "title": "Error State",
+      "description": "Input field in error state with red border. Activated by `invalid` property"
+    },
+    "disabled": {
+      "title": "Disabled State",
+      "description": "Inactive input field, unavailable for interaction. Set by `disabled` property"
+    },
+    "clearable": {
+      "title": "Clearable Input",
+      "description": "Input field with automatic clear button. Activated by `clearable` property. Button appears on focus or hover if field is not empty"
+    },
+    "customClearIcon": {
+      "title": "Custom Clear Icon",
+      "description": "Input field with custom clear icon. Configured via `clearIcon` property (default CloseIcon)"
+    },
+    "formatter": {
+      "title": "Input Formatting",
+      "description": "Input field with automatic formatting. Configured via `formatter` (formatting function) and `parser` (parsing function) properties"
+    },
+    "password": {
+      "title": "Password Field",
+      "description": "Input field for password with visibility toggle. Activated by `showPassword` property. Automatically switches type between 'password' and 'text'"
+    },
+    "limitLength": {
+      "title": "Length Limit",
+      "description": "Input field with character counter display. Activated by `showWordLimit` property and requires `maxlength` to be set. Shows current character count and limit"
+    },
+    "withIcon": {
+      "title": "Field with Icon",
+      "description": "Input field with icon. Icon is set to the left and right of input field via `prefix` and `suffix` slots or via `prefixIcon` and `suffixIcon` properties (Component)"
+    },
+    "inputGroup": {
+      "title": "Input Group",
+      "description": "Composition of multiple elements combined into a logical group. Uses `prepend` (left) and `append` (right) slots to add buttons or other elements"
+    },
+    "tableOfContents": "Components",
+    "argTypes": {
+      "variant": "Visual display variant of input. Defines the style (filled, outlined)",
+      "size": "Input size. Controls element scale through predefined size variants",
+      "invalid": "Error state. Enables visual error indication and blocks interaction",
+      "disabled": "Disabled state. Enables visual indication of disabled state and blocks interaction",
+      "clearable": "Clear value capability. Enables clear button and allows deleting entered data",
+      "showPassword": "Show password. Enables displaying password as text and hides it as dots",
+      "showWordLimit": "Show character limit. Enables displaying character limit and count of entered characters",
+      "formatter": "Value formatting function. Transforms entered value according to predefined format",
+      "modelValue": "Input value. Can be used to initialize value or display current value",
+      "parser": "Value parsing function. Transforms formatted value back to original",
+      "clearIcon": "Clear icon. Graphic element used to clear input value",
+      "prefixIcon": "Prefix icon. Graphic element used to display prefix of input value",
+      "suffixIcon": "Suffix icon. Graphic element used to display suffix of input value",
+      "prepend": "Slot for content before input field",
+      "append": "Slot for content after input field",
+      "prefix": "Slot for prefix content (before input)",
+      "suffix": "Slot for suffix content (after input)",
+      "change": "Event fired when input value changes",
+      "clear": "Event fired when input is cleared",
+      "input": "Event fired on input",
+      "mouseenter": "Event fired when mouse enters input area",
+      "mouseleave": "Event fired when mouse leaves input area",
+      "updatemodelValue": "Event for updating input value"
+    }
+  }
+}

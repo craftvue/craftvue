@@ -1,0 +1,7 @@
+{
+  "tabpanels": {
+    "argTypes": {
+      "default": "Slot for tab panels container"
+    }
+  }
+}

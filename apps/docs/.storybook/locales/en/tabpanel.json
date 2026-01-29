@@ -1,0 +1,10 @@
+{
+  "tabpanel": {
+    "argTypes": {
+      "value": "Panel value (should match tab)",
+      "as": "HTML element for rendering",
+      "asChild": "Use child element as root",
+      "default": "Slot for tab panel content"
+    }
+  }
+}
